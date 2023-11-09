@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="1cfbf78f-d608-4e8d-a63b-1a83dc04e825" Name="SecureBootCheck" Description="U2VjdXJlQm9vdENoZWNr" Version="2.10.0.19" RemoteCategory="0" ExecutionType="Local" MinimumPSVersionRequired="0.0.0">
+  <Object ID="{6311440a-8400-4043-822f-75af9c2e466d}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml&gt;&lt;OutputParameters&gt;&lt;Parameter ParameterName=&quot;SecureBootResult&quot; Label=&quot;Secure Boot Enabled&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.SecureBootResult&quot; /&gt;&lt;Parameter ParameterName=&quot;FirmwareType&quot; Label=&quot;FirmwareType&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.FirmwareType&quot; /&gt;&lt;/OutputParameters&gt;&lt;/xml&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>4056807b-a24c-4674-9303-ff04f969e110.SecureBootResult</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>SecureBootResult</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>4056807b-a24c-4674-9303-ff04f969e110.FirmwareType</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>FirmwareType</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+    </hashset>
+  </LinkManager>
+  <Diagnostics OriginalVersion="2.60.0.3" />
+  <Activity mc:Ignorable="sap sads" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>490,571</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="490,571" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:RunPowerShellScript AssemblyName="PolicyExecutionEngine, Version=2.60.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Run PowerShell Script" sap:VirtualizedContainerService.HintSize="454,348" Moniker="4056807b-a24c-4674-9303-ff04f969e110" OutPut_64="[RunPowerShellScript_OutPut_64]" Result="[RunPowerShellScript_Result]" ResultString="[RunPowerShellScript_ResultString]" Results_x64="[RunPowerShellScript_Results_x64]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RunPowerShellScript" genArgEvent="547f8174-52e1-4863-9f64-5445377c6b3b" m_bTextLinkChange="False" script="JABmAGkAcgBtAHcAYQByAGUAVAB5AHAAZQAgAD0AIAAkAGUAbgB2ADoAZgBpAHIAbQB3AGEAcgBlAF8AdAB5AHAAZQANAAoAaQBmACgAJABmAGkAcgBtAHcAYQByAGUAVAB5AHAAZQAgAC0AZQBxACAAIgBVAEUARgBJACIAKQANAAoAewANAAoACQAkAFMAZQBjAHUAcgBlAEIAbwBvAHQAUgBlAHMAdQBsAHQAIAA9ACAAQwBvAG4AZgBpAHIAbQAtAFMAZQBjAHUAcgBlAEIAbwBvAHQAVQBFAEYASQANAAoAfQANAAoAZQBsAHMAZQBpAGYAKAAkAGYAaQByAG0AdwBhAHIAZQBUAHkAcABlACAALQBlAHEAIAAiAEwAZQBnAGEAYwB5ACIAKQANAAoAewANAAoACQAkAFMAZQBjAHUAcgBlAEIAbwBvAHQAUgBlAHMAdQBsAHQAIAA9ACAAIgBOAG8AdAAgAHMAdQBwAHAAbwByAHQAZQBkACIADQAKAH0ADQAKAA0ACgA=">
+          <p:RunPowerShellScript.InArgs>
+            <scg:Dictionary x:TypeArguments="x:String, p:InArg" />
+          </p:RunPowerShellScript.InArgs>
+          <p:RunPowerShellScript.OutArgs>
+            <p:OutArg x:Key="SecureBootResult" ArgType="string" DisplayName="SecureBootResult" Name="SecureBootResult">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_SecureBootResult]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="FirmwareType" ArgType="string" DisplayName="FirmwareType" Name="FirmwareType">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_FirmwareType]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+          </p:RunPowerShellScript.OutArgs>
+        </p:RunPowerShellScript>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_OutPut_64" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_ResultString" />
+        <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="RunPowerShellScript_Results_x64" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_Result" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_SecureBootResult" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_FirmwareType" />
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>

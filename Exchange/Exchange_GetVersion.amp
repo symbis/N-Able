@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="98711c22-0652-4085-9ea9-4236083a8ba4" Name="Exchange_GetVersion" Description="RXhjaGFuZ2VfR2V0VmVyc2lvbg==" Version="2.10.0.19" RemoteCategory="0" ExecutionType="Local" MinimumPSVersionRequired="0.0.0">
+  <Object ID="{a379c822-ba21-4164-be46-f5a72ab33133}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml&gt;&lt;Parameters&gt;&lt;Parameter ParameterName=&quot;ExchangeVersion2019_latest&quot; Label=&quot;Exchange 2019 Latest BuildNumber&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;ExchangeVersion2019_second&quot; Label=&quot;Exchange 2019 Second BuildNumber&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;ExchangeVersion2016_latest&quot; Label=&quot;Exchange 2016 Latest BuildNumber&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;ExchangeVersion2016_second&quot; Label=&quot;Exchange 2016 second BuildNumber&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;ExchangeVersion2013_latest&quot; Label=&quot;Exchange 2013 Latest BuildNumber&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;ExchangeVersion2013_second&quot; Label=&quot;Exchange 2013 Second BuildNumber&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;/Parameters&gt;&lt;OutputParameters&gt;&lt;Parameter ParameterName=&quot;ExchangeVersion&quot; Label=&quot;ExchangeVersion&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.Exchange Version&quot; /&gt;&lt;Parameter ParameterName=&quot;exchangeUpToDate&quot; Label=&quot;Exchange Up-To-Date&quot; ParameterType=&quot;number&quot; Value=&quot;Run PowerShell Script.Exchange up-to-date&quot; /&gt;&lt;/OutputParameters&gt;&lt;/xml&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>1fcabb9d-83f0-404a-872e-f03a69cd5675.ExchangeVersion</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>ExchangeVersion</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>1fcabb9d-83f0-404a-872e-f03a69cd5675.exchangeUpToDate</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>exchangeUpToDate</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+    </hashset>
+  </LinkManager>
+  <Diagnostics OriginalVersion="2.18.3.1" />
+  <Activity mc:Ignorable="sads sap" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>504,745</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="504,745" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:RunPowerShellScript AssemblyName="PolicyExecutionEngine, Version=2.18.3.1, Culture=neutral, PublicKeyToken=null" DisplayName="Run PowerShell Script" sap:VirtualizedContainerService.HintSize="468,522" Moniker="1fcabb9d-83f0-404a-872e-f03a69cd5675" OutPut_64="[RunPowerShellScript_OutPut_64]" Result="[RunPowerShellScript_Result]" ResultString="[RunPowerShellScript_ResultString]" Results_x64="[RunPowerShellScript_Results_x64]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RunPowerShellScript" genArgEvent="30af8f28-76e2-466b-a312-72c7f9047b44" m_bTextLinkChange="False" script="QQBkAGQALQBQAFMAUwBuAGEAcABpAG4AIABNAGkAYwByAG8AcwBvAGYAdAAuAEUAeABjAGgAYQBuAGcAZQAuAE0AYQBuAGEAZwBlAG0AZQBuAHQALgBQAG8AdwBlAHIAUwBoAGUAbABsAC4AUwBuAGEAcABJAG4ADQAKACQARQB4AGMAaABhAG4AZwBlAFYAZQByAHMAaQBvAG4AMgAwADEAOQBfAGwAYQB0AGUAcwB0AA0ACgAkAEUAeABjAGgAYQBuAGcAZQBWAGUAcgBzAGkAbwBuADIAMAAxADkAXwBzAGUAYwBvAG4AZAANAAoAJABFAHgAYwBoAGEAbgBnAGUAVgBlAHIAcwBpAG8AbgAyADAAMQA2AF8AbABhAHQAZQBzAHQADQAKACQARQB4AGMAaABhAG4AZwBlAFYAZQByAHMAaQBvAG4AMgAwADEANgBfAHMAZQBjAG8AbgBkAA0ACgAkAEUAeABjAGgAYQBuAGcAZQBWAGUAcgBzAGkAbwBuADIAMAAxADMAXwBsAGEAdABlAHMAdAANAAoAJABFAHgAYwBoAGEAbgBnAGUAVgBlAHIAcwBpAG8AbgAyADAAMQAzAF8AcwBlAGMAbwBuAGQADQAKAA0ACgAkAEUAeABjAGgAYQBuAGcAZQBCAHUAaQBsAGQATgB1AG0AYgBlAHIAIAA9ACAARwBlAHQALQBFAHgAYwBoAGEAbgBnAGUAUwBlAHIAdgBlAHIADQAKACQARQB4AGMAaABhAG4AZwBlAFYAZQByAHMAaQBvAG4AIAA9ACAAWwBzAHQAcgBpAG4AZwBdACQARQB4AGMAaABhAG4AZwBlAEIAdQBpAGwAZABOAHUAbQBiAGUAcgAuAEEAZABtAGkAbgBEAGkAcwBwAGwAYQB5AFYAZQByAHMAaQBvAG4ALgBNAGEAagBvAHIAWwAwAF0AIAArACAAIgAuACIAIAArACAAIABbAHMAdAByAGkAbgBnAF0AJABFAHgAYwBoAGEAbgBnAGUAQgB1AGkAbABkAE4AdQBtAGIAZQByAC4AQQBkAG0AaQBuAEQAaQBzAHAAbABhAHkAVgBlAHIAcwBpAG8AbgAuAE0AaQBuAG8AcgBbADAAXQAgACsAIAAiAC4AIgAgACsAIAAgAFsAcwB0AHIAaQBuAGcAXQAkAEUAeABjAGgAYQBuAGcAZQBCAHUAaQBsAGQATgB1AG0AYgBlAHIALgBBAGQAbQBpAG4ARABpAHMAcABsAGEAeQBWAGUAcgBzAGkAbwBuAC4AQgB1AGkAbABkAFsAMABdAA0ACgANAAoAaQBmACgAJABFAHgAYwBoAGEAbgBnAGUAQgB1AGkAbABkAE4AdQBtAGIAZQByAC4AQQBkAG0AaQBuAEQAaQBzAHAAbABhAHkAVgBlAHIAcwBpAG8AbgAuAE0AaQBuAG8AcgAgAC0AZQBxACAAMgApAA0ACgB7AA0ACgAgACAAIAAgAGkAZgAoACQARQB4AGMAaABhAG4AZwBlAFYAZQByAHMAaQBvAG4AIAAtAGUAcQAgACQARQB4AGMAaABhAG4AZwBlAFYAZQByAHMAaQBvAG4AMgAwADEAOQBfAGwAYQB0AGUAcwB0ACkAIAB7ACAAJABlAHgAYwBoAGEAbgBnAGUAVQBwAFQAbwBEAGEAdABlACAAPQAgACIAMgAiACAAfQANAAoAIAAgACAAIABlAGwAcwBlAGkAZgAoACQARQB4AGMAaABhAG4AZwBlAFYAZQByAHMAaQBvAG4AIAAtAGUAcQAgACQARQB4AGMAaABhAG4AZwBlAFYAZQByAHMAaQBvAG4AMgAwADEAOQBfAHMAZQBjAG8AbgBkACkAIAB7ACAAJABlAHgAYwBoAGEAbgBnAGUAVQBwAFQAbwBEAGEAdABlACAAPQAgACIAMQAiACAAfQANAAoAIAAgACAAIABlAGwAcwBlACAAewAgACQAZQB4AGMAaABhAG4AZwBlAFUAcABUAG8ARABhAHQAZQAgAD0AIAAiADAAIgB9AA0ACgB9AA0ACgBpAGYAKAAkAEUAeABjAGgAYQBuAGcAZQBCAHUAaQBsAGQATgB1AG0AYgBlAHIALgBBAGQAbQBpAG4ARABpAHMAcABsAGEAeQBWAGUAcgBzAGkAbwBuAC4ATQBpAG4AbwByACAALQBlAHEAIAAxACkADQAKAHsADQAKACAAIAAgACAAaQBmACgAJABFAHgAYwBoAGEAbgBnAGUAVgBlAHIAcwBpAG8AbgAgAC0AZQBxACAAJABFAHgAYwBoAGEAbgBnAGUAVgBlAHIAcwBpAG8AbgAyADAAMQA2AF8AbABhAHQAZQBzAHQAKQAgAHsAIAAkAGUAeABjAGgAYQBuAGcAZQBVAHAAVABvAEQAYQB0AGUAIAA9ACAAIgAyACIAIAB9AA0ACgAgACAAIAAgAGUAbABzAGUAaQBmACgAJABFAHgAYwBoAGEAbgBnAGUAVgBlAHIAcwBpAG8AbgAgAC0AZQBxACAAJABFAHgAYwBoAGEAbgBnAGUAVgBlAHIAcwBpAG8AbgAyADAAMQA2AF8AcwBlAGMAbwBuAGQAKQAgAHsAIAAkAGUAeABjAGgAYQBuAGcAZQBVAHAAVABvAEQAYQB0AGUAIAA9ACAAIgAxACIAIAB9AA0ACgAgACAAIAAgAGUAbABzAGUAewAkAGUAeABjAGgAYQBuAGcAZQBVAHAAVABvAEQAYQB0AGUAIAA9ACAAIgAwACIAfQANAAoAfQANAAoAaQBmACgAJABFAHgAYwBoAGEAbgBnAGUAQgB1AGkAbABkAE4AdQBtAGIAZQByAC4AQQBkAG0AaQBuAEQAaQBzAHAAbABhAHkAVgBlAHIAcwBpAG8AbgAuAE0AaQBuAG8AcgAgAC0AZQBxACAAMAApAA0ACgB7AA0ACgAgACAAIAAgAGkAZgAoACQARQB4AGMAaABhAG4AZwBlAFYAZQByAHMAaQBvAG4AIAAtAGUAcQAgACQARQB4AGMAaABhAG4AZwBlAFYAZQByAHMAaQBvAG4AMgAwADEAMwBfAGwAYQB0AGUAcwB0ACkAIAB7ACAAJABlAHgAYwBoAGEAbgBnAGUAVQBwAFQAbwBEAGEAdABlACAAPQAgACIAMgAiACAAfQANAAoAIAAgACAAIABlAGwAcwBlAGkAZgAoACQARQB4AGMAaABhAG4AZwBlAFYAZQByAHMAaQBvAG4AIAAtAGUAcQAgACQARQB4AGMAaABhAG4AZwBlAFYAZQByAHMAaQBvAG4AMgAwADEAMwBfAHMAZQBjAG8AbgBkACkAIAB7ACAAJABlAHgAYwBoAGEAbgBnAGUAVQBwAFQAbwBEAGEAdABlACAAPQAgACIAMQAiACAAfQANAAoAIAAgACAAIABlAGwAcwBlACAAewAgACQAZQB4AGMAaABhAG4AZwBlAFUAcABUAG8ARABhAHQAZQAgAD0AIAAiADAAIgB9AA0ACgB9AA0ACgANAAoA">
+          <p:RunPowerShellScript.InArgs>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="ExchangeVersion2019_latest" ArgType="string" DisplayArg="Input Parameters.Exchange 2019 Latest BuildNumber" DisplayName="Exchange Latest Build Number" Name="ExchangeVersion2019_latest" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[ExchangeVersion2019_latest]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="ExchangeVersion2019_second" ArgType="string" DisplayArg="Input Parameters.Exchange 2019 Second BuildNumber" DisplayName="Exchange 2019 Second BuildNumber" Name="ExchangeVersion2019_second" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[ExchangeVersion2019_second]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="ExchangeVersion2016_latest" ArgType="string" DisplayArg="Input Parameters.Exchange 2016 Latest BuildNumber" DisplayName="Exchange 2016 Latest BuildNumber" Name="ExchangeVersion2016_latest" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[ExchangeVersion2016_latest]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="ExchangeVersion2016_second" ArgType="string" DisplayArg="Input Parameters.Exchange 2016 second BuildNumber" DisplayName="Exchange 2016 Second BuildNumber" Name="ExchangeVersion2016_second" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[ExchangeVersion2016_second]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="ExchangeVersion2013_latest" ArgType="string" DisplayArg="Input Parameters.Exchange 2013 Latest BuildNumber" DisplayName="Exchange 2013 Latest BuildNumber" Name="ExchangeVersion2013_latest" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[ExchangeVersion2013_latest]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="ExchangeVersion2013_second" ArgType="string" DisplayArg="Input Parameters.Exchange 2013 Second BuildNumber" DisplayName="Exchange 2013 Second BuildNumber" Name="ExchangeVersion2013_second" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[ExchangeVersion2013_second]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+          </p:RunPowerShellScript.InArgs>
+          <p:RunPowerShellScript.OutArgs>
+            <p:OutArg x:Key="ExchangeVersion" ArgType="string" DisplayName="Exchange Version" Name="ExchangeVersion">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_ExchangeVersion]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="exchangeUpToDate" ArgType="number" DisplayName="Exchange up-to-date" Name="exchangeUpToDate">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:Double">[RunPowerShellScript_exchangeUpToDate]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+          </p:RunPowerShellScript.OutArgs>
+        </p:RunPowerShellScript>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_OutPut_64" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_Result" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_ResultString" />
+        <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="RunPowerShellScript_Results_x64" />
+        <Variable x:TypeArguments="x:String" Name="ExchangeVersion2019_latest" />
+        <Variable x:TypeArguments="x:String" Name="ExchangeVersion2019_second" />
+        <Variable x:TypeArguments="x:String" Name="ExchangeVersion2016_latest" />
+        <Variable x:TypeArguments="x:String" Name="ExchangeVersion2016_second" />
+        <Variable x:TypeArguments="x:String" Name="ExchangeVersion2013_latest" />
+        <Variable x:TypeArguments="x:String" Name="ExchangeVersion2013_second" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_ExchangeVersion" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_exchangeUpToDate" />
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>

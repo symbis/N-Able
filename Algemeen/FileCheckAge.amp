@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="b2725498-1bf7-44bb-8892-aa3f075d6990" Name="FileCheckAge" Description="RmlsZUNoZWNrQWdl" Version="2.10.0.19" RemoteCategory="0" ExecutionType="Local" MinimumPSVersionRequired="0.0.0">
+  <Object ID="{02589bbe-d106-4d84-b3d2-4744386f91c5}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml&gt;&lt;Parameters&gt;&lt;Parameter ParameterName=&quot;fileLocation&quot; Label=&quot;fileLocation&quot; ParameterType=&quot;string&quot; Value=&quot;C:\AenC\acronis.txt&quot; /&gt;&lt;/Parameters&gt;&lt;OutputParameters&gt;&lt;Parameter ParameterName=&quot;dateDifference&quot; Label=&quot;dateDifference&quot; ParameterType=&quot;number&quot; Value=&quot;Date Difference.Difference&quot; /&gt;&lt;/OutputParameters&gt;&lt;/xml&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>27b321d0-3802-4277-9a62-09de1849d883.Difference</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>dateDifference</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+    </hashset>
+  </LinkManager>
+  <Diagnostics OriginalVersion="2.16.1.15" />
+  <Activity mc:Ignorable="sads sap" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>405,659</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+        <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="405,659" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:FileModificationDate FileName_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.16.1.15, Culture=neutral, PublicKeyToken=null" Date="[FileModificationDate_Date]" DisplayName="File Modification Date" FileName="[fileLocation]" FileName_DisplayArg="Input Parameters.fileLocation" FileName_Item="{x:Null}" sap:VirtualizedContainerService.HintSize="369,88" Moniker="7344fb5b-1584-4cda-82f9-2b76ac7b53b9" Result="[FileModificationDate_Result]" ResultString="[FileModificationDate_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="FileModificationDate" m_bTextLinkChange="False" />
+        <p:DateDifference FirstDate="{x:Null}" FirstDateNow_Item="{x:Null}" FirstDateNow_ItemProp="{x:Null}" FirstDate_DisplayArg="{x:Null}" FirstDate_Item="{x:Null}" FirstDate_ItemProp="{x:Null}" SecondDateNow_Item="{x:Null}" SecondDateNow_ItemProp="{x:Null}" SecondDate_Item="{x:Null}" SecondDate_ItemProp="{x:Null}" TimeSpanUnits_Item="{x:Null}" TimeSpanUnits_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.16.1.15, Culture=neutral, PublicKeyToken=null" Difference="[DateDifference_Difference]" DisplayName="Date Difference" FirstDateNow="True" FirstDateNow_DisplayArg="" sap:VirtualizedContainerService.HintSize="369,308" Moniker="27b321d0-3802-4277-9a62-09de1849d883" Result="[DateDifference_Result]" ResultString="[DateDifference_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" SecondDate="[FileModificationDate_Date]" SecondDateNow="False" SecondDateNow_DisplayArg="" SecondDate_DisplayArg="File Modification Date.Date" TimeSpanUnits="Days" TimeSpanUnits_DisplayArg="Days" TypeName="DateDifference" m_bTextLinkChange="False" />
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="s:DateTime" Name="FileModificationDate_Date" />
+        <Variable x:TypeArguments="x:String" Name="FileModificationDate_ResultString" />
+        <Variable x:TypeArguments="x:Double" Name="FileModificationDate_Result" />
+        <Variable x:TypeArguments="x:Double" Name="DateDifference_Difference" />
+        <Variable x:TypeArguments="x:String" Name="DateDifference_ResultString" />
+        <Variable x:TypeArguments="x:Double" Name="DateDifference_Result" />
+        <Variable x:TypeArguments="x:String" Default="C:\AenC\acronis.txt" Name="fileLocation" />
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>

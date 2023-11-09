@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="eea5c6ff-9749-40c3-960f-ddb0955f7fcc" Name="HPArubaSwitch_Version" Description="SFBBcnViYVN3aXRjaF9WZXJzaW9u" Version="2.10.0.19" RemoteCategory="0" ExecutionType="Local" MinimumPSVersionRequired="0.0.0">
+  <Object ID="{78f5c0e4-c95e-42ac-be21-cfe0c3fdc9f9}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml&gt;&lt;Parameters&gt;&lt;Parameter ParameterName=&quot;SwitchIP&quot; Label=&quot;Switch IP&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;SwitchUsername&quot; Label=&quot;SwitchUsername&quot; ParameterType=&quot;string&quot; Value=&quot;manager&quot; /&gt;&lt;Parameter ParameterName=&quot;SwitchPassword&quot; Label=&quot;Switch Password&quot; ParameterType=&quot;password&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;yaBranch&quot; Label=&quot;YA Branch latest Version&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;ybBranch&quot; Label=&quot;YB Branch latest version&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;ycBranch&quot; Label=&quot;YC Branch latest version&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;raBranch&quot; Label=&quot;RA Branch latest version&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;wbBranch&quot; Label=&quot;WB branch latest version&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;wcBranch&quot; Label=&quot;WC Branch latest version&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;kaBranch&quot; Label=&quot;KA Branch latest Version&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;kbBranch&quot; Label=&quot;KB Branch latest Version&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;/Parameters&gt;&lt;OutputParameters&gt;&lt;Parameter ParameterName=&quot;version&quot; Label=&quot;Version Found&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.version&quot; /&gt;&lt;Parameter ParameterName=&quot;Uptodate&quot; Label=&quot;Switch Up-To-Date&quot; ParameterType=&quot;number&quot; Value=&quot;Run PowerShell Script.Uptodate&quot; /&gt;&lt;Parameter ParameterName=&quot;errorFound&quot; Label=&quot;Error Message&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.errorFound&quot; /&gt;&lt;Parameter ParameterName=&quot;SwitchInfo&quot; Label=&quot;SwitchInfo&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.SwitchInfo&quot; /&gt;&lt;Parameter ParameterName=&quot;latestversion&quot; Label=&quot;Latest Available Version&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.latestversion&quot; /&gt;&lt;/OutputParameters&gt;&lt;/xml&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>d24bf6c5-b4e3-413b-8c96-7a51a590efc6.version</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>version</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>d24bf6c5-b4e3-413b-8c96-7a51a590efc6.Uptodate</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>Uptodate</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>d24bf6c5-b4e3-413b-8c96-7a51a590efc6.errorFound</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>errorFound</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>d24bf6c5-b4e3-413b-8c96-7a51a590efc6.SwitchInfo</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>SwitchInfo</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>d24bf6c5-b4e3-413b-8c96-7a51a590efc6.latestversion</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>latestversion</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+    </hashset>
+  </LinkManager>
+  <Diagnostics OriginalVersion="2.91.0.8" />
+  <Activity mc:Ignorable="sads sap" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>504,745</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="504,745" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:RunPowerShellScript AssemblyName="PolicyExecutionEngine, Version=2.91.0.8, Culture=neutral, PublicKeyToken=null" DisplayName="Run PowerShell Script" sap:VirtualizedContainerService.HintSize="468,522" Moniker="d24bf6c5-b4e3-413b-8c96-7a51a590efc6" OutPut_64="[RunPowerShellScript_OutPut_64]" Result="[RunPowerShellScript_Result]" ResultString="[RunPowerShellScript_ResultString]" Results_x64="[RunPowerShellScript_Results_x64]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RunPowerShellScript" genArgEvent="5d885378-879e-44e5-880d-ff1676e19b30" m_bTextLinkChange="False" script="PAAjAA0ACgAuAFMAWQBOAE8AUABTAEkAUwAgAA0ACgBDAGgAZQBjAGsAIAB2AGUAcgBzAGkAbwBuACAAbwBmACAASABQAC8AQQByAHUAYgBhACAAUwB3AGkAdABjAGgAZQBzAC4ADQAKAC4ARABFAFMAQwBSAEkAUABUAEkATwBOAA0ACgBDAGgAZQBjAGsAIAB2AGUAcgBzAGkAbwBuACAAbwBmACAASABQAC8AQQByAHUAYgBhACAAUwB3AGkAdABjAGgAZQBzAC4AIABTAHAAZQBjAGkAZgBpAGMAIABvAG4AIABZAEEALAAgAFkAQgAsACAAWQBDACwAIABSAEEALAAgAFcAQgAsACAAVwBDACwAIABLAEEAIABhAG4AZAAgAEsAQgAgAGIAcgBhAG4AYwBoAC4ADQAKAC4ATgBPAFQARQBTAA0ACgBDAHIAZQBhAHQAZQBkACAAYgB5ACAAQgBhAHIAZQBuAGQAIAB2AGQAIABEAHUAcwBzAGUAbgANAAoARABhAHQAZQA6ACAAMQA5AC0AMQAwAC0AMgAwADIAMwANAAoASQBuAHAAdQB0AHMAOgAgACQAcwB3AGkAdABjAGgAaQBwACwAIAAkAHMAdwBpAHQAYwBoAHUAcwBlAHIAbgBhAG0AZQAsACAAJABzAHcAaQB0AGMAaABwAGEAcwBzAHcAbwByAGQALAAgACQAeQBhAEIAcgBhAG4AYwBoACwAIAAkAHkAYgBCAHIAYQBuAGMAaAAsACAAJAB5AGMAQgByAGEAbgBjAGgALAAgACQAcgBhAEIAcgBhAG4AYwBoACwAIAAkAHcAYgBCAHIAYQBuAGMAaAAsACAAJAB3AGMAQgByAGEAbgBjAGgALAAgACQAawBhAEIAcgBhAG4AYwBoACwAIAAkAGsAYgBCAHIAYQBuAGMAaAANAAoATwB1AHQAcAB1AHQAcwA6ACAAJABVAHAAdABvAEQAYQB0AGUALAAgACQAdgBlAHIAcwBpAG8AbgAsACAAJABlAHIAcgBvAHIARgBvAHUAbgBkACwAIAAkAFMAdwBpAHQAYwBoAEkAbgBmAG8ADQAKAFYAZQByAHMAaQBvAG4AOgAgADAALgAxAA0ACgBSAGUAbABlAGEAcwBlACAATgBvAHQAZQBzAA0ACgBWADAALgAxADoAIABJAG4AaQB0AGkAYQBsACAAUwBlAHQAdQBwAA0ACgAjAD4ADQAKAA0ACgAkAGkAcABBAGQAZAByAGUAcwBzACAAPQAgACQAcwB3AGkAdABjAGgAaQBwAA0ACgAkAHUAcwBlAHIAbgBhAG0AZQAgAD0AIAAkAHMAdwBpAHQAYwBoAHUAcwBlAHIAbgBhAG0AZQANAAoAJABQAFcAbwByAGQAIAA9ACAAQwBvAG4AdgBlAHIAdABUAG8ALQBTAGUAYwB1AHIAZQBTAHQAcgBpAG4AZwAgAC0AUwB0AHIAaQBuAGcAIAAkAHMAdwBpAHQAYwBoAHAAYQBzAHMAdwBvAHIAZAAgAC0AQQBzAFAAbABhAGkAbgBUAGUAeAB0ACAALQBGAG8AcgBjAGUADQAKACQAYwByAGUAZABlAG4AdABpAGEAbAAgAD0AIABOAGUAdwAtAE8AYgBqAGUAYwB0ACAALQBUAHkAcABlAE4AYQBtAGUAIABTAHkAcwB0AGUAbQAuAE0AYQBuAGEAZwBlAG0AZQBuAHQALgBBAHUAdABvAG0AYQB0AGkAbwBuAC4AUABTAEMAcgBlAGQAZQBuAHQAaQBhAGwAIAAtAEEAcgBnAHUAbQBlAG4AdABMAGkAcwB0ACAAJAB1AHMAZQByAG4AYQBtAGUALAAgACQAUABXAG8AcgBkAA0ACgAkAFUAcAB0AG8ARABhAHQAZQAgAD0AIAAwAA0ACgANAAoAIwAgAEMAaABlAGMAawAgAGkAZgAgAFAAbwBzAGgALQBTAFMASAAgAG0AbwBkAHUAbABlACAAaQBzACAAaQBuAHMAdABhAGwAbABlAGQADQAKAGkAZgAgACgALQBuAG8AdAAgACgARwBlAHQALQBNAG8AZAB1AGwAZQAgAC0ATgBhAG0AZQAgAFAAbwBzAGgALQBTAFMASAAgAC0ATABpAHMAdABBAHYAYQBpAGwAYQBiAGwAZQApACkAIAB7AA0ACgAgACAAIAAgACMAIABQAG8AcwBoAC0AUwBTAEgAIABtAG8AZAB1AGwAZQAgAGkAcwAgAG4AbwB0ACAAaQBuAHMAdABhAGwAbABlAGQALAAgAHMAbwAgAGkAbgBzAHQAYQBsAGwAIABpAHQADQAKACAAIAAgACAAVwByAGkAdABlAC0ASABvAHMAdAAgACIAUABvAHMAaAAtAFMAUwBIACAAbQBvAGQAdQBsAGUAIABpAHMAIABuAG8AdAAgAGkAbgBzAHQAYQBsAGwAZQBkAC4AIABJAG4AcwB0AGEAbABsAGkAbgBnAC4ALgAuACIADQAKACAAIAAgACAASQBuAHMAdABhAGwAbAAtAE0AbwBkAHUAbABlACAALQBOAGEAbQBlACAAUABvAHMAaAAtAFMAUwBIACAALQBGAG8AcgBjAGUADQAKACAAIAAgACAAaQBmACAAKAAtAG4AbwB0ACAAKABHAGUAdAAtAE0AbwBkAHUAbABlACAALQBOAGEAbQBlACAAUABvAHMAaAAtAFMAUwBIACAALQBMAGkAcwB0AEEAdgBhAGkAbABhAGIAbABlACkAKQAgAHsADQAKACAAIAAgACAAIAAgACAAIABXAHIAaQB0AGUALQBoAG8AcwB0ACAAIgBGAGEAaQBsAGUAZAAgAHQAbwAgAGkAbgBzAHQAYQBsAGwAIABQAG8AcwBoAC0AUwBTAEgAIABNAG8AZAB1AGwAZQAiAA0ACgAgACAAIAAgACAAIAAgACAAJABlAHIAcgBvAHIARgBvAHUAbgBkACAAPQAgACIARgBhAGkAbABlAGQAIAB0AG8AIABpAG4AcwB0AGEAbABsACAAUABvAHMAaAAtAFMAUwBIACAATQBvAGQAdQBsAGUAIgANAAoAIAAgACAAIAAgACAAIAAgAGUAeABpAHQADQAKACAAIAAgACAAfQANAAoAfQAgAGUAbABzAGUAIAB7AA0ACgAgACAAIAAgAFcAcgBpAHQAZQAtAEgAbwBzAHQAIAAiAFAAbwBzAGgALQBTAFMASAAgAG0AbwBkAHUAbABlACAAaQBzACAAYQBsAHIAZQBhAGQAeQAgAGkAbgBzAHQAYQBsAGwAZQBkAC4AIgAgACAADQAKAH0ADQAKAA0ACgAjAEMAaABlAGMAawAgAGkAZgAgAGgAbwBzAHQAIABpAHMAIABvAG4AbABpAG4AZQANAAoAaQBmACgAKABUAGUAcwB0AC0ATgBlAHQAQwBvAG4AbgBlAGMAdABpAG8AbgAgACQAaQBwAEEAZABkAHIAZQBzAHMAIAAtAHAAbwByAHQAIAAyADIAKQAuAFQAYwBwAFQAZQBzAHQAUwB1AGMAYwBlAGUAZABlAGQAKQANAAoAewANAAoAIAAgACAAIAAjAHQAcgB5ACAAdABvACAAYwBvAG4AbgBlAGMAdAAgAGEAbgBkACAAcgBlAGEAZAAgAHYAZQByAHMAaQBvAG4AIABuAHUAbQBiAGUAcgAgAG8AZgAgAHMAdwBpAHQAYwBoAA0ACgAgACAAIAAgAHQAcgB5AHsADQAKACAAIAAgACAAIAAgACAAIAAkAHMAZQBzAHMAaQBvAG4AIAA9ACAATgBlAHcALQBTAFMASABTAGUAcwBzAGkAbwBuACAALQBDAG8AbQBwAHUAdABlAHIATgBhAG0AZQAgACQAaQBwAEEAZABkAHIAZQBzAHMAIAAtAEMAcgBlAGQAZQBuAHQAaQBhAGwAIAAkAGMAcgBlAGQAZQBuAHQAaQBhAGwAIAAtAEEAYwBjAGUAcAB0AEsAZQB5AA0ACgAgACAAIAAgACAAIAAgACAAaQBmACgAJABzAGUAcwBzAGkAbwBuACkAewANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIwBzAGUAcwBzAGkAbwBuACAAYwBvAG4AbgBlAGMAdABlAGQADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACQAcwB0AHIAZQBhAG0AIAA9ACAAJABzAGUAcwBzAGkAbwBuAC4AUwBlAHMAcwBpAG8AbgAuAEMAcgBlAGEAdABlAFMAaABlAGwAbABTAHQAcgBlAGEAbQAoACIAZAB1AG0AYgAiACwAIAAwACwAIAAwACwAIAAwACwAIAAwACwAIAAxADAAMAAwACkADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgAHMAdABhAHIAdAAtAHMAbABlAGUAcAAgAC0AcwBlAGMAbwBuAGQAcwAgADEADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACQAcwB0AHIAZQBhAG0ALgBXAHIAaQB0AGUAKAAiAGAAbgAiACkADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACQAZABhAHQAYQAgAD0AIAAkAHMAdAByAGUAYQBtAC4AUgBlAGEAZAAoACkADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgAFIAZQBtAG8AdgBlAC0AUwBTAEgAUwBlAHMAcwBpAG8AbgAgACQAcwBlAHMAcwBpAG8AbgANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAJABsAGkAbgBlAHMAIAA9ACAAJABkAGEAdABhACAALQBzAHAAbABpAHQAIAAiAGAAbgAiAA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIABmAG8AcgBlAGEAYwBoACgAJABsAGkAbgBlACAAaQBuACAAJABsAGkAbgBlAHMAKQB7AA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgAGkAZgAoACQAbABpAG4AZQAgAC0AbABpAGsAZQAgACIAKgBTAG8AZgB0AHcAYQByAGUAIABSAGUAdgBpAHMAaQBvAG4AKgAiACkAewANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACQAdgBlAHIAcwBpAG8AbgAgAD0AIAAkAGwAaQBuAGUAIAAtAHIAZQBwAGwAYQBjAGUAIAAiAFMAbwBmAHQAdwBhAHIAZQAgAHIAZQB2AGkAcwBpAG8AbgAgACIALAAgACIAIgANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgAHcAcgBpAHQAZQAtAGgAbwBzAHQAIAAkAHYAZQByAHMAaQBvAG4ADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAfQAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgAA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAB9AA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIABpAGYAKAAkAHYAZQByAHMAaQBvAG4AKQB7AA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACMAVgBlAHIAcwBpAG8AbgAgAGYAbwB1AG4AZAANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIABpAGYAKAAkAHYAZQByAHMAaQBvAG4ALgBTAHUAYgBzAHQAcgBpAG4AZwAoADAALAAyACkAIAAtAGUAcQAgACIAWQBBACIAKQANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAB7AA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAaQBmACgAJAB2AGUAcgBzAGkAbwBuACAALQBsAGkAawBlACAAIgAqACQAeQBhAEIAcgBhAG4AYwBoACoAIgApAHsADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgAFcAcgBpAHQAZQAtAEgAbwBzAHQAIAAiAFkAQQAgAEIAcgBhAG4AYwBoACAAVQBwAHQAbwBEAGEAdABlACIADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACQAVQBwAHQAbwBEAGEAdABlACAAPQAgADEADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAB9AA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAJABsAGEAdABlAHMAdAB2AGUAcgBzAGkAbwBuACAAPQAgACQAeQBhAEIAcgBhAG4AYwBoAA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgAH0AIAANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIABlAGwAcwBlAGkAZgAoACQAdgBlAHIAcwBpAG8AbgAuAFMAdQBiAHMAdAByAGkAbgBnACgAMAAsADIAKQAgAC0AZQBxACAAIgBZAEIAIgApAA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgAHsAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIABpAGYAKAAkAHYAZQByAHMAaQBvAG4AIAAtAGwAaQBrAGUAIAAiACoAJAB5AGIAQgByAGEAbgBjAGgAKgAiACkAewANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAVwByAGkAdABlAC0ASABvAHMAdAAgACIAWQBCACAAQgByAGEAbgBjAGgAIABVAHAAdABvAEQAYQB0AGUAIgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAJABVAHAAdABvAEQAYQB0AGUAIAA9ACAAMQANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgAH0ADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAkAGwAYQB0AGUAcwB0AHYAZQByAHMAaQBvAG4AIAA9ACAAJAB5AGIAQgByAGEAbgBjAGgADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAfQANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIABlAGwAcwBlAGkAZgAoACQAdgBlAHIAcwBpAG8AbgAuAFMAdQBiAHMAdAByAGkAbgBnACgAMAAsADIAKQAgAC0AZQBxACAAIgBZAEMAIgApAA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgAHsAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIABpAGYAKAAkAHYAZQByAHMAaQBvAG4AIAAtAGwAaQBrAGUAIAAiACoAJAB5AGMAQgByAGEAbgBjAGgAKgAiACkAewANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAVwByAGkAdABlAC0ASABvAHMAdAAgACIAWQBDACAAQgByAGEAbgBjAGgAIABVAHAAdABvAEQAYQB0AGUAIgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAJABVAHAAdABvAEQAYQB0AGUAIAA9ACAAMQANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgAH0ADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAkAGwAYQB0AGUAcwB0AHYAZQByAHMAaQBvAG4AIAA9ACAAJAB5AGMAQgByAGEAbgBjAGgADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAfQANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIABlAGwAcwBlAGkAZgAoACQAdgBlAHIAcwBpAG8AbgAuAFMAdQBiAHMAdAByAGkAbgBnACgAMAAsADIAKQAgAC0AZQBxACAAIgBSAEEAIgApAA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgAHsAIAAgACAAIAAgACAAIAAgAA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAaQBmACgAJAB2AGUAcgBzAGkAbwBuACAALQBsAGkAawBlACAAIgAqACQAcgBhAEIAcgBhAG4AYwBoACoAIgApAHsADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgAFcAcgBpAHQAZQAtAEgAbwBzAHQAIAAiAFIAQQAgAEIAcgBhAG4AYwBoACAAVQBwAHQAbwBEAGEAdABlACIAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACQAVQBwAHQAbwBEAGEAdABlACAAPQAgADEADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAB9AA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAJABsAGEAdABlAHMAdAB2AGUAcgBzAGkAbwBuACAAPQAgACQAcgBhAEIAcgBhAG4AYwBoAA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgAH0ADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAZQBsAHMAZQBpAGYAKAAkAHYAZQByAHMAaQBvAG4ALgBTAHUAYgBzAHQAcgBpAG4AZwAoADAALAAyACkAIAAtAGUAcQAgACIAVwBCACIAKQANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAB7ACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgAA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAaQBmACgAJAB2AGUAcgBzAGkAbwBuACAALQBsAGkAawBlACAAIgAqACQAdwBiAEIAcgBhAG4AYwBoACoAIgApAHsADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgAFcAcgBpAHQAZQAtAEgAbwBzAHQAIAAiAFcAQgAgAEIAcgBhAG4AYwBoACAAVQBwAHQAbwBEAGEAdABlACIADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACQAVQBwAHQAbwBEAGEAdABlACAAPQAgADEADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAB9AA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAJABsAGEAdABlAHMAdAB2AGUAcgBzAGkAbwBuACAAPQAgACQAdwBiAEIAcgBhAG4AYwBoAA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgAH0ADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAZQBsAHMAZQBpAGYAKAAkAHYAZQByAHMAaQBvAG4ALgBTAHUAYgBzAHQAcgBpAG4AZwAoADAALAAyACkAIAAtAGUAcQAgACIAVwBDACIAKQANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAB7ACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgAA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAaQBmACgAJAB2AGUAcgBzAGkAbwBuACAALQBsAGkAawBlACAAIgAqACQAdwBjAEIAcgBhAG4AYwBoACoAIgApAHsADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgAFcAcgBpAHQAZQAtAEgAbwBzAHQAIAAiAFcAQwAgAEIAcgBhAG4AYwBoACAAVQBwAHQAbwBEAGEAdABlACIAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACQAVQBwAHQAbwBEAGEAdABlACAAPQAgADEADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAB9AA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAJABsAGEAdABlAHMAdAB2AGUAcgBzAGkAbwBuACAAPQAgACQAdwBjAEIAcgBhAG4AYwBoAA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgAH0ADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAZQBsAHMAZQBpAGYAKAAkAHYAZQByAHMAaQBvAG4ALgBTAHUAYgBzAHQAcgBpAG4AZwAoADAALAAyACkAIAAtAGUAcQAgACIASwBBACIAKQANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAB7ACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgAA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAaQBmACgAJAB2AGUAcgBzAGkAbwBuACAALQBsAGkAawBlACAAIgAqACQAawBhAEIAcgBhAG4AYwBoACoAIgApAHsADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgAFcAcgBpAHQAZQAtAEgAbwBzAHQAIAAiAEsAQQAgAEIAcgBhAG4AYwBoACAAVQBwAHQAbwBEAGEAdABlACIAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACQAVQBwAHQAbwBEAGEAdABlACAAPQAgADEADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAB9AA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAJABsAGEAdABlAHMAdAB2AGUAcgBzAGkAbwBuACAAPQAgACQAawBhAEIAcgBhAG4AYwBoAA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgAH0ADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAZQBsAHMAZQBpAGYAKAAkAHYAZQByAHMAaQBvAG4ALgBTAHUAYgBzAHQAcgBpAG4AZwAoADAALAAyACkAIAAtAGUAcQAgACIASwBCACIAKQANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAB7ACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgAA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAaQBmACgAJAB2AGUAcgBzAGkAbwBuACAALQBsAGkAawBlACAAIgAqACQAawBiAEIAcgBhAG4AYwBoACoAIgApAHsADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgAFcAcgBpAHQAZQAtAEgAbwBzAHQAIAAiAEsAQgAgAEIAcgBhAG4AYwBoACAAVQBwAHQAbwBEAGEAdABlACIADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACQAbABhAHQAZQBzAHQAdgBlAHIAcwBpAG8AbgAgAD0AIAAkAGsAYgBCAHIAYQBuAGMAaAANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAJABVAHAAdABvAEQAYQB0AGUAIAA9ACAAMQANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgAH0ADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAfQANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIABlAGwAcwBlAHsADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIABXAHIAaQB0AGUALQBoAG8AcwB0ACAAIgBOAG8AIABtAGEAdABjAGgAaQBuAGcAIAB2AGUAcgBzAGkAbwBuACAAZgBvAHUAbgBkAC4AIABQAG8AcwBzAGkAYgBsAGUAIABuAG8AdAAgAHUAcAAtAHQAbwAtAGQAYQB0AGUALgAiAA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgAH0ADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgAH0AZQBsAHMAZQB7AA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACMATgBvACAAdgBlAHIAcwBpAG8AbgAgAGYAbwB1AG4AZAANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIABXAHIAaQB0AGUALQBIAG8AcwB0ACAAIgBOAG8AIAB2AGUAcgBzAGkAbwBuACAAZgBvAHUAbgBkACIADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAJABlAHIAcgBvAHIARgBvAHUAbgBkACAAPQAgACIATgBvACAAdgBlAHIAcwBpAG8AbgAgAGYAbwB1AG4AZAAiAA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAB9AA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAkAFMAdwBpAHQAYwBoAEkAbgBmAG8AIAA9ACAAJABsAGkAbgBlAHMAWwAwAF0ADQAKAA0ACgAgACAAIAAgACAAIAAgACAAfQBlAGwAcwBlAHsADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACMAcwBlAHMAcwBpAG8AbgAgAG4AbwB0ACAAYwBvAG4AbgBlAGMAdABlAGQADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgAFcAcgBpAHQAZQAtAEgAbwBzAHQAIAAiAE4AbwAgAFMAUwBIACAAcwBlAHMAcwBpAG8AbgAgAHAAbwBzAHMAaQBiAGwAZQAuACAAUABvAHMAcwBpAGIAbABlACAAdQBzAGUAcgBuAGEAbQBlAC8AcABhAHMAcwB3AG8AcgBkACAAaQBuAGMAbwByAHIAZQBjAHQALgAiAA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAkAGUAcgByAG8AcgBGAG8AdQBuAGQAIAA9ACAAIgBOAG8AIABTAFMASAAgAHMAZQBzAHMAaQBvAG4AIABwAG8AcwBzAGkAYgBsAGUALgAgAFAAbwBzAHMAaQBiAGwAZQAgAHUAcwBlAHIAbgBhAG0AZQAvAHAAYQBzAHMAdwBvAHIAZAAgAGkAbgBjAG8AcgByAGUAYwB0AC4AIgANAAoAIAAgACAAIAAgACAAIAAgAH0ADQAKACAAIAAgACAAIAAgACAAIAANAAoAIAAgACAAIAB9AA0ACgAgACAAIAAgAGMAYQB0AGMAaAB7AA0ACgAgACAAIAAgACAAIAAgACAAIwBlAHIAcgBvAHIAIAB0AGgAcgBvAHcAbgANAAoAIAAgACAAIAAgACAAIAAgAFcAcgBpAHQAZQAtAEgAbwBzAHQAIAAiAEEAbgAgAGUAcgByAG8AcgAgAG8AYwBjAHUAcgByAGUAZAA6ACAAJABfACIADQAKACAAIAAgACAAIAAgACAAIAAkAGUAcgByAG8AcgBGAG8AdQBuAGQAIAA9ACAAIgBBAG4AIABlAHIAcgBvAHIAIABvAGMAYwB1AHIAcgBlAGQAOgAgACQAXwAiAA0ACgAgACAAIAAgAH0AIAANAAoAfQBlAGwAcwBlAHsADQAKACAAIAAgACAAIwBIAG8AcwB0ACAAbgBvAHQAIAByAGUAYQBjAGgAYQBiAGwAZQANAAoAIAAgACAAIABXAHIAaQB0AGUALQBIAG8AcwB0ACAAIgBIAG8AcwB0ACAAbgBvAHQAIAByAGUAYQBjAGgAYQBiAGwAZQAgAGIAeQAgAFMAUwBIAC4AIABDAGgAZQBjAGsAIABpAGYAIABoAG8AcwB0ACAAaQBzACAAbwBuAGwAaQBuAGUAIABvAHIAIAB0AGgAZQAgAGYAaQByAGUAdwBhAGwAbAAgAHMAZQB0AHQAaQBuAGcAcwAuACIADQAKACAAIAAgACAAJABlAHIAcgBvAHIARgBvAHUAbgBkACAAPQAgACIASABvAHMAdAAgAG4AbwB0ACAAcgBlAGEAYwBoAGEAYgBsAGUAIABiAHkAIABTAFMASAAuACAAQwBoAGUAYwBrACAAaQBmACAAaABvAHMAdAAgAGkAcwAgAG8AbgBsAGkAbgBlACAAbwByACAAdABoAGUAIABmAGkAcgBlAHcAYQBsAGwAIABzAGUAdAB0AGkAbgBnAHMALgAiAA0ACgB9AA0ACgAgAA0ACgA=">
+          <p:RunPowerShellScript.InArgs>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="switchip" ArgType="string" DisplayArg="Input Parameters.Switch IP" DisplayName="switchip" Name="switchip" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[SwitchIP]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="switchusername" ArgType="string" DisplayArg="Input Parameters.SwitchUsername" DisplayName="switchusername" Name="switchusername" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[SwitchUsername]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="switchpassword" ArgType="password" DisplayArg="Input Parameters.Switch Password" DisplayName="switchpassword" Name="switchpassword" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[SwitchPassword]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="yaBranch" ArgType="string" DisplayArg="Input Parameters.YA Branch latest Version" DisplayName="yaBranch" Name="yaBranch" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[yaBranch]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="ybBranch" ArgType="string" DisplayArg="Input Parameters.YB Branch latest version" DisplayName="ybBranch" Name="ybBranch" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[ybBranch]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="ycBranch" ArgType="string" DisplayArg="Input Parameters.YC Branch latest version" DisplayName="ycBranch" Name="ycBranch" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[ycBranch]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="raBranch" ArgType="string" DisplayArg="Input Parameters.RA Branch latest version" DisplayName="raBranch" Name="raBranch" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[raBranch]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="kbBranch" ArgType="string" DisplayArg="Input Parameters.KB Branch latest Version" DisplayName="kbBranch" Name="kbBranch" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[kbBranch]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="kaBranch" ArgType="string" DisplayArg="Input Parameters.KA Branch latest Version" DisplayName="kaBranch" Name="kaBranch" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[kaBranch]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="wbBranch" ArgType="string" DisplayArg="Input Parameters.WB branch latest version" DisplayName="wbBranch" Name="wbBranch" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[wbBranch]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="wcBranch" ArgType="string" DisplayArg="Input Parameters.WC Branch latest version" DisplayName="wcBranch" Name="wcBranch" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[wcBranch]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+          </p:RunPowerShellScript.InArgs>
+          <p:RunPowerShellScript.OutArgs>
+            <p:OutArg x:Key="errorFound" ArgType="string" DisplayName="errorFound" Name="errorFound">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_errorFound]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="Uptodate" ArgType="number" DisplayName="Uptodate" Name="Uptodate">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:Double">[RunPowerShellScript_Uptodate]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="version" ArgType="string" DisplayName="version" Name="version">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_version]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="SwitchInfo" ArgType="string" DisplayName="SwitchInfo" Name="SwitchInfo">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_SwitchInfo]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="latestversion" ArgType="string" DisplayName="latestversion" Name="latestversion">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_latestversion]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+          </p:RunPowerShellScript.OutArgs>
+        </p:RunPowerShellScript>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="SwitchIP" />
+        <Variable x:TypeArguments="x:String" Name="SwitchUsername" />
+        <Variable x:TypeArguments="p:Password" Name="SwitchPassword" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_OutPut_64" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_ResultString" />
+        <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="RunPowerShellScript_Results_x64" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_Result" />
+        <Variable x:TypeArguments="x:String" Name="yaBranch" />
+        <Variable x:TypeArguments="x:String" Name="ybBranch" />
+        <Variable x:TypeArguments="x:String" Name="ycBranch" />
+        <Variable x:TypeArguments="x:String" Name="raBranch" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_errorFound" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_version" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_Uptodate" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_SwitchInfo" />
+        <Variable x:TypeArguments="x:String" Name="wbBranch" />
+        <Variable x:TypeArguments="x:String" Name="wcBranch" />
+        <Variable x:TypeArguments="x:String" Name="kaBranch" />
+        <Variable x:TypeArguments="x:String" Name="kbBranch" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_latestversion" />
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>

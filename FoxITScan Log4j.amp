@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="14e3bc47-c79c-49d2-a375-96129319cd01" Name="FoxITScan Log4j" Description="Rm94SVRTY2FuIExvZzRq" Version="2.18.0.1" MinRequiredVersion="2.18.0.1" RemoteCategory="0" ExecutionType="Local" MinimumPSVersionRequired="3.0">
+  <Object ID="{00ee7101-b522-470b-b312-e90267cef850}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml&gt;&lt;OutputParameters&gt;&lt;Parameter ParameterName=&quot;ScanResult&quot; Label=&quot;Scan has run&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.scanResult&quot; /&gt;&lt;Parameter ParameterName=&quot;ScanResultInfectionDetection&quot; Label=&quot;Potential Vulnerable Files Found&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.scanResult&quot; /&gt;&lt;/OutputParameters&gt;&lt;/xml&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>e6c8495d-bdf2-4b5c-8cf5-1c8b66bd4fa9.scan</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>ScanResult</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>e6c8495d-bdf2-4b5c-8cf5-1c8b66bd4fa9.scan</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>ScanResultInfectionDetection</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+    </hashset>
+  </LinkManager>
+  <Diagnostics OriginalVersion="2.18.3.1" />
+  <Activity mc:Ignorable="sads sap" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>661,1237</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="661,1237" MinRequiredVersion="2.18.0.1" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:CreateFolder Folder_Item="{x:Null}" Folder_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.3.1, Culture=neutral, PublicKeyToken=null" DisplayName="Create Folder" Folder="C:\aenc\scanlog4j\" FolderInfo="[CreateFolder_FolderInfo]" Folder_DisplayArg="C:\aenc\scanlog4j\" sap:VirtualizedContainerService.HintSize="625,88" MinRequiredVersion="2.10.0.19" Moniker="819ed805-2fee-45ac-b8a3-b85d03b4f637" Result="[CreateFolder_Result]" ResultString="[CreateFolder_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="CreateFolder" m_bTextLinkChange="False" />
+        <p:DownloadFileFromURL OverwriteExistingFile_Item="{x:Null}" OverwriteExistingFile_ItemProp="{x:Null}" RemoteFileURL_Item="{x:Null}" RemoteFileURL_ItemProp="{x:Null}" SaveAsFileName_Item="{x:Null}" SaveAsFileName_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.3.1, Culture=neutral, PublicKeyToken=null" DisplayName="Download File From URL" sap:VirtualizedContainerService.HintSize="625,160" MinRequiredVersion="2.18.0.1" Moniker="531faddd-2a9b-41c2-a748-2e1115ffb750" OverwriteExistingFile="True" OverwriteExistingFile_DisplayArg="true" RemoteFileURL="https://github.com/fox-it/log4j-finder/releases/latest/download/log4j-finder.exe" RemoteFileURL_DisplayArg="https://github.com/fox-it/log4j-finder/releases/latest/download/log4j-finder.exe" Result="[DownloadFileFromURL_Result]" ResultString="[DownloadFileFromURL_ResultString]" RunAsCurrentLoggedOnUser="False" SaveAsFileName="C:\aenc\scanlog4j\log4j-finder.exe" SaveAsFileName_DisplayArg="C:\aenc\scanlog4j\log4j-finder.exe" ScriptExecutionMethod="None" TypeName="DownloadFileFromURL" m_bTextLinkChange="False" />
+        <p:SetPowerShellExecutionPolicy ExecutionPolicyScope_Item="{x:Null}" ExecutionPolicyScope_ItemProp="{x:Null}" ExecutionPolicy_Item="{x:Null}" ExecutionPolicy_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.18.3.1, Culture=neutral, PublicKeyToken=null" DisplayName="Set PowerShell Execution Policy" ExecutionPolicy="Unrestricted" ExecutionPolicyScope="LocalMachine" ExecutionPolicyScope_DisplayArg="Local Machine" ExecutionPolicy_DisplayArg="Unrestricted" sap:VirtualizedContainerService.HintSize="625,124" MinRequiredVersion="2.16.0.1" Moniker="bc50aba9-3bc2-4c7b-9e29-63e6a19b88fc" OutPut_64="[SetPowerShellExecutionPolicy_OutPut_64]" Result="[SetPowerShellExecutionPolicy_Result]" ResultString="[SetPowerShellExecutionPolicy_ResultString]" Results_x64="[SetPowerShellExecutionPolicy_Results_x64]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="Execute64bit" TypeName="SetPowerShellExecutionPolicy" m_bTextLinkChange="False" />
+        <p:RunPowerShellScript AssemblyName="PolicyExecutionEngine, Version=2.18.3.1, Culture=neutral, PublicKeyToken=null" DisplayName="Run PowerShell Script" sap:VirtualizedContainerService.HintSize="625,522" MinRequiredVersion="2.10.0.19" Moniker="e6c8495d-bdf2-4b5c-8cf5-1c8b66bd4fa9" OutPut_64="[RunPowerShellScript_OutPut_64]" Result="[RunPowerShellScript_Result]" ResultString="[RunPowerShellScript_ResultString]" Results_x64="[RunPowerShellScript_Results_x64]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RunPowerShellScript" genArgEvent="8fbcba4c-5e81-4ceb-a318-fe3f5342ac46" m_bTextLinkChange="False" script="JABzAGMAYQBuAG4AZQByACAAPQAgACYAIAAnAEMAOgBcAGEAZQBuAGMAXABzAGMAYQBuAGwAbwBnADQAagBcAGwAbwBnADQAagAtAGYAaQBuAGQAZQByAC4AZQB4AGUAJwANAAoAWwBzAHQAcgBpAG4AZwBdACQAcwBjAGEAbgAgAD0AIAAkAHMAYwBhAG4AbgBlAHIA">
+          <p:RunPowerShellScript.InArgs>
+            <scg:Dictionary x:TypeArguments="x:String, p:InArg" />
+          </p:RunPowerShellScript.InArgs>
+          <p:RunPowerShellScript.OutArgs>
+            <p:OutArg x:Key="scan" ArgType="string" DisplayName="scanResult" Name="scan">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_scan]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+          </p:RunPowerShellScript.OutArgs>
+        </p:RunPowerShellScript>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="x:Double" Name="DownloadFileFromURL_Result" />
+        <Variable x:TypeArguments="x:String" Name="DownloadFileFromURL_ResultString" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_OutPut_64" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_Result" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_ResultString" />
+        <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="RunPowerShellScript_Results_x64" />
+        <Variable x:TypeArguments="x:String" Name="CreateFolder_FolderInfo" />
+        <Variable x:TypeArguments="x:Double" Name="CreateFolder_Result" />
+        <Variable x:TypeArguments="x:String" Name="CreateFolder_ResultString" />
+        <Variable x:TypeArguments="x:String" Name="SetPowerShellExecutionPolicy_OutPut_64" />
+        <Variable x:TypeArguments="x:Double" Name="SetPowerShellExecutionPolicy_Result" />
+        <Variable x:TypeArguments="x:String" Name="SetPowerShellExecutionPolicy_ResultString" />
+        <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="SetPowerShellExecutionPolicy_Results_x64" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_scan" />
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>

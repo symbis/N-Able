@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="c18b9a69-28a1-4cf7-b0ba-32d651f74719" Name="CheckGPOChangeDate" Description="Q2hlY2tHUE9DaGFuZ2VEYXRl" Version="2.10.0.19" RemoteCategory="0" ExecutionType="Local" MinimumPSVersionRequired="0.0.0">
+  <Object ID="{009c23f7-ca58-4461-9507-abbec88a1fd8}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml&gt;&lt;Parameters&gt;&lt;Parameter ParameterName=&quot;GPOName&quot; Label=&quot;gponame&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;gpoLastAllowedChangeDate&quot; Label=&quot;Last allowed change date &quot; ParameterType=&quot;date&quot; Value=&quot;&quot; /&gt;&lt;/Parameters&gt;&lt;OutputParameters&gt;&lt;Parameter ParameterName=&quot;lastChangeDate&quot; Label=&quot;Last changedate of GPO&quot; ParameterType=&quot;date&quot; Value=&quot;Run PowerShell Script.lastChangeDate&quot; /&gt;&lt;Parameter ParameterName=&quot;gponame&quot; Label=&quot;Name of the GPO&quot; ParameterType=&quot;string&quot; Value=&quot;Input Parameters.gponame&quot; /&gt;&lt;Parameter ParameterName=&quot;gpoChanged&quot; Label=&quot;GPO has changed after the allowed date&quot; ParameterType=&quot;number&quot; Value=&quot;Run PowerShell Script.gpoChanged&quot; /&gt;&lt;/OutputParameters&gt;&lt;/xml&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>179bf90a-712d-4dc0-ba07-35b233ec1909.lastChangeDate</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>lastChangeDate</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>InputParameter.GPOName</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>gponame</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>179bf90a-712d-4dc0-ba07-35b233ec1909.gpoChanged</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>gpoChanged</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+    </hashset>
+  </LinkManager>
+  <Diagnostics OriginalVersion="2.91.0.8" />
+  <Activity mc:Ignorable="sap sads" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>504,745</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="504,745" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:RunPowerShellScript AssemblyName="PolicyExecutionEngine, Version=2.91.0.8, Culture=neutral, PublicKeyToken=null" DisplayName="Run PowerShell Script" sap:VirtualizedContainerService.HintSize="468,522" Moniker="179bf90a-712d-4dc0-ba07-35b233ec1909" OutPut_64="[RunPowerShellScript_OutPut_64]" Result="[RunPowerShellScript_Result]" ResultString="[RunPowerShellScript_ResultString]" Results_x64="[RunPowerShellScript_Results_x64]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RunPowerShellScript" genArgEvent="01b5ab43-1fdd-4d7f-804c-e036611e51c9" m_bTextLinkChange="False" script="PAAjAA0ACgAuAFMAWQBOAE8AUABTAEkAUwAgAA0ACgBDAGgAZQBjAGsAIABjAGgAYQBuAGcAZQAgAGQAYQB0AGUAIABvAGYAIABHAFAATwANAAoALgBEAEUAUwBDAFIASQBQAFQASQBPAE4ADQAKAEMAaABlAGMAawAgAGMAaABhAG4AZwBlACAAZABhAHQAZQAgAG8AZgAgAEcAUABPAA0ACgAuAE4ATwBUAEUAUwANAAoAQwByAGUAYQB0AGUAZAAgAGIAeQAgAEIAYQByAGUAbgBkACAAdgBkACAARAB1AHMAcwBlAG4ADQAKAEQAYQB0AGUAOgAgADEAOQAtADEAMAAtADIAMAAyADMADQAKAEkAbgBwAHUAdABzADoAIAAkAGcAcABvAG4AYQBtAGUALAAgACQAZwBwAG8ATABhAHMAdABBAGwAbABvAHcAZQBkAEMAaABhAG4AZwBlAEQAYQB0AGUADQAKAE8AdQB0AHAAdQB0AHMAOgAgACQAbABhAHMAdABDAGgAYQBuAGcAZQBEAGEAdABlACwAIAAkAGcAcABvAG4AYQBtAGUALAAgACQAZwBwAG8AQwBoAGEAbgBnAGUAZAANAAoAVgBlAHIAcwBpAG8AbgA6ACAAMQAuADAADQAKAFIAZQBsAGUAYQBzAGUAIABOAG8AdABlAHMADQAKAFYAMQAuADAAOgAgAEkAbgBpAHQAaQBhAGwAIABTAGUAdAB1AHAADQAKACMAPgANAAoADQAKAGkAZgAoACQAZwBwAG8AbgBhAG0AZQApAHsADQAKACAAIAAgACAAdAByAHkAewANAAoAIAAgACAAIAAgACAAIAAgACQARwBQAE8AIAA9ACAAZwBlAHQALQBHAFAATwAgAC0AbgBhAG0AZQAgACQAZwBwAG8AbgBhAG0AZQANAAoAIAAgACAAIAAgACAAIAAgACQAbABhAHMAdABDAGgAYQBuAGcAZQBEAGEAdABlACAAPQAgACgAJABnAHAAbwAuAE0AbwBkAGkAZgBpAGMAYQB0AGkAbwBuAFQAaQBtAGUAKQAuAFQAbwBTAHQAcgBpAG4AZwAoACIAZABkAC8ATQBNAC8AeQB5AHkAeQAiACkADQAKACAAIAAgACAAIAAgACAAIABpAGYAKAAoAGcAZQB0AC0AZABhAHQAZQAgACQAbABhAHMAdABDAGgAYQBuAGcAZQBEAGEAdABlACkAIAAtAGcAdAAgACgAZwBlAHQALQBkAGEAdABlACAAJABnAHAAbwBMAGEAcwB0AEEAbABsAG8AdwBlAGQAQwBoAGEAbgBnAGUARABhAHQAZQApACkAewANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIwBHAFAATwAgAGgAYQBzACAAYwBoAGEAbgBnAGUAZAAgAGEAZgB0AGUAcgAgAHQAaABlACAAbABhAHMAdAAgAGEAbABsAG8AdwBlAGQAIABkAGEAdABlAC4ADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACQAZwBwAG8AQwBoAGEAbgBnAGUAZAAgAD0AIAAxAA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIABXAHIAaQB0AGUALQBIAG8AcwB0ACAAIgBHAFAATwAgAGgAYQBzACAAYwBoAGEAbgBnAGUAZAAhACIADQAKACAAIAAgACAAIAAgACAAIAB9AA0ACgAgACAAIAAgACAAIAAgACAAZQBsAHMAZQB7AA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAjAEcAUABPACAAaABhAHMAbgAnAHQAIABjAGgAYQBuAGcAZQBkAA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAkAGcAcABvAEMAaABhAG4AZwBlAGQAIAA9ADAADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgAFcAcgBpAHQAZQAtAEgAbwBzAHQAIAAiAEcAUABPACAAaABhAHMAbgAnAHQAIABjAGgAYQBuAGcAZQBkACEAIgANAAoAIAAgACAAIAAgACAAIAAgAH0ADQAKACAAIAAgACAAfQANAAoAIAAgACAAIABjAGEAdABjAGgAewANAAoAIAAgACAAIAAgACAAIAAgACMAZQByAHIAbwByACAAbwBjAGMAdQByAGUAZAANAAoAIAAgACAAIAAgACAAIAAgAFcAcgBpAHQAZQAtAEgAbwBzAHQAIAAkAGUAcgByAG8AcgBbADAAXQANAAoAIAAgACAAIAB9ACAAIAAgACAAIAAgACAAIAANAAoAfQANAAoAZQBsAHMAZQB7AA0ACgAgACAAIAAgAFcAcgBpAHQAZQAtAEgAbwBzAHQAIAAiAE4AbwAgAEcAUABPACAAbgBhAG0AZQAgAHAAcgBvAHYAaQBkAGUAZAAiAA0ACgB9AA==">
+          <p:RunPowerShellScript.InArgs>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="gponame" ArgType="string" DisplayArg="Input Parameters.gponame" DisplayName="gponame" Name="gponame" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[GPOName]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="gpoLastAllowedChangeDate" ArgType="date" DisplayArg="Input Parameters.Last allowed change date " DisplayName="gpoLastAllowedChangeDate" Name="gpoLastAllowedChangeDate" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[gpoLastAllowedChangeDate]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+          </p:RunPowerShellScript.InArgs>
+          <p:RunPowerShellScript.OutArgs>
+            <p:OutArg x:Key="lastChangeDate" ArgType="date" DisplayName="lastChangeDate" Name="lastChangeDate">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="s:DateTime">[RunPowerShellScript_lastChangeDate]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="gpoChanged" ArgType="number" DisplayName="gpoChanged" Name="gpoChanged">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:Double">[RunPowerShellScript_gpoChanged]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+          </p:RunPowerShellScript.OutArgs>
+        </p:RunPowerShellScript>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_OutPut_64" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_ResultString" />
+        <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="RunPowerShellScript_Results_x64" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_Result" />
+        <Variable x:TypeArguments="x:String" Name="GPOName" />
+        <Variable x:TypeArguments="s:DateTime" Name="gpoLastAllowedChangeDate" />
+        <Variable x:TypeArguments="s:DateTime" Name="RunPowerShellScript_lastChangeDate" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_gpoChanged" />
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>

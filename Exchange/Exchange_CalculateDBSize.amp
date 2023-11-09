@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="4c9caefc-a638-46a8-a9df-aa2841c74b82" Name="Exchange_CalculateDBSize" Description="RXhjaGFuZ2VfQ2FsY3VsYXRlREJTaXpl" Version="2.10.0.19" RemoteCategory="0" ExecutionType="Local" MinimumPSVersionRequired="0.0.0">
+  <Object ID="{3645eccc-cf64-444d-bee1-edaf08c19054}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml&gt;&lt;Parameters&gt;&lt;Parameter ParameterName=&quot;ThresholdsDatabase&quot; Label=&quot;ThresholdsDatabase&quot; ParameterType=&quot;number&quot; Value=&quot;400&quot; /&gt;&lt;/Parameters&gt;&lt;OutputParameters&gt;&lt;Parameter ParameterName=&quot;psAantalDatabases&quot; Label=&quot;Count Databases&quot; ParameterType=&quot;number&quot; Value=&quot;Run PowerShell Script.psAantalDatabases&quot; /&gt;&lt;Parameter ParameterName=&quot;psDatabaseMountStatus&quot; Label=&quot;Database mount status&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.psDatabaseMountStatus&quot; /&gt;&lt;Parameter ParameterName=&quot;psReasonFailed&quot; Label=&quot;Database Reason Failed&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.psReasonFailed&quot; /&gt;&lt;Parameter ParameterName=&quot;psAantalDatabasesFailed&quot; Label=&quot;Count Databases Failed&quot; ParameterType=&quot;number&quot; Value=&quot;Run PowerShell Script.psAantalDatabasesFailed&quot; /&gt;&lt;Parameter ParameterName=&quot;psDatabaseNameFailed&quot; Label=&quot;Failed Databasename &quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.psDatabaseNameFailed&quot; /&gt;&lt;Parameter ParameterName=&quot;psDatabaseSize&quot; Label=&quot;Database Size&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.psDatabaseSize&quot; /&gt;&lt;/OutputParameters&gt;&lt;/xml&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>d5093761-7441-4a04-af3e-06c31c4302b1.psAantalDatabases</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>psAantalDatabases</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>d5093761-7441-4a04-af3e-06c31c4302b1.psDatabaseMountStatus</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>psDatabaseMountStatus</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>d5093761-7441-4a04-af3e-06c31c4302b1.psReasonFailed</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>psReasonFailed</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>d5093761-7441-4a04-af3e-06c31c4302b1.psAantalDatabasesFailed</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>psAantalDatabasesFailed</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>d5093761-7441-4a04-af3e-06c31c4302b1.psDatabaseNameFailed</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>psDatabaseNameFailed</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>d5093761-7441-4a04-af3e-06c31c4302b1.psDatabaseSize</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>psDatabaseSize</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+    </hashset>
+  </LinkManager>
+  <Diagnostics OriginalVersion="2.16.1.15" />
+  <Activity mc:Ignorable="sads sap" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>504,745</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="504,745" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:RunPowerShellScript AssemblyName="PolicyExecutionEngine, Version=2.16.1.15, Culture=neutral, PublicKeyToken=null" DisplayName="Run PowerShell Script" sap:VirtualizedContainerService.HintSize="468,522" Moniker="d5093761-7441-4a04-af3e-06c31c4302b1" OutPut_64="[RunPowerShellScript_OutPut_64]" Result="[RunPowerShellScript_Result]" ResultString="[RunPowerShellScript_ResultString]" Results_x64="[RunPowerShellScript_Results_x64]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RunPowerShellScript" genArgEvent="f7028809-3bcb-4e74-a893-cd18d6ac3859" m_bTextLinkChange="False" script="QQBkAGQALQBQAFMAUwBuAGEAcABpAG4AIABNAGkAYwByAG8AcwBvAGYAdAAuAEUAeABjAGgAYQBuAGcAZQAuAE0AYQBuAGEAZwBlAG0AZQBuAHQALgBQAG8AdwBlAHIAUwBoAGUAbABsAC4AUwBuAGEAcABJAG4ADQAKACQAcABzAFQAaAByAGUAcwBoAG8AbABkACAAPQAgACQAcABzAFQAaAByAGUAcwBoAG8AbABkAHMARABhAHQAYQBiAGEAcwBlAA0ACgAkAEQAQgBzACAAPQAgAEcAZQB0AC0ATQBhAGkAbABiAG8AeABEAGEAdABhAGIAYQBzAGUAIAAtAHMAdABhAHQAdQBzACAADQAKAA0ACgAkAHAAcwBBAGEAbgB0AGEAbABEAGEAdABhAGIAYQBzAGUAcwAgAD0AIAAkAEQAQgBzAC4AQwBvAHUAbgB0AA0ACgAkAHAAcwBBAGEAbgB0AGEAbABEAGEAdABhAGIAYQBzAGUAcwBGAGEAaQBsAGUAZAAgAD0AIAAwAA0ACgAkAHAAcwBEAGEAdABhAGIAYQBzAGUATgBhAG0AZQBGAGEAaQBsAGUAZAAgAD0AIAAiACIADQAKACQAcABzAFIAZQBhAHMAbwBuAEYAYQBpAGwAZQBkACAAPQAgACIAIgANAAoAJABwAHMARABhAHQAYQBiAGEAcwBlAFMAaQB6AGUAIAA9ACAAIgAiAA0ACgAkAHAAcwBEAGEAdABhAGIAYQBzAGUATQBvAHUAbgB0AFMAdABhAHQAdQBzACAAPQAgACIAIgANAAoADQAKAGYAbwByAGUAYQBjAGgAKAAkAEQAQgAgAGkAbgAgACQARABCAHMAKQANAAoAewANAAoADQAKACAAIAAgACAAJABwAHMARABhAHQAYQBiAGEAcwBlAE0AbwB1AG4AdABTAHQAYQB0AHUAcwAgACsAPQAgACQARABCAC4ATQBvAHUAbgB0AGUAZAAuAFQAbwBTAHQAcgBpAG4AZwAoACkAIAArACAAIgAgACIADQAKACAAIAAgACAAJABwAHMARABhAHQAYQBiAGEAcwBlAFMAaQB6AGUAIAArAD0AIABbAHMAdAByAGkAbgBnAF0AJABEAEIALgBEAGEAdABhAGIAYQBzAGUAUwBpAHoAZQAuAFQAbwBHAEIAKAApACAAKwAgACIARwBCACAAIAAiAA0ACgAgACAAIAAgAGkAZgAoACQARABCAC4ATQBvAHUAbgB0AGUAZAAuAFQAbwBTAHQAcgBpAG4AZwAoACkAIAAtAG4AZQAgACIAVAByAHUAZQAiACkADQAKACAAIAAgACAAewANAAoAIAAgACAAIAAgACAAIAAgACMARQByACAAaQBzACAAZQBlAG4AIABkAGEAdABhAGIAYQBzAGUAIABnAGUAdgBvAG4AZABlAG4AIAB3AGUAbABrAGUAIABuAGkAZQB0ACAAZwBlAG0AbwB1AG4AdABlAGQAIABpAHMALgANAAoAIAAgACAAIAAgACAAIAAgAGkAZgAoACQAcABzAEEAYQBuAHQAYQBsAEQAYQB0AGEAYgBhAHMAZQBzAEYAYQBpAGwAZQBkACAALQBlAHEAIAAwACkADQAKACAAIAAgACAAIAAgACAAIAB7AA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAkAHAAcwBSAGUAYQBzAG8AbgBGAGEAaQBsAGUAZAAgAD0AIABbAHMAdAByAGkAbgBnAF0AJABEAEIALgBOAGEAbQBlACAAKwAgACIAIABuAG8AdAAgAG0AbwB1AG4AdABlAGQAIgANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAJABwAHMARABhAHQAYQBiAGEAcwBlAE4AYQBtAGUARgBhAGkAbABlAGQAIAA9ACAAWwBzAHQAcgBpAG4AZwBdACQARABCAC4ATgBhAG0AZQANAAoAIAAgACAAIAAgACAAIAAgAH0ADQAKACAAIAAgACAAIAAgACAAIABlAGwAcwBlAA0ACgAgACAAIAAgACAAIAAgACAAewANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAJABwAHMAUgBlAGEAcwBvAG4ARgBhAGkAbABlAGQAIAA9ACAAJABwAHMAUgBlAGEAcwBvAG4ARgBhAGkAbABlAGQAIAArACAAIgAgACwAIAAiACAAKwBbAHMAdAByAGkAbgBnAF0AJABEAEIALgBOAGEAbQBlACAAKwAgACIAIABuAG8AdAAgAG0AbwB1AG4AdABlAGQAIgANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAJABwAHMARABhAHQAYQBiAGEAcwBlAE4AYQBtAGUARgBhAGkAbABlAGQAIAA9ACAAJABwAHMARABhAHQAYQBiAGEAcwBlAE4AYQBtAGUARgBhAGkAbABlAGQAIAArACAAIgAgACwAIAAiACAAKwAgAFsAcwB0AHIAaQBuAGcAXQAkAEQAQgAuAE4AYQBtAGUADQAKACAAIAAgACAAIAAgACAAIAB9ACAAIAAgACAAIAAgACAAIAANAAoAIAAgACAAIAAgACAAIAAgACQAcABzAEEAYQBuAHQAYQBsAEQAYQB0AGEAYgBhAHMAZQBzAEYAYQBpAGwAZQBkACAAPQAgACQAcABzAEEAYQBuAHQAYQBsAEQAYQB0AGEAYgBhAHMAZQBzAEYAYQBpAGwAZQBkACAAKwAgADEADQAKACAAIAAgACAAfQANAAoADQAKACAAIAAgACAAaQBmACgAJABEAEIALgBEAGEAdABhAGIAYQBzAGUAUwBpAHoAZQAuAFQAbwBHAEIAKAApACAALQBnAGUAIAAkAHAAcwBUAGgAcgBlAHMAaABvAGwAZAApAA0ACgAgACAAIAAgAHsADQAKACAAIAAgACAAIAAgACAAIAAjAGUAcgAgAGkAcwAgAGUAZQBuACAAZABhAHQAYQBiAGEAcwBlACAAZwBlAHYAbwBuAGQAZQBuACAAdwBlAGwAawBlACAAZABlACAAdABoAHIAZQBzAGgAbwBsAGQAcwAgAHcAYQBhAHIAZABlACAAaABlAGUAZgB0ACAAbwB2AGUAcgBzAGMAaAByAGUAZABlAG4ADQAKACAAIAAgACAAIAAgACAAIABpAGYAKAAkAHAAcwBBAGEAbgB0AGEAbABEAGEAdABhAGIAYQBzAGUAcwBGAGEAaQBsAGUAZAAgAC0AZQBxACAAMAApAA0ACgAgACAAIAAgACAAIAAgACAAewANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAJABwAHMAUgBlAGEAcwBvAG4ARgBhAGkAbABlAGQAIAA9ACAAWwBzAHQAcgBpAG4AZwBdACQARABCAC4ATgBhAG0AZQAgACsAIAAiACAAaQBzACAAZwByAGUAYQB0AGUAcgAgAHQAaABhAG4AIAAiACAAKwAgACQAcABzAFQAaAByAGUAcwBoAG8AbABkACAAKwAgACIAIABHAEIAIgANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAJABwAHMARABhAHQAYQBiAGEAcwBlAE4AYQBtAGUARgBhAGkAbABlAGQAIAA9ACAAWwBzAHQAcgBpAG4AZwBdACQARABCAC4ATgBhAG0AZQANAAoAIAAgACAAIAAgACAAIAAgAH0ADQAKACAAIAAgACAAIAAgACAAIABlAGwAcwBlAA0ACgAgACAAIAAgACAAIAAgACAAewANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAJABwAHMAUgBlAGEAcwBvAG4ARgBhAGkAbABlAGQAIAA9ACAAJABwAHMAUgBlAGEAcwBvAG4ARgBhAGkAbABlAGQAIAArACAAIgAgACwAIAAiACAAKwAgAFsAcwB0AHIAaQBuAGcAXQAkAEQAQgAuAE4AYQBtAGUAIAArACAAIgAgAGkAcwAgAGcAcgBlAGEAdABlAHIAIAB0AGgAYQBuACAAIgAgACsAIAAkAHAAcwBUAGgAcgBlAHMAaABvAGwAZAAgACsAIAAiACAARwBCACIADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACQAcABzAEQAYQB0AGEAYgBhAHMAZQBOAGEAbQBlAEYAYQBpAGwAZQBkACAAPQAgACQAcABzAEQAYQB0AGEAYgBhAHMAZQBOAGEAbQBlAEYAYQBpAGwAZQBkACAAKwAgACIAIAAsACAAIgAgACsAIABbAHMAdAByAGkAbgBnAF0AJABEAEIALgBOAGEAbQBlAA0ACgAgACAAIAAgACAAIAAgACAAfQANAAoAIAAgACAAIAAgACAAIAAgACQAcABzAEEAYQBuAHQAYQBsAEQAYQB0AGEAYgBhAHMAZQBzAEYAYQBpAGwAZQBkACAAPQAgACQAcABzAEEAYQBuAHQAYQBsAEQAYQB0AGEAYgBhAHMAZQBzAEYAYQBpAGwAZQBkACAAKwAgADEADQAKACAAIAAgACAAfQANAAoAfQA=">
+          <p:RunPowerShellScript.InArgs>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="psThresholdsDatabase" ArgType="number" DisplayArg="Input Parameters.ThresholdsDatabase" DisplayName="psThresholdsDatabase" Name="psThresholdsDatabase" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Double">[ThresholdsDatabase]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+          </p:RunPowerShellScript.InArgs>
+          <p:RunPowerShellScript.OutArgs>
+            <p:OutArg x:Key="psAantalDatabases" ArgType="number" DisplayName="psAantalDatabases" Name="psAantalDatabases">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:Double">[RunPowerShellScript_psAantalDatabases]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="psDatabaseMountStatus" ArgType="string" DisplayName="psDatabaseMountStatus" Name="psDatabaseMountStatus">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_psDatabaseMountStatus]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="psReasonFailed" ArgType="string" DisplayName="psReasonFailed" Name="psReasonFailed">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_psReasonFailed]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="psAantalDatabasesFailed" ArgType="number" DisplayName="psAantalDatabasesFailed" Name="psAantalDatabasesFailed">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:Double">[RunPowerShellScript_psAantalDatabasesFailed]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="psDatabaseNameFailed" ArgType="string" DisplayName="psDatabaseNameFailed" Name="psDatabaseNameFailed">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_psDatabaseNameFailed]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="psDatabaseSize" ArgType="string" DisplayName="psDatabaseSize" Name="psDatabaseSize">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_psDatabaseSize]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+          </p:RunPowerShellScript.OutArgs>
+        </p:RunPowerShellScript>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="x:Double" Default="400" Name="ThresholdsDatabase" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_OutPut_64" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_ResultString" />
+        <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="RunPowerShellScript_Results_x64" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_Result" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_psDatabaseNameFailed" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_psReasonFailed" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_psAantalDatabases" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_psAantalDatabasesFailed" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_psDatabaseMountStatus" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_psDatabaseSize" />
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>

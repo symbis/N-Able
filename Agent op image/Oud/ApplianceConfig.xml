@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApplianceConfig>
+  <DeployType>agent</DeployType>
+  <AsyncStartup>True</AsyncStartup>
+  <UseNewUpdate>True</UseNewUpdate>
+  <CountNewUpdate>0</CountNewUpdate>
+  <logLevel>3</logLevel>
+  <LogLevelReadOnly>False</LogLevelReadOnly>
+  <ApplianceID>-1</ApplianceID>
+  <Version>2.0.0</Version>
+  <ApplianceVersion>12.2.1.280</ApplianceVersion>
+  <AgentOS>Windows Server 2012 Standard Build (9200)</AgentOS>
+  <AgentOSID>win2000</AgentOSID>
+  <Is64Bit>True</Is64Bit>
+  <BootOption>0</BootOption>
+  <UsePerfMon>False</UsePerfMon>
+  <MaxDownloadAttempts>5</MaxDownloadAttempts>
+  <MaxThreads>100</MaxThreads>
+  <VMwareThreadPool_Enabled>True</VMwareThreadPool_Enabled>
+  <VMwareThreadPool_MaxThreadsPerPool>50</VMwareThreadPool_MaxThreadsPerPool>
+  <VMwareThreadPool_ReportStatsIntervalInSecs>300</VMwareThreadPool_ReportStatsIntervalInSecs>
+  <ServerPoll>300000</ServerPoll>
+  <EnableSolarwindsV1V2>False</EnableSolarwindsV1V2>
+  <UseOSPPVBS>True</UseOSPPVBS>
+  <NoLimitOracleQuery>False</NoLimitOracleQuery>
+  <RemoteExecutionMaxThreads>20</RemoteExecutionMaxThreads>
+  <RemoteExecutionPoll>45000</RemoteExecutionPoll>
+  <WorkScheduler>1000</WorkScheduler>
+  <ServerBusyWaitTime>900000</ServerBusyWaitTime>
+  <serverTimestamp>2020-04-28 11:40:43.405 +02:00</serverTimestamp>
+  <serverAgentClockSkew>12</serverAgentClockSkew>
+  <NetworkErrorMinWaitTime>300000</NetworkErrorMinWaitTime>
+  <NetworkErrorMaxWaitTime>1200000</NetworkErrorMaxWaitTime>
+  <RestartOnNetworkErrorAfterMinutes>120</RestartOnNetworkErrorAfterMinutes>
+  <DataSenderInterval>10000</DataSenderInterval>
+  <InvalidApplianceStartTime>0</InvalidApplianceStartTime>
+  <DataSubmitWaitTime>10000</DataSubmitWaitTime>
+  <DataSubmitWaitCount>6</DataSubmitWaitCount>
+  <TempLocation>\temp</TempLocation>
+  <AM_DefaultTempFileCleanPeriod>24</AM_DefaultTempFileCleanPeriod>
+  <SOLIDERMaxThreads>1000</SOLIDERMaxThreads>
+  <FileTransferResponseInterval>5</FileTransferResponseInterval>
+  <TCPTimeOut>0</TCPTimeOut>
+  <UDPTimeOut>200</UDPTimeOut>
+  <TaskScanTimeHistorySize>0</TaskScanTimeHistorySize>
+  <SetupFileToDelete />
+  <CheckerLogSent>False</CheckerLogSent>
+  <DiscoveryJobs />
+  <CustomerID>123</CustomerID>
+  <CompletedRegistration>false</CompletedRegistration>
+  <IsXMPPAllowed>True</IsXMPPAllowed>
+  <ReadtimeoutInSeconds>150</ReadtimeoutInSeconds>
+  <WaittimeoutInSeconds>135</WaittimeoutInSeconds>
+  <Password />
+  <Passwordencrypt>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA84WMsDpPhE2CbjTTYQlfsQQAAAACAAAAAAAQZgAAAAEAACAAAADaNM/0MzIsrXc9Y7umWaEzjEgKZbwY/TpkJK4TEGkvSwAAAAAOgAAAAAIAACAAAADF33x9OtrONG8uhvXFk0NRpcxNX/l3tDxrMr8DfgQnyBAAAABeL0kUfUHeJ+u34O+jCVZLQAAAACh0VVB1zEBhQ6vZefGOArma44txYahfTGrmom0eAqY3BjUp/AATTh/SABvjpr8posZw97/xImW40DcyC63EuEE=</Passwordencrypt>
+  <URL>aHR0cHM6Ly9sb2dpbi56b3Jndm9vcmljdC5ubC9ib3NoL2Jvc2gv</URL>
+  <IsManaged>True</IsManaged>
+  <UseGVExec>True</UseGVExec>
+  <GVExeFilename />
+  <PsexecFileSize>0</PsexecFileSize>
+  <PsexecUseOld>False</PsexecUseOld>
+  <PsexecDownloadURL />
+  <PsexecFileDigest />
+  <SISServerURL>http://sis.n-able.com</SISServerURL>
+  <SISServerURLReadOnly>False</SISServerURLReadOnly>
+  <SISDownloadTimeoutMilliseconds>3600000</SISDownloadTimeoutMilliseconds>
+  <Test_DisableSISDownload>False</Test_DisableSISDownload>
+  <MaximumRepositorySize>5120</MaximumRepositorySize>
+  <ProbeRepositoryEndpoints>
+    <ArrayOfProbeRepositoryEndpoint xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ProbeRepositoryEndpoint>
+        <Host>10.153.210.91</Host>
+        <Port>10004</Port>
+        <AuthenticationKey>1162859992</AuthenticationKey>
+      </ProbeRepositoryEndpoint>
+    </ArrayOfProbeRepositoryEndpoint>
+  </ProbeRepositoryEndpoints>
+  <DisableLastLoginDataCollection>False</DisableLastLoginDataCollection>
+  <WaitUninstallOrphanReadOnly>False</WaitUninstallOrphanReadOnly>
+  <RegexMultiLine>True</RegexMultiLine>
+  <RegexIgnoreCase>True</RegexIgnoreCase>
+  <WaitUninstallOrphanSecs>432000</WaitUninstallOrphanSecs>
+  <WaitUninstallOrphanCheckIntervalSecs>18000</WaitUninstallOrphanCheckIntervalSecs>
+  <UseProbeCache>True</UseProbeCache>
+  <ProbeVersions>
+    <ArrayOfHostVersionPairOfStringStringInt32 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <HostVersionPairOfStringStringInt32>
+        <Host>10.153.210.91</Host>
+        <Version>12.2.1.280</Version>
+        <Priority>1</Priority>
+      </HostVersionPairOfStringStringInt32>
+    </ArrayOfHostVersionPairOfStringStringInt32>
+  </ProbeVersions>
+  <PendingReboots />
+  <TraceComponent />
+  <RebootDelay>0</RebootDelay>
+  <PendingRebootTS>0</PendingRebootTS>
+  <ForceReboot>True</ForceReboot>
+  <MaxEventLogRecords>1000</MaxEventLogRecords>
+  <ConnectionErrorState>Warning</ConnectionErrorState>
+  <AllowFirewallChanges>True</AllowFirewallChanges>
+  <genericFilesTimestamp>1587698892</genericFilesTimestamp>
+  <repositoryTimestamp>637237429402059620</repositoryTimestamp>
+  <ScheduledDowntimeEnabled>False</ScheduledDowntimeEnabled>
+  <LastPatchDiscoveryDate>1-1-2005</LastPatchDiscoveryDate>
+  <TunnelStunEndpoint>stun1.n-able.com:3478</TunnelStunEndpoint>
+  <TunnelURL>https://login.zorgvoorict.nl:443/tunnel/request.tunnel</TunnelURL>
+  <_runServiceOnSafeBootWithNetwork>True</_runServiceOnSafeBootWithNetwork>
+  <CurrentLoggedInUserScanInterval>5</CurrentLoggedInUserScanInterval>
+  <RemoteTaskHandlerStartDelayMinutes>5</RemoteTaskHandlerStartDelayMinutes>
+  <PatchSuppressionTimeoutMinutes>360</PatchSuppressionTimeoutMinutes>
+  <InstallDotNet4>True</InstallDotNet4>
+  <ThirdPartyPatchVersion />
+  <SNMPDeviceResetDetection>True</SNMPDeviceResetDetection>
+  <DelayForMaintenanceRecordDelete>300000</DelayForMaintenanceRecordDelete>
+  <Force64bitWindowsScheduler>False</Force64bitWindowsScheduler>
+  <UseWindowsSchedulerAsFallBackForExecution>True</UseWindowsSchedulerAsFallBackForExecution>
+  <AssetDiscoveryAfterInstallation>False</AssetDiscoveryAfterInstallation>
+  <boshUrlPath>/bosh/bosh/</boshUrlPath>
+  <directBoshUrlPath1>/http-bind/</directBoshUrlPath1>
+  <directBoshUrlScheme1>https</directBoshUrlScheme1>
+  <directBoshPort1>5280</directBoshPort1>
+  <directBoshUrlPath2>/bosh/bosh/</directBoshUrlPath2>
+  <directBoshUrlScheme2>https</directBoshUrlScheme2>
+  <directBoshPort2>443</directBoshPort2>
+  <xmppChunkInKBytes>500</xmppChunkInKBytes>
+  <CheckDataSizeBeforeSubmit>True</CheckDataSizeBeforeSubmit>
+  <PatchSubmissionWindowInMinutes>30</PatchSubmissionWindowInMinutes>
+  <PatchCacheListeningInterface>0.0.0.0</PatchCacheListeningInterface>
+  <PatchIgnoreSucceededWithErrorsResultCode>True</PatchIgnoreSucceededWithErrorsResultCode>
+  <PatchDisableWUAAccessRegistryUpdated>False</PatchDisableWUAAccessRegistryUpdated>
+  <PatchOnlyUseWSUS>False</PatchOnlyUseWSUS>
+  <PatchPrerequisitesEnabled>True</PatchPrerequisitesEnabled>
+  <PatchFullScanAtStartup>False</PatchFullScanAtStartup>
+  <PatchSecurityUpdatesFeatureEnabled>True</PatchSecurityUpdatesFeatureEnabled>
+  <PatchAnniversaryUpdatesFeatureEnabled>True</PatchAnniversaryUpdatesFeatureEnabled>
+  <PatchPrerequisitesTimeoutMinutes>720</PatchPrerequisitesTimeoutMinutes>
+  <PatchOomFailSafeEnabled>True</PatchOomFailSafeEnabled>
+  <PatchFeatureUpdatesExtendedScanFeatureEnabled>True</PatchFeatureUpdatesExtendedScanFeatureEnabled>
+  <DODownloadMode>0</DODownloadMode>
+  <DODownloadModeOriginal />
+  <xmppInitialReconnectDelay>30</xmppInitialReconnectDelay>
+  <xmppMaxReconnectDelay>300</xmppMaxReconnectDelay>
+  <httpPollingDelay>900</httpPollingDelay>
+  <directSupportActionTimeout>2880</directSupportActionTimeout>
+  <xmppHeartBeat>60</xmppHeartBeat>
+  <crmid>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA84WMsDpPhE2CbjTTYQlfsQQAAAACAAAAAAAQZgAAAAEAACAAAACbr4I12jFCMFFhcwH9Q2c8JSZNIyVTyVUUMmwcfRi5qAAAAAAOgAAAAAIAACAAAAA8TKA7TwUMld5kSDn/skATGsmNZZt0qi35XARA363J8iAAAABaD6QukAKMNIXvLQxQFKAGZqIv3gTmkhhGREmkA2V350AAAADoCiWepf4i9yH9srSHIAnxE9bTrLljlxdG9xnW1RuplpatLlIVAqSc7msOxL54RRbH8qVrpktiGlVMlw8f0wJe</crmid>
+  <TestHeadTimeout>25</TestHeadTimeout>
+  <SNMP_DNS_CHECK>False</SNMP_DNS_CHECK>
+  <ResetPrimaryXmppConfigOnStartup>False</ResetPrimaryXmppConfigOnStartup>
+  <primaryBoshConfig>False</primaryBoshConfig>
+</ApplianceConfig>

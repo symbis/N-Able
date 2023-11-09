@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="265e372d-96d3-41df-8172-4f4674cf92d7" Name="SoftwareVersionScriptV1" Description="U29mdHdhcmVWZXJzaW9uU2NyaXB0VjE=" Version="2.10.0.19" RemoteCategory="0" ExecutionType="Local" MinimumPSVersionRequired="0.0.0">
+  <Object ID="{4e35ec46-e639-430a-a756-4b2fc6054a2a}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml&gt;&lt;Parameters&gt;&lt;Parameter ParameterName=&quot;FortigateIP&quot; Label=&quot;Fortigate IP adres&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;FortigatePort&quot; Label=&quot;Fortigate Port&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;FortigateUser&quot; Label=&quot;Fortigate gebruikersnaam&quot; ParameterType=&quot;string&quot; Value=&quot;admin&quot; /&gt;&lt;Parameter ParameterName=&quot;FortigatePassword&quot; Label=&quot;Fortigate Password&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;FortigateLatestOS&quot; Label=&quot;Fortigate laatste OS versie&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;Exchange2019&quot; Label=&quot;Exchange2019&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;Exchange2016&quot; Label=&quot;Exchange2016&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;Exchange2013&quot; Label=&quot;Exchange2013&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;/Parameters&gt;&lt;/xml&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System" />
+  </LinkManager>
+  <Diagnostics OriginalVersion="2.18.1.8" />
+  <Activity mc:Ignorable="sap sads" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>490,571</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="490,571" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:RunPowerShellScript AssemblyName="PolicyExecutionEngine, Version=2.18.1.8, Culture=neutral, PublicKeyToken=null" DisplayName="Run PowerShell Script" sap:VirtualizedContainerService.HintSize="454,348" Moniker="493772a6-da00-4f30-934f-fe8ae2335e49" OutPut_64="[RunPowerShellScript_OutPut_64]" Result="[RunPowerShellScript_Result]" ResultString="[RunPowerShellScript_ResultString]" Results_x64="[RunPowerShellScript_Results_x64]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RunPowerShellScript" genArgEvent="5b7db75e-0907-4ed8-9201-9e65e771cd23" m_bTextLinkChange="False" script="IwB1AHMAZQByACAAcwBlAHQAdABpAG4AZwBzACAARgBvAHIAdABpAGcAYQB0AGUADQAKACQAZgB3ACAAPQAgACIAMQAwAC4AMAAuADAALgAyADUAMwAiAA0ACgAkAHAAbwByAHQAIAA9ACAAIgA4ADQANAAzACIADQAKACQARgBHAFQAdQBzAGUAcgAgAD0AIAAiAGEAZABtAGkAbgAiAA0ACgAkAEYARwBUAHAAYQBzAHMAIAA9ACAAQwBvAG4AdgBlAHIAdABUAG8ALQBTAGUAYwB1AHIAZQBTAHQAcgBpAG4AZwAgAHsAcABhAHMAcwB3AG8AcgBkAH0AIAATIGEAcwBwAGwAYQBpAG4AdABlAHgAdAAgABMgZgBvAHIAYwBlAA0ACgANAAoAIwBsAGEAdABlAHMAdAAgAEYAbwByAHQAaQBPAFMADQAKACQAZgB3AGwAYQB0AGUAcwB0ACAAPQAgACIANgAuADQALgA1ACIADQAKAA0ACgAjAGwAYQB0AGUAcwB0ACAAZQB4AGMAaABhAG4AZwBlACAAYgB1AGkAbABkAHMADQAKACQAMgAwADEAOQBsAGEAdABlAHMAdAAgAD0AIAAiADEANQAuADIALgA3ADkAMgAuADMAIgANAAoAJAAyADAAMQA2AGwAYQB0AGUAcwB0ACAAPQAgACIAMQA1AC4AMQAuADIAMQA3ADYALgAyACIADQAKACQAMgAwADEAMwBsAGEAdABlAHMAdAAgAD0AIAAiADEANQAuADAALgAxADQAOQA3AC4AMgAiAA0ACgANAAoAIwBzAGUAdAB0AGkAbgBnAHMAIAAtACAARABvACAAbgBvAHQAIABjAGgAYQBuAGcAZQAhAA0ACgAkAGgAbwBzAHQAbgBhAG0AZQAgAD0AIABoAG8AcwB0AG4AYQBtAGUADQAKACQAbQBvAGQAdQBsAGUAIAA9ACAAZwBlAHQALQBtAG8AZAB1AGwAZQANAAoAJABpAG4AZgBvAGYAaQBsAGUAIAA9ACAAZwBlAHQALQBpAHQAZQBtACAALQBwAGEAdABoACAAIgBcAFwAJABoAG8AcwB0AG4AYQBtAGUAXABjACQAXABhAGUAbgBjAFwAcwBvAGYAdAB3AGEAcgBlAHYAZQByAHMAaQBvAG4AcwBcAFMAbwBmAHQAdwBhAHIAZQBfAHYAZQByAHMAaQBvAG4AcwAuAHQAeAB0ACIADQAKACQAZgBpAGwAdABlAHIAIAA9ACAAKABHAGUAdAAtAEEARABPAGIAagBlAGMAdAAgAC0ARgBpAGwAdABlAHIAIAAnAG0AcwBFAHgAYwBoAEMAYQBwAGEAYgBpAGwAaQB0AHkASQBkAGUAbgB0AGkAZgBpAGUAcgBzACAALQBlAHEAIAAiADEAIgAnACkADQAKACQARQBYAHMAZQByAHYAZQByACAAPQAgACQAZgBpAGwAdABlAHIALgBuAGEAbQBlAA0ACgBbAE4AZQB0AC4AUwBlAHIAdgBpAGMAZQBQAG8AaQBuAHQATQBhAG4AYQBnAGUAcgBdADoAOgBTAGUAYwB1AHIAaQB0AHkAUAByAG8AdABvAGMAbwBsACAAPQAgAFsATgBlAHQALgBTAGUAYwB1AHIAaQB0AHkAUAByAG8AdABvAGMAbwBsAFQAeQBwAGUAXQA6ADoAVABsAHMAMQAyAA0ACgANAAoAIwBDAHIAZQBhAHQAZQAgAGYAaQBsAGUAIAB0AG8AIABhAGQAZAAgAHMAbwBmAHQAdwBhAHIAZQAgAHYAZQByAHMAaQBvAG4AIABpAG4AZgBvAHIAbQBhAHQAaQBvAG4ADQAKAE4AZQB3AC0AaQB0AGUAbQAgAC0ASQB0AGUAbQBUAHkAcABlACAAIgBmAGkAbABlACIAIAAtAHAAYQB0AGgAIAAiAEMAOgBcAGEAZQBuAGMAXABzAG8AZgB0AHcAYQByAGUAdgBlAHIAcwBpAG8AbgBzAFwAIgAgAC0AbgBhAG0AZQAgACIAUwBvAGYAdAB3AGEAcgBlAF8AdgBlAHIAcwBpAG8AbgBzAC4AdAB4AHQAIgAgAC0ARgBvAHIAYwBlAA0ACgANAAoAIwBGAEcAVAAgAGMAaABlAGMAawAgAG0AbwBkAHUAbABlAA0ACgBJAGYAIAAoACQAbQBvAGQAdQBsAGUALgBuAGEAbQBlACAALQBuAG8AdABjAG8AbgB0AGEAaQBuAHMAIAAiAFAAbwB3AGUAcgBGAEcAVAAiACkAewANAAoASQBuAHMAdABhAGwAbAAtAG0AbwBkAHUAbABlACAAUABvAHcAZQByAEYARwBUAH0ADQAKAEkAbQBwAG8AcgB0AC0ATQBvAGQAdQBsAGUAIABQAG8AdwBlAHIARgBHAFQADQAKAA0ACgAjAGMAbwBuAG4AZQBjAHQAIAB0AG8AIABGAEcAVAANAAoAJABGAEcAVAAgAD0AIAAoAEMAbwBuAG4AZQBjAHQALQBGAEcAVAAgAC0AVQBzAGUAcgBuAGEAbQBlACAAJABGAEcAVAB1AHMAZQByACAALQBQAGEAcwBzAHcAbwByAGQAIAAkAEYARwBUAHAAYQBzAHMAIAAtAHMAZQByAHYAZQByACAAJABmAHcAIAAtAHAAbwByAHQAIAAkAHAAbwByAHQAIAAtAFMAawBpAHAAQwBlAHIAdABpAGYAaQBjAGEAdABlAEMAaABlAGMAawApAA0ACgANAAoAJABGAEcAVABWAGUAcgBzAGkAbwBuACAAPQAgACQARgBHAFQALgB2AGUAcgBzAGkAbwBuAA0ACgAkAGYAdwBoAG8AcwB0ACAAPQAgAEcAZQB0AC0ARgBHAFQAUwB5AHMAdABlAG0ARwBsAG8AYgBhAGwADQAKACQAZgB3AG4AYQBtAGUAIAA9ACAAJABmAHcAaABvAHMAdAAuAGgAbwBzAHQAbgBhAG0AZQANAAoAaQBmACgAJABGAEcAVABWAGUAcgBzAGkAbwBuACAALQBsAHQAIAAkAGYAdwBsAGEAdABlAHMAdAApAHsAJABmAHcAdQBwAGQAYQB0AGUAIAA9ACAAIgBTAG8AZgB0AHcAYQByAGUAIABuAGkAZQB0ACAAbwBwACAAZABlACAAbABhAGEAdABzAHQAZQAgAHIAZQBsAGUAYQBzAGUAIAAoACQAZgB3AGwAYQB0AGUAcwB0ACkAIgB9AA0ACgBlAGwAcwBlAHsAJABmAHcAdQBwAGQAYQB0AGUAIAA9ACAAIgBTAG8AZgB0AHcAYQByAGUAIABVAHAALQB0AG8ALQBkAGEAdABlACIAfQANAAoADQAKAEEAZABkAC0AQwBvAG4AdABlAG4AdAAgACQAaQBuAGYAbwBmAGkAbABlACAAJABmAHcAbgBhAG0AZQANAAoAQQBkAGQALQBDAG8AbgB0AGUAbgB0ACAAJABpAG4AZgBvAGYAaQBsAGUAIAAkAEYARwBUAFYAZQByAHMAaQBvAG4ADQAKAEEAZABkAC0AYwBvAG4AdABlAG4AdAAgACQAaQBuAGYAbwBmAGkAbABlACAAJABmAHcAdQBwAGQAYQB0AGUADQAKAA0ACgAjAGQAaQBzAGMAbwBuAG4AZQBjAHQAIABGAEcAVAANAAoARABpAHMAYwBvAG4AbgBlAGMAdAAtAEYARwBUACAALQBDAG8AbgBmAGkAcgBtADoAJABmAGEAbABzAGUADQAKAEEAZABkAC0AQwBvAG4AdABlAG4AdAAgACQAaQBuAGYAbwBmAGkAbABlACAAIgAiAA0ACgANAAoADQAKACMARQB4AGMAaABhAG4AZwBlACAAYwBoAGUAYwBrACAAbQBvAGQAdQBsAGUADQAKAEkAZgAoACQAbQBvAGQAdQBsAGUALgBuAGEAbQBlACAALQBuAG8AdABjAG8AbgB0AGEAaQBuAHMAIAAiAEEAYwB0AGkAdgBlAEQAaQByAGUAYwB0AG8AcgB5ACIAKQB7AA0ACgBJAG4AcwB0AGEAbABsAC0ATQBvAGQAdQBsAGUAIAAtAE4AYQBtAGUAIABBAGMAdABpAHYAZQBEAGkAcgBlAGMAdABvAHIAeQB9AA0ACgBJAG0AcABvAHIAdAAtAE0AbwBkAHUAbABlACAAQQBjAHQAaQB2AGUARABpAHIAZQBjAHQAbwByAHkADQAKAA0ACgAjAEMAaABlAGMAawAgAGkAbgBzAHQAYQBsAGwAZQBkACAAZQB4AGMAaABhAG4AZwBlACAAdgBlAHIAcwBpAG8AbgAoAHMAKQANAAoAJABmAGkAbAB0AGUAcgAgAD0AIAAoAEcAZQB0AC0AQQBEAE8AYgBqAGUAYwB0ACAALQBGAGkAbAB0AGUAcgAgACcAbQBzAEUAeABjAGgAQwBhAHAAYQBiAGkAbABpAHQAeQBJAGQAZQBuAHQAaQBmAGkAZQByAHMAIAAtAGUAcQAgACIAMQAiACcAKQANAAoAJABFAFgAcwBlAHIAdgBlAHIAIAA9ACAAJABmAGkAbAB0AGUAcgAuAG4AYQBtAGUADQAKAA0ACgANAAoAZgBvAHIAZQBhAGMAaAAoACQAcwBlAHIAdgBlAHIAIABpAG4AIAAkAEUAWABzAGUAcgB2AGUAcgApAHsADQAKAGEAZABkAC0AYwBvAG4AdABlAG4AdAAgACQAaQBuAGYAbwBmAGkAbABlACAAJABzAGUAcgB2AGUAcgANAAoADQAKACQAZQB4AGMAaABhAG4AZwBlACAAPQAgACgARwBlAHQALQBXAG0AaQBPAGIAagBlAGMAdAAgAC0AQwBvAG0AcAB1AHQAZQByAE4AYQBtAGUAIAAkAHMAZQByAHYAZQByACAALQBDAGwAYQBzAHMAIABXAGkAbgAzADIAXwBQAHIAbwBkAHUAYwB0ACAAfAAgAFcAaABlAHIAZQAgAE4AYQBtAGUAIAAtAGUAcQAgACIATQBpAGMAcgBvAHMAbwBmAHQAIABFAHgAYwBoAGEAbgBnAGUAIABTAGUAcgB2AGUAcgAiACkADQAKACQARQB4AHYAZQByACAAPQAgACQAZQB4AGMAaABhAG4AZwBlAC4AdgBlAHIAcwBpAG8AbgANAAoAJABFAHgAMgAwADEAOQBsAGEAdABlAHMAdAAgAD0AIAAkADIAMAAxADkAbABhAHQAZQBzAHQADQAKACQARQB4ADIAMAAxADYAbABhAHQAZQBzAHQAIAA9ACAAJAAyADAAMQA2AGwAYQB0AGUAcwB0AA0ACgAkAEUAeAAyADAAMQAzAGwAYQB0AGUAcwB0ACAAPQAgACQAMgAwADEAMwBsAGEAdABlAHMAdAANAAoADQAKAEkAZgAoACQARQB4AHYAZQByACAALQBnAHQAIAAiADEANQAuADIALgAwAC4AMAAiACkAewANAAoAaQBmACgAJABFAHgAdgBlAHIAIAAtAGwAdAAgACQARQB4ADIAMAAxADkAbABhAHQAZQBzAHQAKQB7ACQAdQBwAGQAYQB0AGUAIAA9ACAAIgBFAHgAYwBoAGEAbgBnAGUAIAAyADAAMQA5ACAAbgBpAGUAdAAgAG8AcAAgAGQAZQAgAGwAYQBhAHQAcwB0AGUAIABDAFUAIgB9AA0ACgBFAGwAcwBlAHsAJAB1AHAAZABhAHQAZQAgAD0AIAAiAEUAeABjAGgAYQBuAGcAZQAgADIAMAAxADkAIABVAHAALQB0AG8ALQBkAGEAdABlACIAfQB9AA0ACgBFAGwAcwBlAGkAZgAoACQARQB4AHYAZQByACAALQBnAHQAIAAiADEANQAuADEALgAwAC4AMAAiACkAewANAAoAaQBmACgAJABFAHgAdgBlAHIAIAAtAGwAdAAgACQARQB4ADIAMAAxADYAbABhAHQAZQBzAHQAKQB7ACQAdQBwAGQAYQB0AGUAIAA9ACAAIgBFAHgAYwBoAGEAbgBnAGUAIAAyADAAMQA2ACAAbgBpAGUAdAAgAG8AcAAgAGQAZQAgAGwAYQBhAHQAcwB0AGUAIABDAFUAIgB9AA0ACgBFAGwAcwBlAHsAJAB1AHAAZABhAHQAZQAgAD0AIAAiAEUAeABjAGgAYQBuAGcAZQAgADIAMAAxADYAIABVAHAALQB0AG8ALQBkAGEAdABlACIAfQB9AA0ACgBFAGwAcwBlAGkAZgAoACQARQB4AHYAZQByACAALQBnAHQAIAAiADEANQAuADAALgAwAC4AMAAiACkAewANAAoAaQBmACgAJABFAHgAdgBlAHIAIAAtAGwAdAAgACQARQB4ADIAMAAxADMAbABhAHQAZQBzAHQAKQB7ACQAdQBwAGQAYQB0AGUAIAA9ACAAIgBFAHgAYwBoAGEAbgBnAGUAIAAyADAAMQAzACAAbgBpAGUAdAAgAG8AcAAgAGQAZQAgAGwAYQBhAHQAcwB0AGUAIABDAFUAIgB9AA0ACgBFAGwAcwBlAHsAJAB1AHAAZABhAHQAZQAgAD0AIAAiAEUAeABjAGgAYQBuAGcAZQAgADIAMAAxADMAIABVAHAALQB0AG8ALQBkAGEAdABlACIAfQB9AA0ACgBFAGwAcwBlAHsAJABFAHgAdgBlAHIAIAA9ACAAJABFAHgAdgBlAHIAfQANAAoADQAKAEEAZABkAC0AQwBvAG4AdABlAG4AdAAgACQAaQBuAGYAbwBmAGkAbABlACAAJABFAHgAdgBlAHIADQAKAEEAZABkAC0AQwBvAG4AdABlAG4AdAAgACQAaQBuAGYAbwBmAGkAbABlACAAJAB1AHAAZABhAHQAZQANAAoAfQANAAoA">
+          <p:RunPowerShellScript.InArgs>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="fw" ArgType="string" DisplayArg="Input Parameters.Fortigate IP adres" DisplayName="FortiGate IP adres" Name="fw" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[FortigateIP]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="port" ArgType="string" DisplayArg="Input Parameters.Fortigate Port" DisplayName="Fortigate Port " Name="port" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[FortigatePort]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="FGTuser" ArgType="string" DisplayArg="Input Parameters.Fortigate gebruikersnaam" DisplayName="Fortigate Gebruikersnaam" Name="FGTuser" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[FortigateUser]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="FGTpass" ArgType="string" DisplayArg="Input Parameters.Fortigate Password" DisplayName="Fortigate Password" Name="FGTpass" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[FortigatePassword]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="fwlatest" ArgType="string" DisplayArg="Input Parameters.Fortigate laatste OS versie" DisplayName="FortiOS latest version" Name="fwlatest" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[FortigateLatestOS]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="latest2019" ArgType="string" DisplayArg="Input Parameters.Exchange2019" DisplayName="Exchange 2019" Name="latest2019" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[Exchange2019]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="latest2016" ArgType="string" DisplayArg="Input Parameters.Exchange2016" DisplayName="Exchange 2016" Name="latest2016" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[Exchange2016]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="latest2013" ArgType="string" DisplayArg="Input Parameters.Exchange2013" DisplayName="Exchange 2013" Name="latest2013" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[Exchange2013]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+          </p:RunPowerShellScript.InArgs>
+          <p:RunPowerShellScript.OutArgs>
+            <p:OutArg x:Key="update" ArgType="string" DisplayName="Exchange up-to-date" Name="update">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_update]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+          </p:RunPowerShellScript.OutArgs>
+        </p:RunPowerShellScript>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_OutPut_64" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_ResultString" />
+        <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="RunPowerShellScript_Results_x64" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_Result" />
+        <Variable x:TypeArguments="x:String" Name="FortigateIP" />
+        <Variable x:TypeArguments="x:String" Name="FortigatePort" />
+        <Variable x:TypeArguments="x:String" Default="admin" Name="FortigateUser" />
+        <Variable x:TypeArguments="x:String" Name="FortigatePassword" />
+        <Variable x:TypeArguments="x:String" Name="FortigateLatestOS" />
+        <Variable x:TypeArguments="x:String" Name="Exchange2019" />
+        <Variable x:TypeArguments="x:String" Name="Exchange2016" />
+        <Variable x:TypeArguments="x:String" Name="Exchange2013" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_update" />
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>

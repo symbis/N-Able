@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="249ae260-283d-4a6b-aaa4-08dafef2af97" Name="MaintenanceModeCitrix" Description="TWFpbnRlbmFuY2VNb2RlQ2l0cml4" Version="2.10.0.19" RemoteCategory="0" ExecutionType="Local" MinimumPSVersionRequired="0.0.0">
+  <Object ID="{63020503-f2c9-4253-8eb5-99a7b3251df1}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml&gt;&lt;OutputParameters&gt;&lt;Parameter ParameterName=&quot;checkfile&quot; Label=&quot;Error Message&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.checkfile&quot; /&gt;&lt;Parameter ParameterName=&quot;MaintenanceMode&quot; Label=&quot;MaintenanceMode&quot; ParameterType=&quot;number&quot; Value=&quot;Run PowerShell Script.MaintenanceMode&quot; /&gt;&lt;/OutputParameters&gt;&lt;/xml&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>b985f182-983f-4f3c-a713-82bada137f4c.checkfile</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>checkfile</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>b985f182-983f-4f3c-a713-82bada137f4c.MaintenanceMode</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>MaintenanceMode</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+    </hashset>
+  </LinkManager>
+  <Diagnostics OriginalVersion="2.91.0.8" />
+  <Activity mc:Ignorable="sads sap" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>504,745</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="504,745" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:RunPowerShellScript AssemblyName="PolicyExecutionEngine, Version=2.91.0.8, Culture=neutral, PublicKeyToken=null" DisplayName="Run PowerShell Script" sap:VirtualizedContainerService.HintSize="468,522" Moniker="b985f182-983f-4f3c-a713-82bada137f4c" OutPut_64="[RunPowerShellScript_OutPut_64]" Result="[RunPowerShellScript_Result]" ResultString="[RunPowerShellScript_ResultString]" Results_x64="[RunPowerShellScript_Results_x64]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RunPowerShellScript" genArgEvent="cf6856b0-7321-4b90-a4f9-5122aa2797c6" m_bTextLinkChange="False" script="PAAjAA0ACgAuAFMAWQBOAE8AUABTAEkAUwAgAA0ACgBDAGgAZQBjAGsAIABtAGEAaQBuAHQAZQBuAGEAbgBjAGUAIABtAG8AZABlACAAbwBmACAAQwBpAHQAcgBpAHgAIABzAGUAcgB2AGUAcgBzAA0ACgAuAEQARQBTAEMAUgBJAFAAVABJAE8ATgANAAoAQwBoAGUAYwBrACAAbQBhAGkAbgB0AGUAbgBhAG4AYwBlACAAbQBvAGQAZQAgAG8AZgAgAEMAaQB0AHIAaQB4ACAAcwBlAHIAdgBlAHIAcwAgAHcAaQB0AGgAIABsAG8AYwBhAGwAIABmAGkAbABlACAAaQBuACAAQwA6AFwAdABlAG0AcAANAAoALgBOAE8AVABFAFMADQAKAEMAcgBlAGEAdABlAGQAIABiAHkAIABCAGEAcgBlAG4AZAAgAHYAZAAgAEQAdQBzAHMAZQBuAA0ACgBEAGEAdABlADoAIAAxADkALQAxADAALQAyADAAMgAzAA0ACgBJAG4AcAB1AHQAcwA6ACAADQAKAE8AdQB0AHAAdQB0AHMAOgAgACQATQBhAGkAbgB0AGUAbgBhAG4AYwBlAE0AbwBkAGUALAAgACQAYwBoAGUAYwBrAGYAaQBsAGUADQAKAFYAZQByAHMAaQBvAG4AOgAgADEALgAwAA0ACgBSAGUAbABlAGEAcwBlACAATgBvAHQAZQBzAA0ACgBWADEALgAwADoAIABJAG4AaQB0AGkAYQBsACAAUwBlAHQAdQBwAA0ACgAjAD4ADQAKACQAYwBoAGUAYwBrAGYAaQBsAGUAIAA9ACAAIgAtACIADQAKACQATQBhAGkAbgB0AGUAbgBhAG4AYwBlAE0AbwBkAGUAIAA9ACAAMgANAAoAJABwAGEAdABoAE0AYQBpAG4AdABlAG4AYQBuAGMAZQBNAG8AZABlACAAPQAgACIAQwA6AFwAdABlAG0AcABcAE0AYQBpAG4AdABlAG4AYQBuAGMAZQBNAG8AZABlAC4AdAB4AHQAIgANAAoAJABwAGEAdABoAFIAZQBiAG8AbwB0AFMAYwBoAGUAZAB1AGwAZQBkACAAPQAgACIAQwA6AFwAdABlAG0AcABcAFIAZQBiAG8AbwB0AFMAYwBoAGUAZAB1AGwAZQBkAC4AdAB4AHQAIgANAAoAaQBmACgAdABlAHMAdAAtAHAAYQB0AGgAIAAkAHAAYQB0AGgATQBhAGkAbgB0AGUAbgBhAG4AYwBlAE0AbwBkAGUAKQB7AA0ACgAgACAAIAAgACMAYwBoAGUAYwBrACAAaQBmACAAbQBhAGkAbgB0AGUAbgBhAG4AYwBlACAAZgBpAGwAZQAgAGUAeABpAHMAdABzACAAIAAgACAADQAKACAAIAAgACAAaQBmACgAdABlAHMAdAAtAHAAYQB0AGgAIAAkAHAAYQB0AGgAUgBlAGIAbwBvAHQAUwBjAGgAZQBkAHUAbABlAGQAKQANAAoAIAAgACAAIAB7AA0ACgAgACAAIAAgACAAIAAgACAAIwBjAGgAZQBjAGsAIABpAGYAIAByAGUAYgBvAG8AdABzAGMAaABlAGQAdQBsAGUAZAAgAGYAaQBsAGUAIABlAHgAaQBzAHQADQAKACAAIAAgACAAIAAgACAAIABpAGYAKAAoAEcAZQB0AC0AQwBvAG4AdABlAG4AdAAgAC0AUABhAHQAaAAgACQAcABhAHQAaABSAGUAYgBvAG8AdABTAGMAaABlAGQAdQBsAGUAZAApACAALQBlAHEAIAAxACAALQBhAG4AZAAgACgAKABHAGUAdAAtAEMAaABpAGwAZABJAHQAZQBtACAALQBQAGEAdABoACAAJABwAGEAdABoAFIAZQBiAG8AbwB0AFMAYwBoAGUAZAB1AGwAZQBkACAAfAAgACAAVwBoAGUAcgBlAC0ATwBiAGoAZQBjAHQAIAB7ACAAJABfAC4ATABhAHMAdABXAHIAaQB0AGUAVABpAG0AZQAgAC0AZwB0ACAAKABHAGUAdAAtAEQAYQB0AGUAKQAuAEEAZABkAEQAYQB5AHMAKAAtADEAKQAgAH0AKQAuAGMAbwB1AG4AdAApACAALQBnAHQAIAAwACkADQAKACAAIAAgACAAIAAgACAAIAB7ACAAIAAgACAAIAAgACAAIAAgACAAIAAgAA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACMAUgBlAGIAbwBvAHQAIABTAGMAaABlAGQAdQBsAGUAZAAsACAAYQBuAGQAIABmAGkAbABlACAAaQBzACAAbABhAHMAdAAgAG0AbwBkAGkAZgBpAGUAZAAgAGwAYQBzAHQAIABkAGEAeQAuACAADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAJABNAGEAaQBuAHQAZQBuAGEAbgBjAGUATQBvAGQAZQAgAD0AIAAtADEAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAADQAKACAAIAAgACAAIAAgACAAIAB9AA0ACgAgACAAIAAgACAAIAAgACAAZQBsAHMAZQB7AA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAjAE4AbwAgAFIAZQBiAG8AbwB0ACAAUwBjAGgAZQBkAHUAbABlAGQAIAAmACAAUwBlAHIAdgBlAHIAIABpAHMAIABpAG4AIABtAGEAaQBuAHQAZQBuAGEAbgBjAGUAIABNAG8AZABlAC4ADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACQATQBhAGkAbgB0AGUAbgBhAG4AYwBlAE0AbwBkAGUAIAA9ACAARwBlAHQALQBDAG8AbgB0AGUAbgB0ACAALQBQAGEAdABoACAAJABwAGEAdABoAE0AYQBpAG4AdABlAG4AYQBuAGMAZQBNAG8AZABlAA0ACgAgACAAIAAgACAAIAAgACAAfQANAAoAIAAgACAAIAB9AGUAbABzAGUAewANAAoAIAAgACAAIAAgACAAIAAgACMATgBvACAAUgBlAGIAbwBvAHQAIABTAGMAaABlAGQAdQBsAGUAZAAgACYAIABTAGUAcgB2AGUAcgAgAGkAcwAgAGkAbgAgAG0AYQBpAG4AdABlAG4AYQBuAGMAZQAgAE0AbwBkAGUALgANAAoAIAAgACAAIAAgACAAIAAgACQATQBhAGkAbgB0AGUAbgBhAG4AYwBlAE0AbwBkAGUAIAA9ACAARwBlAHQALQBDAG8AbgB0AGUAbgB0ACAALQBQAGEAdABoACAAJABwAGEAdABoAE0AYQBpAG4AdABlAG4AYQBuAGMAZQBNAG8AZABlAA0ACgAgACAAIAAgAH0AIAAgACAADQAKAH0ADQAKAGUAbABzAGUAewANAAoAIAAgACAAIAAkAGMAaABlAGMAawBmAGkAbABlACAAPQAgACQAcABhAHQAaABNAGEAaQBuAHQAZQBuAGEAbgBjAGUATQBvAGQAZQAgACsAIAAiACAAZABvAGUAcwAgAG4AbwB0ACAAZQB4AGkAcwB0AC4AIABDAGgAZQBjAGsAIABTAGMAaABlAGQAdQBsAGUAZAAgAHQAYQBzAGsALgAiAA0ACgB9AA0ACgANAAoA">
+          <p:RunPowerShellScript.InArgs>
+            <scg:Dictionary x:TypeArguments="x:String, p:InArg" />
+          </p:RunPowerShellScript.InArgs>
+          <p:RunPowerShellScript.OutArgs>
+            <p:OutArg x:Key="MaintenanceMode" ArgType="number" DisplayName="MaintenanceMode" Name="MaintenanceMode">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:Double">[RunPowerShellScript_MaintenanceMode]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="checkfile" ArgType="string" DisplayName="checkfile" Name="checkfile">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_checkfile]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+          </p:RunPowerShellScript.OutArgs>
+        </p:RunPowerShellScript>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_OutPut_64" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_Result" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_ResultString" />
+        <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="RunPowerShellScript_Results_x64" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_MaintenanceMode" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_checkfile" />
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>

@@ -1,0 +1,29 @@
+Update N-able agent
+
+1. services stoppen en op handmatig zetten  (windows agent & windows agent maintenance)
+
+2. in de map C:\Program Files (x86)\N-able Technologies\Windows Agent\config de volgende bestanden weggooien
+
+            - ApplianceConfig.xml
+
+            - ApplianceConfig.xml.backup
+
+5. ImageApplianceConfig.xml openen en de volgende 4 regels aanpassen (indien nodig)
+
+            - <ApplianceID>-1</ApplianceID>                                             (moet op -1 staan)
+
+            - <CompletedRegistration>False</CompletedRegistration>         (False)
+
+            - <CustomerID>114</CustomerID>                                            (114 voor Adullam)
+
+            - <CheckerLogSent>False</CheckerLogSent>                           (False)
+
+6. Kopieer ImageApplianceConfig.xml naar ApplianceConfig.xml en ApplianceConfig
+
+
+
+Agent stoppen
+	C:\ProgramData\N-Able Technologies\Windows Agent\config\ConnectionString_Agent.xml -> Verwijderen
+	Bovenstaande stappen van jou uitvoeren.
+	elevated CMD, daarna C:\Program Files (x86)\N-able Technologies\Windows Agent\bin\ncentralasset.exe -d uitvoeren
+	Daarna kan de image uitgerold worden.

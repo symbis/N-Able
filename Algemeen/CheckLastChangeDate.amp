@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="6dc0fa66-250f-45b4-b67b-d9fb181b4309" Name="CheckLastChangeDate" Description="Q2hlY2sgRmlsZSBmb3IgbGFzdCBjaGFuZ2UgZGF0ZQ==" Version="2.10.0.19" RemoteCategory="0" ExecutionType="Local" MinimumPSVersionRequired="0.0.0">
+  <Object ID="{3a8fdfce-eacc-40cc-a95c-ce04a53c9bce}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml&gt;&lt;Parameters&gt;&lt;Parameter ParameterName=&quot;fileLocation&quot; Label=&quot;fileLocation&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;/Parameters&gt;&lt;OutputParameters&gt;&lt;Parameter ParameterName=&quot;TimeSinceLastChange&quot; Label=&quot;TimeSinceLastChange&quot; ParameterType=&quot;date&quot; Value=&quot;Run PowerShell Script.TimeSinceLastChange&quot; /&gt;&lt;/OutputParameters&gt;&lt;/xml&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>ddfe514f-af01-41a5-8baa-f2c671b2b294.TimeSinceLastChange</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>TimeSinceLastChange</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+    </hashset>
+  </LinkManager>
+  <Diagnostics OriginalVersion="2.16.1.15" />
+  <Activity mc:Ignorable="sads sap" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>504,745</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+        <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="504,745" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:RunPowerShellScript AssemblyName="PolicyExecutionEngine, Version=2.16.1.15, Culture=neutral, PublicKeyToken=null" DisplayName="Run PowerShell Script" sap:VirtualizedContainerService.HintSize="468,522" Moniker="ddfe514f-af01-41a5-8baa-f2c671b2b294" OutPut_64="[RunPowerShellScript_OutPut_64]" Result="[RunPowerShellScript_Result]" ResultString="[RunPowerShellScript_ResultString]" Results_x64="[RunPowerShellScript_Results_x64]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RunPowerShellScript" genArgEvent="f9e6062e-7da9-46d6-842c-081c95adf398" m_bTextLinkChange="False" script="JABkAGEAdABlACAAPQAgAEcAZQB0AC0ARABhAHQAZQANAAoAJABtAG8AZABpAGYAaQBjAGEAdABpAG8AbgBkAGEAdABlACAAPQAgAEcAZQB0AC0ASQB0AGUAbQAgACQAZgBpAGwAZQBMAG8AYwBhAHQAaQBvAG4AIAB8ACAARgBvAHIAZQBhAGMAaAAgAHsAJABfAC4ATABhAHMAdABXAHIAaQB0AGUAVABpAG0AZQB9AA0ACgAkAHIAZQBzAHUAbAB0ACAAPQAgACQAZABhAHQAZQAgAC0AIAAkAG0AbwBkAGkAZgBpAGMAYQB0AGkAbwBuAGQAYQB0AGUADQAKACQAVABpAG0AZQBTAGkAbgBjAGUATABhAHMAdABDAGgAYQBuAGcAZQAgAD0AIAAkAHIAZQBzAHUAbAB0AC4AZABhAHkAcwA=">
+          <p:RunPowerShellScript.InArgs>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="fileLocation" ArgType="string" DisplayArg="Input Parameters.fileLocation" DisplayName="fileLocation" Name="fileLocation" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:String">[fileLocation]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+          </p:RunPowerShellScript.InArgs>
+          <p:RunPowerShellScript.OutArgs>
+            <p:OutArg x:Key="TimeSinceLastChange" ArgType="date" DisplayName="TimeSinceLastChange" Name="TimeSinceLastChange">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="s:DateTime">[RunPowerShellScript_TimeSinceLastChange]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+          </p:RunPowerShellScript.OutArgs>
+        </p:RunPowerShellScript>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_OutPut_64" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_ResultString" />
+        <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="RunPowerShellScript_Results_x64" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_Result" />
+        <Variable x:TypeArguments="x:String" Name="fileLocation" />
+        <Variable x:TypeArguments="s:DateTime" Name="RunPowerShellScript_TimeSinceLastChange" />
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>

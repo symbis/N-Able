@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="8519778f-1717-40e3-8e14-380c24697c97" Name="AdminUsers - Active" Description="QWRtaW5Vc2VycyAtIEFjdGl2ZQ==" Version="2.10.0.19" RemoteCategory="0" ExecutionType="Local" MinimumPSVersionRequired="0.0.0">
+  <Object ID="{24a3a445-2c37-48ab-8543-7fba889a0797}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml&gt;&lt;OutputParameters&gt;&lt;Parameter ParameterName=&quot;AdminUsersCount&quot; Label=&quot;Total of Domain Admins&quot; ParameterType=&quot;number&quot; Value=&quot;Run PowerShell Script.AdminUsersCount&quot; /&gt;&lt;Parameter ParameterName=&quot;AdminUsersName&quot; Label=&quot;Names of Domain Admins&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.AdminUsersName&quot; /&gt;&lt;/OutputParameters&gt;&lt;/xml&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>db2ab929-d664-4bf5-a2a4-144c69a431b7.AdminUsersCount</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>AdminUsersCount</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>db2ab929-d664-4bf5-a2a4-144c69a431b7.AdminUsersName</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>AdminUsersName</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+    </hashset>
+  </LinkManager>
+  <Diagnostics OriginalVersion="2.91.0.8" />
+  <Activity mc:Ignorable="sads sap" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>504,745</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="504,745" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:RunPowerShellScript AssemblyName="PolicyExecutionEngine, Version=2.50.0.3, Culture=neutral, PublicKeyToken=null" DisplayName="Run PowerShell Script" sap:VirtualizedContainerService.HintSize="468,522" Moniker="db2ab929-d664-4bf5-a2a4-144c69a431b7" OutPut_64="[RunPowerShellScript_OutPut_64]" Result="[RunPowerShellScript_Result]" ResultString="[RunPowerShellScript_ResultString]" Results_x64="[RunPowerShellScript_Results_x64]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RunPowerShellScript" genArgEvent="daaaf392-f5cf-4799-b34e-49db384336b3" m_bTextLinkChange="False" script="SQBtAHAAbwByAHQALQBNAG8AZAB1AGwAZQAgAC0ATgBhAG0AZQAgAEEAYwB0AGkAdgBlAEQAaQByAGUAYwB0AG8AcgB5AA0ACgAkAEwAbwBnAEYAbwBsAGQAZQByACAAPQAgACIAQwA6AFwAcwB5AG0AYgBpAHMAIgANAAoADQAKACMAZwBlAHQAIABhAGwAbAAgAHUAcwBlAHIAcwAgAHcAaQB0AGgAIABhAGQAbQBpAG4AIAByAGkAZwBoAHQAcwANAAoAJABBAGQAbQBpAG4AVQBzAGUAcgBzACAAPQAgAEcAZQB0AC0AQQBEAEcAcgBvAHUAcABNAGUAbQBiAGUAcgAgAC0ASQBkAGUAbgB0AGkAdAB5ACAAIgBEAG8AbQBhAGkAbgAgAEEAZABtAGkAbgBzACIAIAAtAFIAZQBjAHUAcgBzAGkAdgBlACAAIAB8ACAARwBlAHQALQBBAEQAVQBzAGUAcgAgAC0AcAByAG8AcABlAHIAdABpAGUAcwAgACoAIAB8ACAAdwBoAGUAcgBlACAAewAkAF8ALgBlAG4AYQBiAGwAZQBkACAALQBlAHEAIAAkAHQAcgB1AGUAfQANAAoAWwBzAHQAcgBpAG4AZwBdACQAQQBkAG0AaQBuAFUAcwBlAHIAcwBOAGEAbQBlACAAPQAgACQAQQBkAG0AaQBuAFUAcwBlAHIAcwAuAG4AYQBtAGUAIAAtAGoAbwBpAG4AIAAnACwAIAAnAA0ACgAkAEEAZABtAGkAbgBVAHMAZQByAHMAQwBvAHUAbgB0ACAAPQAgACgAJABBAGQAbQBpAG4AVQBzAGUAcgBzACAAfAAgAG0AZQBhAHMAdQByAGUAKQAuAGMAbwB1AG4AdAANAAoADQAKACMAZQB4AHAAbwByAHQAIAByAGUAcwB1AGwAdABzACAAdABvACAAVABYAFQAIABmAGkAbABlAA0ACgBpAGYAKAAhACgAVABlAHMAdAAtAFAAQQBUAEgAIAAtAFAAQQBUAEgAIAAkAEwAbwBnAEYAbwBsAGQAZQByACkAKQAgAHsATgBlAHcALQBJAHQAZQBtACAALQBJAHQAZQBtAFQAeQBwAGUAIABEAGkAcgBlAGMAdABvAHIAeQAgAC0AUABhAHQAaAAgACQATABvAGcARgBvAGwAZABlAHIAfQANAAoAJABBAGQAbQBpAG4AVQBzAGUAcgBzACAAfAAgAE8AdQB0AC0ARgBpAGwAZQAgAC0ARgBpAGwAZQBQAGEAdABoACAAIgBDADoAXABzAHkAbQBiAGkAcwBcAE4ALQBBAGIAbABlAF8AQQBkAG0AaQBuAFUAcwBlAHIAcwAuAHQAeAB0ACIA">
+          <p:RunPowerShellScript.InArgs>
+            <scg:Dictionary x:TypeArguments="x:String, p:InArg" />
+          </p:RunPowerShellScript.InArgs>
+          <p:RunPowerShellScript.OutArgs>
+            <p:OutArg x:Key="AdminUsersCount" ArgType="number" DisplayName="AdminUsersCount" Name="AdminUsersCount">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:Double">[RunPowerShellScript_AdminUsersCount]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="AdminUsersName" ArgType="string" DisplayName="AdminUsersName" Name="AdminUsersName">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_AdminUsersName]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+          </p:RunPowerShellScript.OutArgs>
+        </p:RunPowerShellScript>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_OutPut_64" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_ResultString" />
+        <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="RunPowerShellScript_Results_x64" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_Result" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_AdminUsersCount" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_AdminUsersName" />
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>

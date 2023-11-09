@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="762c4a51-5fe7-4e53-a584-5fcf092943ac" Name="checkWebmailURL" Description="Y2hlY2tXZWJtYWlsVVJM" Version="2.10.0.19" RemoteCategory="0" ExecutionType="Local" MinimumPSVersionRequired="0.0.0">
+  <Object ID="{e2d5993f-ed25-45fc-bd8b-3c69a16408e1}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml&gt;&lt;OutputParameters&gt;&lt;Parameter ParameterName=&quot;psOWAURL&quot; Label=&quot;Exchange Owa URL&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.psOWAURL &quot; /&gt;&lt;Parameter ParameterName=&quot;psStatus&quot; Label=&quot;Status van URL Check&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.psStatus&quot; /&gt;&lt;Parameter ParameterName=&quot;psStatusCode&quot; Label=&quot;Statuscode&quot; ParameterType=&quot;number&quot; Value=&quot;Run PowerShell Script.psStatusCode&quot; /&gt;&lt;Parameter ParameterName=&quot;PScertExpiresIn&quot; Label=&quot;Certificaat Expiration&quot; ParameterType=&quot;number&quot; Value=&quot;Run PowerShell Script.PScertExpiresIn &quot; /&gt;&lt;/OutputParameters&gt;&lt;/xml&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>d8cf8af0-0053-4d47-a555-af5b8c76d31f.psOWAURL</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>psOWAURL</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>d8cf8af0-0053-4d47-a555-af5b8c76d31f.psStatus</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>psStatus</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>d8cf8af0-0053-4d47-a555-af5b8c76d31f.psStatusCode</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>psStatusCode</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>d8cf8af0-0053-4d47-a555-af5b8c76d31f.PScertExpiresIn</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>PScertExpiresIn</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+    </hashset>
+  </LinkManager>
+  <Diagnostics OriginalVersion="2.16.1.15" />
+  <Activity mc:Ignorable="sads sap" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>504,745</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="504,745" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:RunPowerShellScript AssemblyName="PolicyExecutionEngine, Version=2.16.1.15, Culture=neutral, PublicKeyToken=null" DisplayName="Run PowerShell Script" sap:VirtualizedContainerService.HintSize="468,522" Moniker="d8cf8af0-0053-4d47-a555-af5b8c76d31f" OutPut_64="[RunPowerShellScript_OutPut_64]" Result="[RunPowerShellScript_Result]" ResultString="[RunPowerShellScript_ResultString]" Results_x64="[RunPowerShellScript_Results_x64]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RunPowerShellScript" genArgEvent="7f44db5c-36b6-442f-9953-b54b6ea00bb3" m_bTextLinkChange="False" script="aQBmACAAKAAtAG4AbwB0ACAAKABbAFMAeQBzAHQAZQBtAC4ATQBhAG4AYQBnAGUAbQBlAG4AdAAuAEEAdQB0AG8AbQBhAHQAaQBvAG4ALgBQAFMAVAB5AHAAZQBOAGEAbQBlAF0AJwBTAGUAcgB2AGUAcgBDAGUAcgB0AGkAZgBpAGMAYQB0AGUAVgBhAGwAaQBkAGEAdABpAG8AbgBDAGEAbABsAGIAYQBjAGsAJwApAC4AVAB5AHAAZQApAA0ACgB7AA0ACgAkAGMAZQByAHQAQwBhAGwAbABiAGEAYwBrACAAPQAgAEAAIgANAAoAIAAgACAAIAB1AHMAaQBuAGcAIABTAHkAcwB0AGUAbQA7AA0ACgAgACAAIAAgAHUAcwBpAG4AZwAgAFMAeQBzAHQAZQBtAC4ATgBlAHQAOwANAAoAIAAgACAAIAB1AHMAaQBuAGcAIABTAHkAcwB0AGUAbQAuAE4AZQB0AC4AUwBlAGMAdQByAGkAdAB5ADsADQAKACAAIAAgACAAdQBzAGkAbgBnACAAUwB5AHMAdABlAG0ALgBTAGUAYwB1AHIAaQB0AHkALgBDAHIAeQBwAHQAbwBnAHIAYQBwAGgAeQAuAFgANQAwADkAQwBlAHIAdABpAGYAaQBjAGEAdABlAHMAOwANAAoAIAAgACAAIABwAHUAYgBsAGkAYwAgAGMAbABhAHMAcwAgAFMAZQByAHYAZQByAEMAZQByAHQAaQBmAGkAYwBhAHQAZQBWAGEAbABpAGQAYQB0AGkAbwBuAEMAYQBsAGwAYgBhAGMAawANAAoAIAAgACAAIAB7AA0ACgAgACAAIAAgACAAIAAgACAAcAB1AGIAbABpAGMAIABzAHQAYQB0AGkAYwAgAHYAbwBpAGQAIABJAGcAbgBvAHIAZQAoACkADQAKACAAIAAgACAAIAAgACAAIAB7AA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIABpAGYAKABTAGUAcgB2AGkAYwBlAFAAbwBpAG4AdABNAGEAbgBhAGcAZQByAC4AUwBlAHIAdgBlAHIAQwBlAHIAdABpAGYAaQBjAGEAdABlAFYAYQBsAGkAZABhAHQAaQBvAG4AQwBhAGwAbABiAGEAYwBrACAAPQA9AG4AdQBsAGwAKQANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAewANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIABTAGUAcgB2AGkAYwBlAFAAbwBpAG4AdABNAGEAbgBhAGcAZQByAC4AUwBlAHIAdgBlAHIAQwBlAHIAdABpAGYAaQBjAGEAdABlAFYAYQBsAGkAZABhAHQAaQBvAG4AQwBhAGwAbABiAGEAYwBrACAAKwA9ACAADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIABkAGUAbABlAGcAYQB0AGUADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAoAA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIABPAGIAagBlAGMAdAAgAG8AYgBqACwAIAANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAWAA1ADAAOQBDAGUAcgB0AGkAZgBpAGMAYQB0AGUAIABjAGUAcgB0AGkAZgBpAGMAYQB0AGUALAAgAA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIABYADUAMAA5AEMAaABhAGkAbgAgAGMAaABhAGkAbgAsACAADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgAFMAcwBsAFAAbwBsAGkAYwB5AEUAcgByAG8AcgBzACAAZQByAHIAbwByAHMADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAApAA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAewANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAcgBlAHQAdQByAG4AIAB0AHIAdQBlADsADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAB9ADsADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgAH0ADQAKACAAIAAgACAAIAAgACAAIAB9AA0ACgAgACAAIAAgAH0ADQAKACIAQAANAAoAIAAgACAAIABBAGQAZAAtAFQAeQBwAGUAIAAkAGMAZQByAHQAQwBhAGwAbABiAGEAYwBrAA0ACgAgAH0ADQAKAFsAUwBlAHIAdgBlAHIAQwBlAHIAdABpAGYAaQBjAGEAdABlAFYAYQBsAGkAZABhAHQAaQBvAG4AQwBhAGwAbABiAGEAYwBrAF0AOgA6AEkAZwBuAG8AcgBlACgAKQANAAoAQQBkAGQALQBQAFMAUwBuAGEAcABpAG4AIABNAGkAYwByAG8AcwBvAGYAdAAuAEUAeABjAGgAYQBuAGcAZQAuAE0AYQBuAGEAZwBlAG0AZQBuAHQALgBQAG8AdwBlAHIAUwBoAGUAbABsAC4AUwBuAGEAcABJAG4ADQAKACQAVQBSAEwAIAA9ACAARwBlAHQALQBPAHcAYQBWAGkAcgB0AHUAYQBsAEQAaQByAGUAYwB0AG8AcgB5ACAALQBTAGUAcgB2AGUAcgAgACQAZQBuAHYAOgBjAG8AbQBwAHUAdABlAHIAbgBhAG0AZQAgAHwAIABzAGUAbABlAGMAdAAgACoASQBuAHQAZQByAG4AYQBsAFUAUgBMACoADQAKACQAcABzAE8AVwBBAFUAUgBMACAAPQAgACQAVQBSAEwALgBJAG4AdABlAHIAbgBhAGwAVQByAGwALgBUAG8AUwB0AHIAaQBuAGcAKAApAA0ACgAkAHAAcwBTAHQAYQB0AHUAcwBDAG8AZABlACAAPQAgACgASQBuAHYAbwBrAGUALQBXAGUAYgBSAGUAcQB1AGUAcwB0ACAALQBVAHMAZQBCAGEAcwBpAGMAUABhAHIAcwBpAG4AZwAgAC0AVQByAGkAIAAkAHAAcwBPAFcAQQBVAFIATAApAC4AcwB0AGEAdAB1AHMAYwBvAGQAZQANAAoAIwBbAE4AZQB0AC4AUwBlAHIAdgBpAGMAZQBQAG8AaQBuAHQATQBhAG4AYQBnAGUAcgBdADoAOgBTAGUAYwB1AHIAaQB0AHkAUAByAG8AdABvAGMAbwBsACAAPQAgAFsATgBlAHQALgBTAGUAYwB1AHIAaQB0AHkAUAByAG8AdABvAGMAbwBsAFQAeQBwAGUAXQA6ADoAVABsAHMAIAAtAGIAbwByACAAWwBOAGUAdAAuAFMAZQBjAHUAcgBpAHQAeQBQAHIAbwB0AG8AYwBvAGwAVAB5AHAAZQBdADoAOgBUAGwAcwAxADEAIAAtAGIAbwByACAAWwBOAGUAdAAuAFMAZQBjAHUAcgBpAHQAeQBQAHIAbwB0AG8AYwBvAGwAVAB5AHAAZQBdADoAOgBUAGwAcwAxADIADQAKACQATwBXAEEAVQBSAEwAQwBlAHIAdAAgAD0AIABbAFMAeQBzAHQAZQBtAC4ATgBlAHQALgBTAGUAcgB2AGkAYwBlAFAAbwBpAG4AdABNAGEAbgBhAGcAZQByAF0AOgA6AEYAaQBuAGQAUwBlAHIAdgBpAGMAZQBQAG8AaQBuAHQAKAAkAHAAcwBPAFcAQQBVAFIATAApAA0ACgAkAGUAeABwAEQAYQB0AGUAIAA9ACAAJABPAFcAQQBVAFIATABDAGUAcgB0AC4AQwBlAHIAdABpAGYAaQBjAGEAdABlAC4ARwBlAHQARQB4AHAAaQByAGEAdABpAG8AbgBEAGEAdABlAFMAdAByAGkAbgBnACgAKQANAAoAJABjAGUAcgB0AEUAeABwAEQAYQB0AGUAIAA9ACAAWwBTAHkAcwB0AGUAbQAuAEQAYQB0AGUAVABpAG0AZQBdADoAOgBQAGEAcgBzAGUAKAAkAGUAeABwAEQAYQB0AGUAKQANAAoAWwBpAG4AdABdACQAUABTAGMAZQByAHQARQB4AHAAaQByAGUAcwBJAG4AIAA9ACAAKAAkAGMAZQByAHQARQB4AHAARABhAHQAZQAgAC0AIAAkACgAZwBlAHQALQBkAGEAdABlACkAKQAuAEQAYQB5AHMADQAKAGkAZgAoACQAcABzAFMAdABhAHQAdQBzAEMAbwBkAGUAIAAtAGUAcQAgADIAMAAwACkADQAKAHsADQAKACAAIAAgACAAIwB3AGUAYgBzAGkAdABlACAAaQBzACAAcgB1AG4AbgBpAG4AZwANAAoAIAAgACAAIAAkAHAAcwBTAHQAYQB0AHUAcwAgAD0AIAAiAE8ASwAiAA0ACgB9AA0ACgBlAGwAcwBlACAADQAKAHsADQAKACAAIAAgACAAIwBXAGUAYgBzAGkAdABlACAAaQBzACAAbgBpAGUAdAAgAHIAdQBuAG4AaQBuAGcADQAKACAAIAAgACAAJABwAHMAUwB0AGEAdAB1AHMAIAA9ACAAIgBXAGUAYgBtAGEAaQBsACAAVQBSAEwAIABpAHMAIABkAG8AdwBuACIADQAKAH0ADQAKAA==">
+          <p:RunPowerShellScript.InArgs>
+            <scg:Dictionary x:TypeArguments="x:String, p:InArg" />
+          </p:RunPowerShellScript.InArgs>
+          <p:RunPowerShellScript.OutArgs>
+            <p:OutArg x:Key="psOWAURL" ArgType="string" DisplayName="psOWAURL " Name="psOWAURL">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_psOWAURL]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="psStatusCode" ArgType="number" DisplayName="psStatusCode" Name="psStatusCode">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:Double">[RunPowerShellScript_psStatusCode]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="psStatus" ArgType="string" DisplayName="psStatus" Name="psStatus">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_psStatus]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="PScertExpiresIn" ArgType="number" DisplayName="PScertExpiresIn " Name="PScertExpiresIn">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:Double">[RunPowerShellScript_PScertExpiresIn]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+          </p:RunPowerShellScript.OutArgs>
+        </p:RunPowerShellScript>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_OutPut_64" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_Result" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_ResultString" />
+        <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="RunPowerShellScript_Results_x64" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_psOWAURL" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_psStatusCode" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_psStatus" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_PScertExpiresIn" />
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>

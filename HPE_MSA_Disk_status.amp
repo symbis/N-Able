@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="8b87d89f-4e4d-4c88-8c83-3a3398dd50b1" Name="HP 2040 Show Disks" Description="R2V0IGRpc2sgaW5mb3JtYXRpb24gdmlhIFNTSA==" Version="2.10.0.19" RemoteCategory="2" ExecutionType="Local" MinimumPSVersionRequired="0.0.0">
+  <Object ID="{ab8b2119-a8c4-413e-a351-2373d73079b2}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml&gt;&lt;Parameters&gt;&lt;Parameter ParameterName=&quot;Username&quot; Label=&quot;Username&quot; ParameterType=&quot;string&quot; Value=&quot;manage&quot; /&gt;&lt;Parameter ParameterName=&quot;ConnectionAddress&quot; Label=&quot;Connection Address&quot; ParameterType=&quot;string&quot; Value=&quot;10.17.1.211&quot; /&gt;&lt;Parameter ParameterName=&quot;Password&quot; Label=&quot;Password&quot; ParameterType=&quot;password&quot; Value=&quot;&quot; /&gt;&lt;/Parameters&gt;&lt;OutputParameters&gt;&lt;Parameter ParameterName=&quot;diskStatus&quot; Label=&quot;Disk Status&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.diskStatus&quot; /&gt;&lt;Parameter ParameterName=&quot;CountSparedisks&quot; Label=&quot;CountSparedisks&quot; ParameterType=&quot;number&quot; Value=&quot;Run PowerShell Script.CountSparedisks&quot; /&gt;&lt;Parameter ParameterName=&quot;faileddiskID&quot; Label=&quot;Failed Disk ID&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.faileddiskID&quot; /&gt;&lt;Parameter ParameterName=&quot;CountTotalDisks&quot; Label=&quot;CountTotalDisks&quot; ParameterType=&quot;number&quot; Value=&quot;Run PowerShell Script.CountTotalDisks&quot; /&gt;&lt;/OutputParameters&gt;&lt;/xml&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>cdffbdd8-d8b7-4e63-b9ec-5fd9287f3384.CountSparedisks</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>CountSparedisks</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>cdffbdd8-d8b7-4e63-b9ec-5fd9287f3384.CountTotalDisks</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>CountTotalDisks</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>cdffbdd8-d8b7-4e63-b9ec-5fd9287f3384.faileddiskID</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>faileddiskID</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>cdffbdd8-d8b7-4e63-b9ec-5fd9287f3384.diskStatus</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>diskStatus</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+    </hashset>
+  </LinkManager>
+  <Diagnostics OriginalVersion="2.18.1.8" />
+  <Activity mc:Ignorable="sads sap" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>522,1453</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="522,1453" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:OpenSession Password_ItemProp="{x:Null}" PortNumber_ItemProp="{x:Null}" SSHServer_ItemProp="{x:Null}" UserName_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.6.0.6, Culture=neutral, PublicKeyToken=null" Cipher="[OpenSession_Cipher]" ClientVersion="[OpenSession_ClientVersion]" Connected="[OpenSession_Connected]" DisplayName="Open Session" ExpectPattern="[OpenSession_ExpectPattern]" sap:VirtualizedContainerService.HintSize="486,196" Host="[OpenSession_Host]" HostKey="[OpenSession_HostKey]" HostNameArrow="[OpenSession_HostNameArrow]" IO="[OpenSession_IO]" Mac="[OpenSession_Mac]" Moniker="0e7378ee-46ff-45ed-890d-98bb23fa6b4b" Password="[Password]" Password_DisplayArg="Input Parameters.Password" Password_Item="{x:Null}" Port="[OpenSession_Port]" PortNumber="22" PortNumber_DisplayArg="22" PortNumber_Item="{x:Null}" Pwd="[OpenSession_Pwd]" RemoveTerminalEmulationCharacters="[OpenSession_RemoveTerminalEmulationCharacters]" Result="[OpenSession_Result]" ResultString="[OpenSession_ResultString]" RunAsCurrentLoggedOnUser="False" SSHOutput="[OpenSession_SSHOutput]" SSHServer="[ConnectionAddress]" SSHServer_DisplayArg="Input Parameters.Connection Address" SSHServer_Item="{x:Null}" ScriptExecutionMethod="None" ServerVersion="[OpenSession_ServerVersion]" SessionId="[OpenSession_SessionId]" ShellConnected="[OpenSession_ShellConnected]" ShellOpened="[OpenSession_ShellOpened]" TypeName="OpenSession" UserName="[Username]" UserName_DisplayArg="Input Parameters.Username" UserName_Item="{x:Null}" Username="[OpenSession_Username]" m_bTextLinkChange="False" />
+        <p:SendCommandsandReceiveResponse SSHCommand_ItemProp="{x:Null}" SSHOutputExpect_ItemProp="{x:Null}" SessionId_ItemProp="{x:Null}" Timeout_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.6.0.6, Culture=neutral, PublicKeyToken=null" DisplayName="Disable Cli Paging" sap:VirtualizedContainerService.HintSize="486,196" Moniker="4a909434-d500-446b-aa81-492e6a64f741" Result="[SendCommandsandReceiveResponse_Result]" ResultString="[SendCommandsandReceiveResponse_ResultString]" RunAsCurrentLoggedOnUser="False" SSHCommand="set cli-parameters pager disabled" SSHCommand_DisplayArg="set cli-parameters pager disabled" SSHCommand_Item="{x:Null}" SSHOutput="[SendCommandsandReceiveResponse_SSHOutput]" SSHOutputExpect="#" SSHOutputExpect_DisplayArg="#" SSHOutputExpect_Item="{x:Null}" ScriptExecutionMethod="None" SessionId="[OpenSession_SessionId]" SessionId_DisplayArg="Open Session.SSH Session Id" SessionId_Item="{x:Null}" Timeout="60" Timeout_DisplayArg="60" Timeout_Item="{x:Null}" TypeName="SendCommandsandReceiveResponse" m_bTextLinkChange="False" />
+        <p:SendCommandsandReceiveResponse SSHCommand_ItemProp="{x:Null}" SSHOutputExpect_ItemProp="{x:Null}" SessionId_ItemProp="{x:Null}" Timeout_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.6.0.6, Culture=neutral, PublicKeyToken=null" DisplayName="Show Disks" sap:VirtualizedContainerService.HintSize="486,196" Moniker="12bb54fe-c580-4ea1-9c92-1c650bc7d924" Result="[SendCommandsandReceiveResponse_Result_1]" ResultString="[SendCommandsandReceiveResponse_ResultString_1]" RunAsCurrentLoggedOnUser="False" SSHCommand="show disks" SSHCommand_DisplayArg="show disks" SSHCommand_Item="{x:Null}" SSHOutput="[SendCommandsandReceiveResponse_SSHOutput_1]" SSHOutputExpect="#" SSHOutputExpect_DisplayArg="#" SSHOutputExpect_Item="{x:Null}" ScriptExecutionMethod="None" SessionId="[OpenSession_SessionId]" SessionId_DisplayArg="Open Session.SSH Session Id" SessionId_Item="{x:Null}" Timeout="60" Timeout_DisplayArg="60" Timeout_Item="{x:Null}" TypeName="SendCommandsandReceiveResponse" m_bTextLinkChange="False" />
+        <p:RunPowerShellScript AssemblyName="PolicyExecutionEngine, Version=2.18.1.8, Culture=neutral, PublicKeyToken=null" DisplayName="Run PowerShell Script" sap:VirtualizedContainerService.HintSize="486,522" Moniker="cdffbdd8-d8b7-4e63-b9ec-5fd9287f3384" OutPut_64="[RunPowerShellScript_OutPut_64_1]" Result="[RunPowerShellScript_Result_1]" ResultString="[RunPowerShellScript_ResultString_1]" Results_x64="[RunPowerShellScript_Results_x64_1]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RunPowerShellScript" genArgEvent="1d34fa0b-add8-4ed3-8313-7febf1b7985e" m_bTextLinkChange="False" script="JABQAHIAbwBjAGUAcwBzAGUAZAAgAD0AIABbAHIAZQBnAGUAeABdADoAOgBzAHAAbABpAHQAKAAkAFMAaABvAHcARABpAHMAawBzACwAIAAnAC0AewAyACwAfQAnACkAIAB8ACAAPwAgAHsAJABfAC4ATABlAG4AZwB0AGgAIAAtAGcAdAAgADAAfQANAAoADQAKACQAUAByAG8AYwBlAHMAcwBlAGQAIAA9ACAAJABQAHIAbwBjAGUAcwBzAGUAZABbADEAXQANAAoAJABSAE0AYQB0AGMAaABlAHMAIAA9ACAAQAAoACkADQAKACQAQwBvAHUAbgB0AFMAcABhAHIAZQBkAGkAcwBrAHMAIAA9ACAAMAANAAoAJABDAG8AdQBuAHQAVABvAHQAYQBsAEQAaQBzAGsAcwAgAD0AIAAwAA0ACgAkAGQAaQBzAGsAUwB0AGEAdAB1AHMAIAA9ACAAIgAiAA0ACgAkAGYAYQBpAGwAZQBkAGQAaQBzAGsASQBEAD0AIAAiACIADQAKAA0ACgAkAEwAaQBuAGUAcwAgAD0AIAAkAFAAcgBvAGMAZQBzAHMAZQBkAC4AUwBwAGwAaQB0ACgAWwBFAG4AdgBpAHIAbwBuAG0AZQBuAHQAXQA6ADoATgBlAHcATABpAG4AZQApACAAfAAgAD8AIAB7ACQAXwAuAEwAZQBuAGcAdABoACAALQBnAHQAIAAwAH0ADQAKAA0ACgANAAoADQAKAEYAbwByAGUAYQBjAGgAIAAoACQATAAgAGkAbgAgACQATABpAG4AZQBzACkAIAB7AA0ACgAgACAASQBGACAAKAAkAEwAIAAtAG0AYQB0AGMAaAAgACIARwBsAG8AYgBhAGwAIABTAFAAIgApACAAewANAAoAIAAgACAAIAAkAEMAbwB1AG4AdABTAHAAYQByAGUAZABpAHMAawBzACsAKwANAAoAIAAgAH0ADQAKACAAIABJAEYAIAAoACQATAAgAC0AbQBhAHQAYwBoACAAIgBWAEkAUgBUAFUAQQBMACAAUABPAE8ATAAiACAALQBvAHIAIAAkAEwAIAAtAG0AYQB0AGMAaAAgACIARwBsAG8AYgBhAGwAIABTAFAAIgApACAAewANAAoAIAAgACAAIAAkAEMAbwB1AG4AdABUAG8AdABhAGwARABpAHMAawBzACsAKwANAAoAIAAgAH0ADQAKAH0ADQAKAA0ACgBGAG8AcgBlAGEAYwBoACAAKAAkAEwAIABpAG4AIAAkAEwAaQBuAGUAcwApACAAewANAAoAIAAgAEkARgAgACgAJABMACAALQBtAGEAdABjAGgAIAAnAFwAYgBcAGQAKwBcAC4AXABkACsAXABiACcAKQAgAHsADQAKACAAIAAgACAAJABSAE0AYQB0AGMAaABlAHMAIAArAD0AIAAkAE0AYQB0AGMAaABlAHMALgBWAGEAbAB1AGUAcwAgACAAIAAgAA0ACgAgACAAfQANAAoAfQANAAoADQAKACQAUAByAG8AYwBlAHMAcwBlAGQAIAA9ACAAWwByAGUAZwBlAHgAXQA6ADoAcwBwAGwAaQB0ACgAJABQAHIAbwBjAGUAcwBzAGUAZAAsACAAJwBcAGIAXABkACsAXAAuAFwAZAArAFwAYgAnACkADQAKAA0ACgBGAG8AcgAgACgAJABJACAAPQAgADAAOwAgACQASQAgAC0AbAB0ACAAJABSAE0AYQB0AGMAaABlAHMALgBMAGUAbgBnAHQAaAA7ACAAJABJACsAKwApACAAewANAAoAIAAgAFMAdwBpAHQAYwBoACAALQBXAGkAbABkAGMAYQByAGQAIAAoACQAUAByAG8AYwBlAHMAcwBlAGQAWwAoACQAaQArADEAKQBdACkAIAB7AA0ACgAgACAAIAAgACAAIAAiACoAIABEAGUAZwByAGEAZABlAGQAKgAiACAAewANAAoAIAAgACAAIAAgACAAJABkAGkAcwBrAFMAdABhAHQAdQBzACAAKwA9ACAAIgAgAEQAZQBnAHIAYQBkAGUAZAAiAA0ACgAgACAAIAAgACAAIAAkAGYAYQBpAGwAZQBkAGQAaQBzAGsASQBEACAAKwA9ACAAIgAgACIAIAArACAAJABSAE0AYQB0AGMAaABlAHMAWwAkAGkAXQANAAoAIAAgACAAIAAgACAAfQANAAoADQAKACAAIAAgACAAIAAgACIAKgAgAEYAYQB1AGwAdAAqACIAIAB7AA0ACgAgACAAIAAgACAAIAAkAGQAaQBzAGsAUwB0AGEAdAB1AHMAIAArAD0AIAAiACAARgBhAHUAbAB0ACIADQAKACAAIAAgACAAIAAgACQAZgBhAGkAbABlAGQAZABpAHMAawBJAEQAIAArAD0AIAAiACAAIgAgACsAIAAkAFIATQBhAHQAYwBoAGUAcwBbACQAaQBdAA0ACgAgACAAIAAgAH0AIAANAAoAIAAgAH0ADQAKACAAIABpAGYAKAAkAGQAaQBzAGsAUwB0AGEAdAB1AHMAIAAtAGUAcQAgACIAIgApAHsAJABkAGkAcwBrAFMAdABhAHQAdQBzACAAPQAgACIATwBLACIAfQANAAoAfQA=">
+          <p:RunPowerShellScript.InArgs>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="ShowDisks" ArgType="string" DisplayArg="Show Disks.SSH Output" DisplayName="ShowDisks" Name="ShowDisks" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[SendCommandsandReceiveResponse_SSHOutput_1]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+          </p:RunPowerShellScript.InArgs>
+          <p:RunPowerShellScript.OutArgs>
+            <p:OutArg x:Key="faileddiskID" ArgType="string" DisplayName="faileddiskID" Name="faileddiskID">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_faileddiskID]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="diskStatus" ArgType="string" DisplayName="diskStatus" Name="diskStatus">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_diskStatus]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="CountTotalDisks" ArgType="number" DisplayName="CountTotalDisks" Name="CountTotalDisks">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:Double">[RunPowerShellScript_CountTotalDisks]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="CountSparedisks" ArgType="number" DisplayName="CountSparedisks" Name="CountSparedisks">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:Double">[RunPowerShellScript_CountSparedisks]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+          </p:RunPowerShellScript.OutArgs>
+        </p:RunPowerShellScript>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="OpenSession_HostNameArrow" />
+        <Variable x:TypeArguments="x:String" Name="OpenSession_Host" />
+        <Variable x:TypeArguments="x:String" Name="OpenSession_ShellOpened" />
+        <Variable x:TypeArguments="x:String" Name="OpenSession_ShellConnected" />
+        <Variable x:TypeArguments="x:Boolean" Name="OpenSession_RemoveTerminalEmulationCharacters" />
+        <Variable x:TypeArguments="x:String" Name="OpenSession_Connected" />
+        <Variable x:TypeArguments="x:String" Name="OpenSession_SSHOutput" />
+        <Variable x:TypeArguments="x:Double" Name="OpenSession_Port" />
+        <Variable x:TypeArguments="x:String" Name="OpenSession_Username" />
+        <Variable x:TypeArguments="x:String" Name="OpenSession_IO" />
+        <Variable x:TypeArguments="x:String" Name="OpenSession_ExpectPattern" />
+        <Variable x:TypeArguments="x:String" Name="OpenSession_Cipher" />
+        <Variable x:TypeArguments="x:String" Name="OpenSession_Mac" />
+        <Variable x:TypeArguments="x:String" Name="OpenSession_ServerVersion" />
+        <Variable x:TypeArguments="x:String" Name="OpenSession_ClientVersion" />
+        <Variable x:TypeArguments="x:String" Name="OpenSession_Pwd" />
+        <Variable x:TypeArguments="x:String" Name="OpenSession_HostKey" />
+        <Variable x:TypeArguments="x:String" Name="OpenSession_SessionId" />
+        <Variable x:TypeArguments="x:String" Name="OpenSession_ResultString" />
+        <Variable x:TypeArguments="x:Double" Name="OpenSession_Result" />
+        <Variable x:TypeArguments="x:String" Name="SendCommandsandReceiveResponse_SSHOutput" />
+        <Variable x:TypeArguments="x:String" Name="SendCommandsandReceiveResponse_ResultString" />
+        <Variable x:TypeArguments="x:Double" Name="SendCommandsandReceiveResponse_Result" />
+        <Variable x:TypeArguments="x:String" Name="SendCommandsandReceiveResponse_SSHOutput_1" />
+        <Variable x:TypeArguments="x:String" Name="SendCommandsandReceiveResponse_ResultString_1" />
+        <Variable x:TypeArguments="x:Double" Name="SendCommandsandReceiveResponse_Result_1" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_OutPut_64_1" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_Result_1" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_ResultString_1" />
+        <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="RunPowerShellScript_Results_x64_1" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_diskStatus" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_faileddiskID" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_CountTotalDisks" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_CountSparedisks" />
+        <Variable x:TypeArguments="x:String" Default="manage" Name="Username" />
+        <Variable x:TypeArguments="x:String" Default="10.17.1.211" Name="ConnectionAddress" />
+        <Variable x:TypeArguments="p:Password" Name="Password">
+          <Variable.Default>
+            <Literal x:TypeArguments="p:Password">
+              <p:Password PasswordValue="T1DKYScDs03qfTVysevxTA==" />
+            </Literal>
+          </Variable.Default>
+        </Variable>
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>
