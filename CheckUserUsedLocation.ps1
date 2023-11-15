@@ -122,7 +122,7 @@ if($user -ne '' -and $serverList -ne ''){
                     $session = New-pssession -ComputerName $server.Name -errorAction SilentlyContinue 
                 }
                 if($session){
-                     $tasks = Invoke-Command -session $session -ScriptBlock { Get-ScheduledTask -CimSession $server.Name -ErrorAction SilentlyContinue }
+                     $tasks = Invoke-Command -session $session -ScriptBlock { Get-ScheduledTask -ErrorAction SilentlyContinue }
                      Remove-PSSession -Session $session  
                 }
                 $tasksUsedByUser = $tasks | Where-Object { ($_.Principal.UserId -like "$userName" -or $_.Principal.UserId -like "$pre2000Name" ) -and $_.Principal.LogonType -eq "Password" }
