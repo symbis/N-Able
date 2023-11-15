@@ -14,11 +14,11 @@ V1.0: Initial release
 #> 
 
 #uncomment variable when running manually 
-#$userName = "Administrator"
+$userName = "Administrator"
 
 #comment variables when running manually
-$password = ConvertTo-SecureString $runAsPassword -AsPlainText -Force
-$credentials = New-Object System.Management.Automation.PSCredential ($runAsUser, $password)
+#$password = ConvertTo-SecureString $runAsPassword -AsPlainText -Force
+#$credentials = New-Object System.Management.Automation.PSCredential ($runAsUser, $password)
 
 
 $PathLogFile = "C:\Symbis\"
@@ -45,7 +45,7 @@ if($userName){
         $userName = $user.Name
         $upn = $user.UserPrincipalName
         $servers = Get-ADComputer -Filter {OperatingSystem -Like "Windows Server*"} -Properties OperatingSystem 
-        #$servers = Get-ADComputer -Filter {Name -Like "AD-BCK-02*"} -Properties OperatingSystem   
+        #$servers = Get-ADComputer -Filter {Name -Like "MNGMT-02*"} -Properties OperatingSystem   
         if(($servers.getType()).BaseType.Name -ne "Array"){
             $totalServers = 1
         }
@@ -82,17 +82,15 @@ if($user -ne '' -and $serverList -ne ''){
         #check on all servers for services with those user.
             try {
                 if($credentials){
-                    $session = enter-pssession -ComputerName $server.Name -errorAction SilentlyContinue -Credential $credentials
+                    $session = New-pssession -ComputerName $server.Name -errorAction SilentlyContinue -Credential $credentials
                 }else{
-                    $session = enter-pssession -ComputerName $server.Name -errorAction SilentlyContinue 
+                    $session = New-pssession -ComputerName $server.Name -errorAction SilentlyContinue 
                 }
-                if($session)
-                {
-                    $services = Get-CimInstance -ClassName Win32_Service -ErrorAction SilentlyContinue | Select-Object DisplayName, Name, State, StartName
-                    Exit-PSSession
+                if($session){
+                     $services = Invoke-Command -session $session -ScriptBlock { Get-CimInstance -ClassName Win32_Service -ErrorAction SilentlyContinue | Select-Object DisplayName, Name, State, StartName }
+                     Remove-PSSession -Session $session  
                 }
-                
-               
+                            
                 $servicesUsedByUser = $services | Where-Object {$_.StartName -like $pre2000Name}
                 if($servicesUsedByUser){
                     #Services found with this user on server
@@ -119,16 +117,14 @@ if($user -ne '' -and $serverList -ne ''){
             #check on all servers for scheduled task with those user.
             try {
                 if($credentials){
-                    $session = enter-pssession -ComputerName $server.Name -errorAction SilentlyContinue -Credential $credentials
+                    $session = New-pssession -ComputerName $server.Name -errorAction SilentlyContinue -Credential $credentials
                 }else{
-                    $session = enter-pssession -ComputerName $server.Name -errorAction SilentlyContinue 
+                    $session = New-pssession -ComputerName $server.Name -errorAction SilentlyContinue 
                 }
-                if($session)
-                {
-                    $tasks = Get-ScheduledTask -CimSession $server.Name -ErrorAction SilentlyContinue
-                    Exit-PSSession
+                if($session){
+                     $tasks = Invoke-Command -session $session -ScriptBlock { Get-ScheduledTask -CimSession $server.Name -ErrorAction SilentlyContinue }
+                     Remove-PSSession -Session $session  
                 }
-                
                 $tasksUsedByUser = $tasks | Where-Object { ($_.Principal.UserId -like "$userName" -or $_.Principal.UserId -like "$pre2000Name" ) -and $_.Principal.LogonType -eq "Password" }
                 if($tasksUsedByUser){
                     #Services found with this user on server
