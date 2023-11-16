@@ -14,11 +14,11 @@ V1.0: Initial release
 #> 
 
 #uncomment variable when running manually 
-$userName = "Administrator"
+#$userName = "Administrator"
 
 #comment variables when running manually
-#$password = ConvertTo-SecureString $runAsPassword -AsPlainText -Force
-#$credentials = New-Object System.Management.Automation.PSCredential ($runAsUser, $password)
+$password = ConvertTo-SecureString $runAsPassword -AsPlainText -Force
+$credentials = New-Object System.Management.Automation.PSCredential ($runAsUser, $password)
 
 
 $PathLogFile = "C:\Symbis\"
@@ -45,7 +45,7 @@ if($userName){
         $userName = $user.Name
         $upn = $user.UserPrincipalName
         $servers = Get-ADComputer -Filter {OperatingSystem -Like "Windows Server*"} -Properties OperatingSystem 
-        #$servers = Get-ADComputer -Filter {Name -Like "MNGMT-02*"} -Properties OperatingSystem   
+        #$servers = Get-ADComputer -Filter {Name -Like "EXC-01*"} -Properties OperatingSystem   
         if(($servers.getType()).BaseType.Name -ne "Array"){
             $totalServers = 1
         }
@@ -90,18 +90,20 @@ if($user -ne '' -and $serverList -ne ''){
                      $services = Invoke-Command -session $session -ScriptBlock { Get-CimInstance -ClassName Win32_Service -ErrorAction SilentlyContinue | Select-Object DisplayName, Name, State, StartName }
                      Remove-PSSession -Session $session  
                 }
-                            
+                else{
+                    Write-Host "No Session Found"
+                }                            
                 $servicesUsedByUser = $services | Where-Object {$_.StartName -like $pre2000Name}
                 if($servicesUsedByUser){
                     #Services found with this user on server
                     foreach($serviceUsedByUser in $servicesUsedByUser)
                     {
                         Write-Host "Found on server" $server.Name "the following services with the user" $user.Name": "$serviceUsedByUser.DisplayName
-                        $errors += "Found on server " + $server.Name + " the following services with the user " + $user.Name + ": " +$serviceUsedByUser.DisplayName                
-                    } 
+                        $errors += "Found on server " + $server.Name + " the following services with the user " + $user.Name + ": " +$serviceUsedByUser.DisplayName                                       
+                    }    
                     $serversWithServices += $server.Name
                     $serversWithServices += ", "
-                    countserversWithServices += 1                   
+                    $countserversWithServices += 1                                     
                 }
             }
             catch {
@@ -122,20 +124,23 @@ if($user -ne '' -and $serverList -ne ''){
                     $session = New-pssession -ComputerName $server.Name -errorAction SilentlyContinue 
                 }
                 if($session){
-                     $tasks = Invoke-Command -session $session -ScriptBlock { Get-ScheduledTask -ErrorAction SilentlyContinue }
-                     Remove-PSSession -Session $session  
+                    $tasks = Invoke-Command -session $session -ScriptBlock { Get-ScheduledTask -ErrorAction SilentlyContinue }
+                    Remove-PSSession -Session $session  
                 }
-                $tasksUsedByUser = $tasks | Where-Object { ($_.Principal.UserId -like "$userName" -or $_.Principal.UserId -like "$pre2000Name" ) -and $_.Principal.LogonType -eq "Password" }
+                else{
+                    Write-Host "No Session Found"
+                }
+                $tasksUsedByUser = $tasks | Where-Object { ($_.Principal.UserId -like "$userName" -or $_.Principal.UserId -like "$pre2000Name" ) -and ($_.Principal.LogonType -eq "Password" -or $_.Principal.LogonType -eq "1")}
                 if($tasksUsedByUser){
                     #Services found with this user on server
                     foreach($taskUsedByUser in $tasksUsedByUser)
                     {
                         Write-Host "Found on server" $server.Name "the following scheduled Task with the user" $user.Name": "$taskUsedByUser.TaskName
-                        $errors += "Found on server " + $server.Name + " the following scheduled Task with the user " + $user.Name + ": " +$taskUsedByUser.TaskName               
+                        $errors += "Found on server " + $server.Name + " the following scheduled Task with the user " + $user.Name + ": " +$taskUsedByUser.TaskName         
                     }
                     $serverswithScheduledTasks += $server.Name
                     $serverswithScheduledTasks += ", "  
-                    $countserversWithScheduledTasks += 1                 
+                    $countserversWithScheduledTasks += 1               
                 }
             }
             catch {
