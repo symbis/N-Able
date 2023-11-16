@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="a07547c5-9f07-4463-ab0b-d4db05de23ec" Name="UninstallEDR" Description="VW5pbnN0YWxsRURS" Version="2.16.1.1" MinRequiredVersion="2.16.1.1" RemoteCategory="0" ExecutionType="Local" MinimumPSVersionRequired="0.0.0">
+  <Object ID="{3e6ed5c2-ccec-40fe-b659-33bd2bfa3b7b}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml&gt;&lt;Parameters&gt;&lt;Parameter ParameterName=&quot;APIKEY&quot; Label=&quot;APIKEY S1&quot; ParameterType=&quot;password&quot; Value=&quot;&quot; /&gt;&lt;/Parameters&gt;&lt;/xml&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System" />
+  </LinkManager>
+  <Diagnostics OriginalVersion="2.91.0.8" />
+  <Activity mc:Ignorable="sads sap" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>620,1667</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="620,1667" MinRequiredVersion="2.16.1.1" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:IsAppInstalled ApplicationName_Item="{x:Null}" ApplicationName_ItemProp="{x:Null}" ApplicationName="Sentinel Agent" ApplicationName_DisplayArg="Sentinel Agent" AssemblyName="PolicyExecutionEngine, Version=2.90.0.1, Culture=neutral, PublicKeyToken=null" Conditional="[IsAppInstalled_Conditional]" DisplayName="Is Application Installed" sap:VirtualizedContainerService.HintSize="584,88" MinRequiredVersion="2.10.0.19" Moniker="cdbfb7d0-befa-4616-b5ab-10f58ae1637f" Result="[IsAppInstalled_Result]" ResultString="[IsAppInstalled_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IsAppInstalled" m_bTextLinkChange="False" />
+        <p:SwitchObject AllowDefault_Item="{x:Null}" AllowDefault_ItemProp="{x:Null}" Variable_Item="{x:Null}" Variable_ItemProp="{x:Null}" AllowDefault="False" AllowDefault_DisplayArg="true" AssemblyName="PolicyExecutionEngine, Version=2.90.0.1, Culture=neutral, PublicKeyToken=null" DisplayName="Switch" sap:VirtualizedContainerService.HintSize="584,754" MinRequiredVersion="2.10.0.19" Moniker="e560dcc7-b978-44ea-b633-d85723212802" Result="[SwitchObject_Result]" ResultString="[SwitchObject_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="SwitchObject" Variable="[IsAppInstalled_Conditional]" Variable_DisplayArg="Is Application Installed.Conditional" Variable_Type="x:String" m_bTextLinkChange="False">
+          <p:SwitchObject.CaseSequence>
+            <p:CaseSequenceActivity DisplayName="" sap:VirtualizedContainerService.HintSize="552,538" Name="CaseSequenceActivity">
+              <p:CaseSequenceActivity.Activities>
+                <p:CaseObject Value_Item="{x:Null}" Value_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.90.0.1, Culture=neutral, PublicKeyToken=null" DisplayName="Case" sap:VirtualizedContainerService.HintSize="546,502" MinRequiredVersion="2.10.0.19" Moniker="0aaca761-1ad7-4fb3-8f0b-4aca3bdcf377" Result="[CaseObject_Result]" ResultString="[CaseObject_ResultString]" RunAsCurrentLoggedOnUser="False" RunCase="False" ScriptExecutionMethod="None" TypeName="CaseObject" ValidationError="" Value_DisplayArg="False" Value_Type="x:String" m_bTextLinkChange="False">
+                  <p:CaseObject.ThenOption>
+                    <p:SequenceActivity DisplayName="Then" sap:VirtualizedContainerService.HintSize="514,402" Name="SequenceActivity">
+                      <p:SequenceActivity.Activities>
+                        <p:Log Message_Item="{x:Null}" Message_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.90.0.1, Culture=neutral, PublicKeyToken=null" DisplayName="Log" sap:VirtualizedContainerService.HintSize="476,88" LogMessage="[Log_LogMessage]" Message="****Sentinel Agent is not installed. Aborting uninstall.****" Message_DisplayArg="****Sentinel Agent is not installed. Aborting uninstall.****" MinRequiredVersion="2.10.0.19" Moniker="c47db0ac-1e52-4da3-b4cb-6a327850f930" Result="[Log_Result]" ResultString="[Log_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="Log" m_bTextLinkChange="False" />
+                        <p:StopPolicy CompletionResult_Item="{x:Null}" CompletionResult_ItemProp="{x:Null}" StopReason_Item="{x:Null}" StopReason_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.90.0.1, Culture=neutral, PublicKeyToken=null" CompletionResult="0" CompletionResult_DisplayArg="0" DisplayName="Stop Policy" sap:VirtualizedContainerService.HintSize="476,124" MinRequiredVersion="2.16.1.1" Moniker="0c807848-d2cc-4fa1-a293-ca0e10b87256" Result="[StopPolicy_Result]" ResultString="[StopPolicy_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" StopReason="SentinelOne is not installed" StopReason_DisplayArg="SentinelOne is not installed" TypeName="StopPolicy" m_bTextLinkChange="False" />
+                      </p:SequenceActivity.Activities>
+                      <p:SequenceActivity.Variables>
+                        <Variable x:TypeArguments="x:String" Name="Log_LogMessage" />
+                        <Variable x:TypeArguments="x:String" Name="Log_ResultString" />
+                        <Variable x:TypeArguments="x:Double" Name="Log_Result" />
+                        <Variable x:TypeArguments="x:String" Name="StopPolicy_ResultString" />
+                        <Variable x:TypeArguments="x:Double" Name="StopPolicy_Result" />
+                      </p:SequenceActivity.Variables>
+                    </p:SequenceActivity>
+                  </p:CaseObject.ThenOption>
+                  <p:CaseObject.Value>
+                    <InArgument x:TypeArguments="x:Object">
+                      <p:ObjectLiteral Value="False" />
+                    </InArgument>
+                  </p:CaseObject.Value>
+                </p:CaseObject>
+              </p:CaseSequenceActivity.Activities>
+              <p:CaseSequenceActivity.Variables>
+                <Variable x:TypeArguments="x:String" Name="CaseObject_ResultString" />
+                <Variable x:TypeArguments="x:Double" Name="CaseObject_Result" />
+              </p:CaseSequenceActivity.Variables>
+            </p:CaseSequenceActivity>
+          </p:SwitchObject.CaseSequence>
+          <p:SwitchObject.DefaultOption>
+            <p:SequenceActivity DisplayName="Default" sap:VirtualizedContainerService.HintSize="149,127" Name="SequenceActivity">
+              <p:SequenceActivity.Activities>
+                <sco:Collection x:TypeArguments="Activity" />
+              </p:SequenceActivity.Activities>
+              <p:SequenceActivity.Variables>
+                <sco:Collection x:TypeArguments="Variable" />
+              </p:SequenceActivity.Variables>
+            </p:SequenceActivity>
+          </p:SwitchObject.DefaultOption>
+        </p:SwitchObject>
+        <p:RunPowerShellScript AssemblyName="PolicyExecutionEngine, Version=2.90.0.1, Culture=neutral, PublicKeyToken=null" DisplayName="Run PowerShell Script" sap:VirtualizedContainerService.HintSize="584,522" MinRequiredVersion="2.10.0.19" Moniker="150be58e-30c8-4244-b163-19d73ad8aae4" OutPut_64="[RunPowerShellScript_OutPut_64]" Result="[RunPowerShellScript_Result]" ResultString="[RunPowerShellScript_ResultString]" Results_x64="[RunPowerShellScript_Results_x64]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RunPowerShellScript" genArgEvent="794ccca1-dc11-4073-905a-77ff8ef41413" m_bTextLinkChange="False" script="JABkAGkAcgA9AEcAZQB0AC0AQwBoAGkAbABkAEkAdABlAG0AIAAtAFAAYQB0AGgAIAAnAEMAOgBcAFAAcgBvAGcAcgBhAG0AIABGAGkAbABlAHMAXABTAGUAbgB0AGkAbgBlAGwATwBuAGUAXAAqAFwAUwBlAG4AdABpAG4AZQBsAGMAdABsAC4AZQB4AGUAJwAgAA0ACgBDAEQAIAAkAGQAaQByAC4AZABpAHIAZQBjAHQAbwByAHkAIAANAAoAJABhAGcAZQBuAHQASQBEACAAPQAgAC4AXABTAGUAbgB0AGkAbgBlAGwAYwB0AGwALgBlAHgAZQAgAGEAZwBlAG4AdABfAGkAZAANAAoAJABVAFIASQAgAD0AIAAiAGgAdAB0AHAAcwA6AC8ALwBlAHUAYwBlADEALQBjAHcAMAAyAC4AcwBlAG4AdABpAG4AZQBsAG8AbgBlAC4AbgBlAHQALwB3AGUAYgAvAGEAcABpAC8AdgAyAC4AMQAvAGEAZwBlAG4AdABzAC8AcABhAHMAcwBwAGgAcgBhAHMAZQBzAD8AdQB1AGkAZABzAD0AJABhAGcAZQBuAHQASQBEACIADQAKACQASABlAGEAZABlAHIAcwAgAD0AIABAAHsAQQB1AHQAaABvAHIAaQB6AGEAdABpAG8AbgAgAD0AIAAiAEEAUABJAFQAbwBrAGUAbgAgACQAQQBQAEkASwBFAFkAIgB9AA0ACgAkAHAAYQBzAHMAcABoAHIAYQBzAGUAIAA9ACAAKAAkAHIAZQBzAHUAbAB0ACAAPQAgAEkAbgB2AG8AawBlAC0AUgBlAHMAdABNAGUAdABoAG8AZAAgAC0AVQByAGkAIAAkAFUAUgBJACAALQBNAGUAdABoAG8AZAAgAEcARQBUACAALQBIAGUAYQBkAGUAcgBzACAAJABIAGUAYQBkAGUAcgBzACAALQBDAG8AbgB0AGUAbgB0AFQAeQBwAGUAIAAiAGEAcABwAGwAaQBjAGEAdABpAG8AbgAvAGoAcwBvAG4AIgApAC4AZABhAHQAYQAuAHAAYQBzAHMAcABoAHIAYQBzAGUADQAKAGkAZgAoACQAcABhAHMAcwBwAGgAcgBhAHMAZQApAA0ACgB7AA0ACgAgACAAIAAgAHQAcgB5AA0ACgAgACAAIAAgAHsADQAKACAAIAAgACAALgBcAHUAbgBpAG4AcwB0AGEAbABsAC4AZQB4AGUAIAAvAHUAbgBpAG4AcwB0AGEAbABsACAALwBrACAAJABwAGEAcwBzAHAAaAByAGEAcwBlACAALwBuAG8AcgBlAHMAdABhAHIAdAAgAC8AcQANAAoAIAAgACAAIAB9AA0ACgAgACAAIAAgAGMAYQB0AGMAaAANAAoAIAAgACAAIAB7AA0ACgAgACAAIAAgACAAIAAgACAAVwByAGkAdABlAC0ASABvAHMAdAAgACIAVQBuAGkAbgBzAHQAYQBsAGwAIABGAGEAaQBsAGUAZAAiAA0ACgAgACAAIAAgAH0ADQAKAH0ADQAKAEUAbABzAGUADQAKAHsADQAKACAAIAAgACAAVwByAGkAdABlAC0ASABvAHMAdAAgACIATgBvACAAUABhAHMAcwBwAGgAcgBhAHMAZQAgAHIAZQB0AHIAaQBlAHYAZQBkACwAIAB0AHIAeQAgAHQAbwAgAHUAbgBpAG4AcwB0AGEAbABsACAAdwBpAHQAaABvAHUAdAAgAHAAYQBzAHMAcABoAHIAYQBzAGUALgAiAA0ACgAgACAAIAAgAHQAcgB5AA0ACgAgACAAIAAgAHsADQAKACAAIAAgACAALgBcAHUAbgBpAG4AcwB0AGEAbABsAC4AZQB4AGUAIAAvAHUAbgBpAG4AcwB0AGEAbABsACAALwBuAG8AcgBlAHMAdABhAHIAdAAgAC8AcQANAAoAIAAgACAAIAB9AA0ACgAgACAAIAAgAGMAYQB0AGMAaAANAAoAIAAgACAAIAB7AA0ACgAgACAAIAAgACAAIAAgACAAVwByAGkAdABlAC0ASABvAHMAdAAgACIAVQBuAGkAbgBzAHQAYQBsAGwAIABGAGEAaQBsAGUAZAAsACAAdAByAHkAaQBuAGcAIAB3AGkAdABoAG8AdQB0ACAAcgBhAG4AZABvAG0AIABwAGEAcwBzAHAAaAByAGEAcwBlACIADQAKACAAIAAgACAAfQANAAoAIAAgACAAIAB0AHIAeQANAAoAIAAgACAAIAB7AA0ACgAgACAAIAAgAC4AXAB1AG4AaQBuAHMAdABhAGwAbAAuAGUAeABlACAALwB1AG4AaQBuAHMAdABhAGwAbAAgAC8AawAgACIAeAB5AHoAIgAgAC8AbgBvAHIAZQBzAHQAYQByAHQAIAAvAHEAIAANAAoAIAAgACAAIAB9AA0ACgAgACAAIAAgAGMAYQB0AGMAaAANAAoAIAAgACAAIAB7AA0ACgAgACAAIAAgACAAIAAgACAAVwByAGkAdABlAC0ASABvAHMAdAAgACIAVQBuAGkAbgBzAHQAYQBsAGwAIABGAGEAaQBsAGUAZAAuACAAUgBlAG0AbwB2AGUAIABTAGUAbgB0AGkAbgBlAGwATwBuAGUAIAB3AGkAdABoACAAUwBlAG4AdABpAG4AZQBsAEMAbABlAGEAbgBlAHIALgAiAA0ACgAgACAAIAAgAH0ADQAKAH0ADQAKACAADQAKACAADQAKAA==">
+          <p:RunPowerShellScript.InArgs>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="APIKEY" ArgType="password" DisplayArg="Input Parameters.APIKEY S1" DisplayName="APIKEY" Name="APIKEY" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[APIKEY]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+          </p:RunPowerShellScript.InArgs>
+          <p:RunPowerShellScript.OutArgs>
+            <scg:Dictionary x:TypeArguments="x:String, p:OutArg" />
+          </p:RunPowerShellScript.OutArgs>
+        </p:RunPowerShellScript>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="IsAppInstalled_Conditional" />
+        <Variable x:TypeArguments="x:String" Name="IsAppInstalled_ResultString" />
+        <Variable x:TypeArguments="x:Double" Name="IsAppInstalled_Result" />
+        <Variable x:TypeArguments="x:String" Name="SwitchObject_ResultString" />
+        <Variable x:TypeArguments="x:Double" Name="SwitchObject_Result" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_OutPut_64" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_ResultString" />
+        <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="RunPowerShellScript_Results_x64" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_Result" />
+        <Variable x:TypeArguments="p:Password" Name="APIKEY">
+          <Variable.Default>
+            <Literal x:TypeArguments="p:Password">
+              <p:Password PasswordValue="AeV/HLGpj9f51XL/+hdUr/QWzn6a4j7DtmJo3QsU2bLSrYxLMGWqYOgizKEe88joSm9xEJBOeU0npYPu4Obpja7Pc42+ipwFQLEp63OEiWa7sKOL54S4bED1MdaRbcPx" />
+            </Literal>
+          </Variable.Default>
+        </Variable>
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>
