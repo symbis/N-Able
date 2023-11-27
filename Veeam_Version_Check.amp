@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="fd94648b-1525-40c3-b517-08752d1dbad2" Name="Veeam_Version_Check" Description="VmVlYW1fVmVyc2lvbl9DaGVjaw==" Version="2.10.0.19" RemoteCategory="0" ExecutionType="Local" MinimumPSVersionRequired="0.0.0">
+  <Object ID="{9323a100-be1c-49d6-941d-70c318a9707a}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml&gt;&lt;Parameters&gt;&lt;Parameter ParameterName=&quot;LatestAvailableVersion&quot; Label=&quot;LatestAvailableVersion&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;/Parameters&gt;&lt;OutputParameters&gt;&lt;Parameter ParameterName=&quot;LatestAvailableVersionOutput&quot; Label=&quot;Latest Available Version of Veeam&quot; ParameterType=&quot;string&quot; Value=&quot;Input Parameters.LatestAvailableVersion&quot; /&gt;&lt;Parameter ParameterName=&quot;InstalledVersion&quot; Label=&quot;Installed Veeam Version&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.InstalledVersion&quot; /&gt;&lt;Parameter ParameterName=&quot;VersionUptoDate&quot; Label=&quot;Veeam Up-To-Date&quot; ParameterType=&quot;number&quot; Value=&quot;Run PowerShell Script.VersionUptoDate&quot; /&gt;&lt;/OutputParameters&gt;&lt;/xml&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>InputParameter.LatestAvailableVersion</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>LatestAvailableVersionOutput</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>f361cfb7-e248-4ff2-82d4-c1e36a1e3199.InstalledVersion</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>InstalledVersion</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>f361cfb7-e248-4ff2-82d4-c1e36a1e3199.VersionUptoDate</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>VersionUptoDate</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+    </hashset>
+  </LinkManager>
+  <Diagnostics OriginalVersion="2.91.0.8" />
+  <Activity mc:Ignorable="sap sads" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>504,745</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="504,745" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:RunPowerShellScript AssemblyName="PolicyExecutionEngine, Version=2.91.0.8, Culture=neutral, PublicKeyToken=null" DisplayName="Run PowerShell Script" sap:VirtualizedContainerService.HintSize="468,522" Moniker="f361cfb7-e248-4ff2-82d4-c1e36a1e3199" OutPut_64="[RunPowerShellScript_OutPut_64]" Result="[RunPowerShellScript_Result]" ResultString="[RunPowerShellScript_ResultString]" Results_x64="[RunPowerShellScript_Results_x64]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RunPowerShellScript" genArgEvent="ef1a09e2-6dda-4810-bf78-d0c0607a9ee1" m_bTextLinkChange="False" script="PAAjACAADQAKAC4AUwBZAE4ATwBQAFMASQBTACAAIAANAAoAQwBoAGUAYwBrACAAVgBlAGUAYQBtACAAVgBlAHIAcwBpAG8AbgAgAGkAbgBmAG8AcgBtAGEAdABpAG8AbgANAAoALgBEAEUAUwBDAFIASQBQAFQASQBPAE4AIAANAAoAQwBoAGUAYwBrACAAVgBlAGUAYQBtACAAVgBlAHIAcwBpAG8AbgAgAGkAbgBmAG8AcgBtAGEAdABpAG8AbgANAAoALgBOAE8AVABFAFMAIAANAAoAQwByAGUAYQB0AGUAZAAgAGIAeQAgAEIAYQByAGUAbgBkACAAdgBkACAARAB1AHMAcwBlAG4AIAANAAoARABhAHQAZQA6ACAAMQA0AC0AMQAxAC0AMgAwADIAMwANAAoASQBuAHAAdQB0AHMAOgAgACQATABhAHQAZQBzAHQAQQB2AGEAaQBsAGEAYgBsAGUAVgBlAHIAcwBpAG8AbgBbAHMAdAByAGkAbgBnAF0ADQAKAE8AdQB0AHAAdQB0AHMAOgAgACQASQBuAHMAdABhAGwAbABlAGQAVgBlAHIAcwBpAG8AbgBbAHMAdAByAGkAbgBnAF0ALAAgACQAVgBlAHIAcwBpAG8AbgBVAHAAdABvAEQAYQB0AGUAWwBpAG4AdABdAA0ACgBWAGUAcgBzAGkAbwBuADoAIAAxAC4AMAAgAA0ACgBSAGUAbABlAGEAcwBlACAATgBvAHQAZQBzACAADQAKAFYAMQAuADAAOgAgAEkAbgBpAHQAaQBhAGwAIABTAGUAdAB1AHAAIAANAAoAIwA+ACAADQAKAA0ACgANAAoAIwBHAGUAdAAgAFYAZQBlAGEAbQAgAFYAZQByAHMAaQBvAG4AIABJAG4AZgBvAA0ACgAkAEkAbgBzAHQAYQBsAGwAUABhAHQAaAAgAD0AIABHAGUAdAAtAEkAdABlAG0AUAByAG8AcABlAHIAdAB5ACAALQBQAGEAdABoACAAIgBIAEsATABNADoAXABTAG8AZgB0AHcAYQByAGUAXABWAGUAZQBhAG0AXABWAGUAZQBhAG0AIABCAGEAYwBrAHUAcAAgAGEAbgBkACAAUgBlAHAAbABpAGMAYQB0AGkAbwBuAFwAIgAgAHwAIABTAGUAbABlAGMAdAAgAC0ARQB4AHAAYQBuAGQAUAByAG8AcABlAHIAdAB5ACAAQwBvAHIAZQBQAGEAdABoAA0ACgBBAGQAZAAtAFQAeQBwAGUAIAAtAEwAaQB0AGUAcgBhAGwAUABhAHQAaAAgACIAJABJAG4AcwB0AGEAbABsAFAAYQB0AGgAXABWAGUAZQBhAG0ALgBCAGEAYwBrAHUAcAAuAEMAbwBuAGYAaQBnAHUAcgBhAHQAaQBvAG4ALgBkAGwAbAAiACAADQAKACQAUAByAG8AZAB1AGMAdABEAGEAdABhACAAPQAgAFsAVgBlAGUAYQBtAC4AQgBhAGMAawB1AHAALgBDAG8AbgBmAGkAZwB1AHIAYQB0AGkAbwBuAC4AQgBhAGMAawB1AHAAUAByAG8AZAB1AGMAdABdADoAOgBDAHIAZQBhAHQAZQAoACkADQAKACQASQBuAHMAdABhAGwAbABlAGQAVgBlAHIAcwBpAG8AbgAgAD0AIAAkAFAAcgBvAGQAdQBjAHQARABhAHQAYQAuAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAuAFQAbwBTAHQAcgBpAG4AZwAoACkADQAKAGkAZgAgACgAJABQAHIAbwBkAHUAYwB0AEQAYQB0AGEALgBNAGEAcgBrAGUAdABOAGEAbQBlACAALQBuAGUAIAAiACIAKQAgAHsAJABJAG4AcwB0AGEAbABsAGUAZABWAGUAcgBzAGkAbwBuACAAKwA9ACAAIgAgACQAKAAkAFAAcgBvAGQAdQBjAHQARABhAHQAYQAuAE0AYQByAGsAZQB0AE4AYQBtAGUAKQAiAH0ADQAKAA0ACgAjAGMAbwBtAHAAYQByAGUAIABWAGUAcgBzAGkAbwBuACAAdwBpAHQAaAAgAGwAYQB0AGUAcwB0ACAAYQB2AGEAaQBsAGEAYgBsAGUAIAB2AGUAcgBzAGkAbwBuAA0ACgBpAGYAKAAkAEkAbgBzAHQAYQBsAGwAZQBkAFYAZQByAHMAaQBvAG4AIAAtAGUAcQAgACQATABhAHQAZQBzAHQAQQB2AGEAaQBsAGEAYgBsAGUAVgBlAHIAcwBpAG8AbgApAHsADQAKACAAIAAgACAAIwBWAGUAZQBhAG0AIAB1AHAAIAB0AG8AIABkAGEAdABlAA0ACgAgACAAIAAgACQAVgBlAHIAcwBpAG8AbgBVAHAAdABvAEQAYQB0AGUAIAA9ACAAMQANAAoAfQANAAoAZQBsAHMAZQB7AA0ACgAgACAAIAAgACMAVgBlAGUAYQBtACAAVgBlAHIAcwBpAG8AbgAgAG8AdQB0AC0AbwBmAC0AZABhAHQAZQANAAoAIAAgACAAIAAkAFYAZQByAHMAaQBvAG4AVQBwAHQAbwBEAGEAdABlACAAPQAgADAADQAKAH0A">
+          <p:RunPowerShellScript.InArgs>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="LatestAvailableVersion" ArgType="string" DisplayArg="Input Parameters.LatestAvailableVersion" DisplayName="LatestAvailableVersion" Name="LatestAvailableVersion" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[LatestAvailableVersion]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+          </p:RunPowerShellScript.InArgs>
+          <p:RunPowerShellScript.OutArgs>
+            <p:OutArg x:Key="VersionUptoDate" ArgType="number" DisplayName="VersionUptoDate" Name="VersionUptoDate">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:Double">[RunPowerShellScript_VersionUptoDate]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="InstalledVersion" ArgType="string" DisplayName="InstalledVersion" Name="InstalledVersion">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_InstalledVersion]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+          </p:RunPowerShellScript.OutArgs>
+        </p:RunPowerShellScript>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_OutPut_64" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_Result" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_ResultString" />
+        <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="RunPowerShellScript_Results_x64" />
+        <Variable x:TypeArguments="x:String" Name="LatestAvailableVersion" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_VersionUptoDate" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_InstalledVersion" />
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>
