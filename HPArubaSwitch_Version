@@ -1,0 +1,150 @@
+<#
+.SYNOPSIS 
+Check version of HP/Aruba Switches.
+.DESCRIPTION
+Check version of HP/Aruba Switches. Specific on YA, YB, YC, RA, WB, WC, KA and KB branch.
+.NOTES
+Created by Barend vd Dussen
+Date: 19-10-2023
+Inputs: $switchip, $switchusername, $switchpassword, $yaBranch, $ybBranch, $ycBranch, $raBranch, $wbBranch, $wcBranch, $kaBranch, $kbBranch
+Outputs: $UptoDate, $version, $errorFound, $SwitchInfo
+Version: 0.1
+Release Notes
+V0.1: Initial Setup
+#>
+
+$ipAddress = $switchip
+$username = $switchusername
+$PWord = ConvertTo-SecureString -String $switchpassword -AsPlainText -Force
+$credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $username, $PWord
+$UptoDate = 0
+
+# Check if Posh-SSH module is installed
+if (-not (Get-Module -Name Posh-SSH -ListAvailable)) {
+    # Posh-SSH module is not installed, so install it
+    Write-Host "Posh-SSH module is not installed. Installing..."
+    Install-Module -Name Posh-SSH -Force
+    if (-not (Get-Module -Name Posh-SSH -ListAvailable)) {
+        Write-host "Failed to install Posh-SSH Module"
+        $errorFound = "Failed to install Posh-SSH Module"
+        exit
+    }
+} else {
+    Write-Host "Posh-SSH module is already installed."  
+}
+
+#Check if host is online
+if((Test-NetConnection $ipAddress -port 22).TcpTestSucceeded)
+{
+    #try to connect and read version number of switch
+    try{
+        $session = New-SSHSession -ComputerName $ipAddress -Credential $credential -AcceptKey
+        if($session){
+            #session connected
+            $stream = $session.Session.CreateShellStream("dumb", 0, 0, 0, 0, 1000)
+            start-sleep -seconds 1
+            $stream.Write("`n")
+            $data = $stream.Read()
+            Remove-SSHSession $session
+            $lines = $data -split "`n"
+            foreach($line in $lines){
+                if($line -like "*Software Revision*"){
+                    $version = $line -replace "Software revision ", ""
+                    write-host $version
+                }                
+            }
+            if($version){
+                #Version found
+                if($version.Substring(0,2) -eq "YA")
+                {
+                    if($version -like "*$yaBranch*"){
+                        Write-Host "YA Branch UptoDate"
+                        $UptoDate = 1
+                    }
+                    $latestversion = $yaBranch
+                } 
+                elseif($version.Substring(0,2) -eq "YB")
+                {               
+                    if($version -like "*$ybBranch*"){
+                        Write-Host "YB Branch UptoDate"                        
+                        $UptoDate = 1
+                    }
+                    $latestversion = $ybBranch
+                }
+                elseif($version.Substring(0,2) -eq "YC")
+                {               
+                    if($version -like "*$ycBranch*"){
+                        Write-Host "YC Branch UptoDate"                        
+                        $UptoDate = 1
+                    }
+                    $latestversion = $ycBranch
+                }
+                elseif($version.Substring(0,2) -eq "RA")
+                {        
+                    if($version -like "*$raBranch*"){
+                        Write-Host "RA Branch UptoDate"                        
+                        $UptoDate = 1
+                    }
+                    $latestversion = $raBranch
+                }
+                elseif($version.Substring(0,2) -eq "WB")
+                {               
+                    if($version -like "*$wbBranch*"){
+                        Write-Host "WB Branch UptoDate"
+                        $UptoDate = 1
+                    }
+                    $latestversion = $wbBranch
+                }
+                elseif($version.Substring(0,2) -eq "WC")
+                {               
+                    if($version -like "*$wcBranch*"){
+                        Write-Host "WC Branch UptoDate"                        
+                        $UptoDate = 1
+                    }
+                    $latestversion = $wcBranch
+                }
+                elseif($version.Substring(0,2) -eq "KA")
+                {               
+                    if($version -like "*$kaBranch*"){
+                        Write-Host "KA Branch UptoDate"                        
+                        $UptoDate = 1
+                    }
+                    $latestversion = $kaBranch
+                }
+                elseif($version.Substring(0,2) -eq "KB")
+                {               
+                    if($version -like "*$kbBranch*"){
+                        Write-Host "KB Branch UptoDate"
+                        $latestversion = $kbBranch
+                        $UptoDate = 1
+                    }
+                }
+                else{
+                    Write-host "No matching version found. Possible not up-to-date."
+                }
+                
+            }else{
+                #No version found
+                Write-Host "No version found"
+                $errorFound = "No version found"
+            }
+            $SwitchInfo = $lines[0]
+
+        }else{
+            #session not connected
+            Write-Host "No SSH session possible. Possible username/password incorrect."
+            $errorFound = "No SSH session possible. Possible username/password incorrect."
+        }
+        
+    }
+    catch{
+        #error thrown
+        Write-Host "An error occurred: $_"
+        $errorFound = "An error occurred: $_"
+    } 
+}else{
+    #Host not reachable
+    Write-Host "Host not reachable by SSH. Check if host is online or the firewall settings."
+    $errorFound = "Host not reachable by SSH. Check if host is online or the firewall settings."
+}
+ 

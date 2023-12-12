@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="3374bb37-0942-4fd5-8b40-29f8930f5443" Name="vCenter_Version" Description="Q2hlY2sgdkNlbnRlciBWZXJzaW9uLg==" Version="2.10.0.19" RemoteCategory="0" ExecutionType="Local" MinimumPSVersionRequired="0.0.0">
+  <Object ID="{4c63a92d-81e3-4331-b32d-4ab0f66298bc}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml&gt;&lt;Parameters&gt;&lt;Parameter ParameterName=&quot;VMwareHost&quot; Label=&quot;VMware Hostname/IP Address. (Can be a Vcenter or ESXi Host)&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;VMwareUser&quot; Label=&quot;VMware Username&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;VMwarePass&quot; Label=&quot;Vmware password&quot; ParameterType=&quot;password&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;vCenterLatestAvailableBuild_6&quot; Label=&quot;vCenter Latest Available BuildNumber for Version 6&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;vCenterLatestAvailableBuild_7&quot; Label=&quot;vCenter Latest Available BuildNumber for Version 7&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;vCenterLatestAvailableBuild_8&quot; Label=&quot;vCenter Latest Available BuildNumber for Version 8&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;/Parameters&gt;&lt;OutputParameters&gt;&lt;Parameter ParameterName=&quot;vCenterHostname&quot; Label=&quot;vCenter Hostname&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.vCenterHostname&quot; /&gt;&lt;Parameter ParameterName=&quot;vCenterInstalledVersion&quot; Label=&quot;vCenter Installed Version&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.vCenterInstalledVersion&quot; /&gt;&lt;Parameter ParameterName=&quot;vCenterInstalledBuild&quot; Label=&quot;vCenter Installed Buildnumber&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.vCenterInstalledBuild&quot; /&gt;&lt;Parameter ParameterName=&quot;vCenterUpToDate&quot; Label=&quot;vCenter UpToDate&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.vCenterUpToDate&quot; /&gt;&lt;Parameter ParameterName=&quot;vCenterLatestAvailableBuild&quot; Label=&quot;vCenter Latest Available Build&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.vCenterLatestAvailableBuild&quot; /&gt;&lt;/OutputParameters&gt;&lt;/xml&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>c8073b18-857f-4710-9270-b032199669e3.vCenterHostname</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>vCenterHostname</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>c8073b18-857f-4710-9270-b032199669e3.vCenterInstalledVersion</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>vCenterInstalledVersion</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>c8073b18-857f-4710-9270-b032199669e3.vCenterInstalledBuild</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>vCenterInstalledBuild</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>c8073b18-857f-4710-9270-b032199669e3.vCenterLatestAvailableBuild</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>vCenterLatestAvailableBuild</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>c8073b18-857f-4710-9270-b032199669e3.vCenterUpToDate</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>vCenterUpToDate</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+    </hashset>
+  </LinkManager>
+  <Diagnostics OriginalVersion="2.91.0.8" />
+  <Activity mc:Ignorable="sads sap" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>504,745</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="504,745" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:RunPowerShellScript AssemblyName="PolicyExecutionEngine, Version=2.91.0.8, Culture=neutral, PublicKeyToken=null" DisplayName="Run PowerShell Script" sap:VirtualizedContainerService.HintSize="468,522" Moniker="c8073b18-857f-4710-9270-b032199669e3" OutPut_64="[RunPowerShellScript_OutPut_64]" Result="[RunPowerShellScript_Result]" ResultString="[RunPowerShellScript_ResultString]" Results_x64="[RunPowerShellScript_Results_x64]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RunPowerShellScript" genArgEvent="4456a201-b637-48ce-a98e-4368014a485c" m_bTextLinkChange="False" script="PAAjACAADQAKAC4AUwBZAE4ATwBQAFMASQBTACAAIAANAAoAQwBoAGUAYwBrACAAdgBDAGUAbgB0AGUAcgAgAFYAZQByAHMAaQBvAG4AIABpAG4AZgBvAHIAbQBhAHQAaQBvAG4ADQAKAC4ARABFAFMAQwBSAEkAUABUAEkATwBOACAADQAKAEMAaABlAGMAawAgAHYAQwBlAG4AdABlAHIAIABWAGUAcgBzAGkAbwBuACAAaQBuAGYAbwByAG0AYQB0AGkAbwBuAA0ACgAuAE4ATwBUAEUAUwAgAA0ACgBDAHIAZQBhAHQAZQBkACAAYgB5ACAAQgBhAHIAZQBuAGQAIAB2AGQAIABEAHUAcwBzAGUAbgAgAA0ACgBEAGEAdABlADoAIAAxADQALQAxADEALQAyADAAMgAzAA0ACgBJAG4AcAB1AHQAcwA6ACAAJABWAE0AdwBhAHIAZQBIAG8AcwB0AFsAcwB0AHIAaQBuAGcAXQAsACAAJABWAE0AdwBhAHIAZQBVAHMAZQByAFsAcwB0AHIAaQBuAGcAXQAsACAAJABWAE0AdwBhAHIAZQBQAGEAcwBzAFsAcABhAHMAcwB3AG8AcgBkAF0ALAAgACQAdgBDAGUAbgB0AGUAcgBMAGEAdABlAHMAdABBAHYAYQBpAGwAYQBiAGwAZQBCAHUAaQBsAGQAXwA2AFsAcwB0AHIAaQBuAGcAXQAsACAAJAB2AEMAZQBuAHQAZQByAEwAYQB0AGUAcwB0AEEAdgBhAGkAbABhAGIAbABlAEIAdQBpAGwAZABfADcAWwBzAHQAcgBpAG4AZwBdACwAIAAkAHYAQwBlAG4AdABlAHIATABhAHQAZQBzAHQAQQB2AGEAaQBsAGEAYgBsAGUAQgB1AGkAbABkAF8AOABbAHMAdAByAGkAbgBnAF0ADQAKAE8AdQB0AHAAdQB0AHMAOgAgACQAdgBDAGUAbgB0AGUAcgBIAG8AcwB0AG4AYQBtAGUAWwBzAHQAcgBpAG4AZwBdACwAIAAkAHYAQwBlAG4AdABlAHIASQBuAHMAdABhAGwAbABlAGQAVgBlAHIAcwBpAG8AbgBbAHMAdAByAGkAbgBnAF0ALAAgACQAdgBDAGUAbgB0AGUAcgBJAG4AcwB0AGEAbABsAGUAZABCAHUAaQBsAGQAWwBzAHQAcgBpAG4AZwBdACwAIAAkAHYAQwBlAG4AdABlAHIAVQBwAFQAbwBEAGEAdABlAFsAUwB0AHIAaQBuAGcAXQAsACAAJAB2AEMAZQBuAHQAZQByAEwAYQB0AGUAcwB0AEEAdgBhAGkAbABhAGIAbABlAEIAdQBpAGwAZABbAHMAdAByAGkAbgBnAF0ADQAKAFYAZQByAHMAaQBvAG4AOgAgADEALgAwACAADQAKAFIAZQBsAGUAYQBzAGUAIABOAG8AdABlAHMAIAANAAoAVgAxAC4AMAA6ACAASQBuAGkAdABpAGEAbAAgAFMAZQB0AHUAcAAgAA0ACgAjAD4AIAANAAoADQAKACMAIABEAG8AIABuAG8AdAAgAHAAcgBvAG0AcAB0ACAAdQBzAGUAcgAgAGYAbwByACAAYwBvAG4AZgBpAHIAbQBhAHQAaQBvAG4AcwANAAoAUwBlAHQALQBWAGEAcgBpAGEAYgBsAGUAIAAtAE4AYQBtAGUAIAAnAEMAbwBuAGYAaQByAG0AUAByAGUAZgBlAHIAZQBuAGMAZQAnACAALQBWAGEAbAB1AGUAIAAnAE4AbwBuAGUAJwAgAC0AUwBjAG8AcABlACAARwBsAG8AYgBhAGwADQAKAA0ACgAjACAASQBuAHMAdABhAGwAbAAgAFAAYQBjAGsAYQBnAGUATQBhAG4AYQBnAGUAbQBlAG4AdAANAAoASQBuAHMAdABhAGwAbAAtAFAAYQBjAGsAYQBnAGUAIAAtAE4AYQBtAGUAIABQAGEAYwBrAGEAZwBlAE0AYQBuAGEAZwBlAG0AZQBuAHQAIAAtAE0AaQBuAGkAbQB1AG0AVgBlAHIAcwBpAG8AbgAgADEALgA0AC4ANwAgAC0ARgBvAHIAYwBlACAALQBDAG8AbgBmAGkAcgBtADoAJABmAGEAbABzAGUAIAAtAFMAbwB1AHIAYwBlACAAUABTAEcAYQBsAGwAZQByAHkADQAKAA0ACgAjACAASQBuAHMAdABhAGwAbAAgAFAAbwB3AGUAcgBzAGgAZQBsAGwARwBlAHQADQAKAEkAbgBzAHQAYQBsAGwALQBQAGEAYwBrAGEAZwBlACAALQBOAGEAbQBlACAAUABvAHcAZQByAHMAaABlAGwAbABHAGUAdAAgAC0ARgBvAHIAYwBlACAALQBWAGUAcgBiAG8AcwBlAA0ACgANAAoAIwBTAE4ATQBQAHYAMwAgAGMAaABlAGMAawAgAG0AbwBkAHUAbABlAA0ACgAkAG0AbwBkAHUAbABlACAAPQAgAGcAZQB0AC0AbQBvAGQAdQBsAGUADQAKAEkAZgAgACgAJABtAG8AZAB1AGwAZQAuAG4AYQBtAGUAIAAtAG4AbwB0AGMAbwBuAHQAYQBpAG4AcwAgACIAVgBNAHcAYQByAGUALgBQAG8AdwBlAHIAQwBMAEkAIgApAHsASQBuAHMAdABhAGwAbAAtAG0AbwBkAHUAbABlACAAVgBNAHcAYQByAGUALgBQAG8AdwBlAHIAQwBMAEkAIAAgAC0ARgBvAHIAYwBlACAALQBTAGsAaQBwAFAAdQBiAGwAaQBzAGgAZQByAEMAaABlAGMAawAgAC0AQQBsAGwAbwB3AEMAbABvAGIAYgBlAHIAfQANAAoASQBtAHAAbwByAHQALQBNAG8AZAB1AGwAZQAgAFYATQB3AGEAcgBlAC4AUABvAHcAZQByAEMATABJAA0ACgANAAoAJABWAE0AdwBhAHIAZQBQAGEAcwBzAHcAbwByAGQAIAA9ACAAQwBvAG4AdgBlAHIAdABUAG8ALQBTAGUAYwB1AHIAZQBTAHQAcgBpAG4AZwAgACQAVgBNAHcAYQByAGUAUABhAHMAcwAgABMgYQBzAHAAbABhAGkAbgB0AGUAeAB0ACAAEyBmAG8AcgBjAGUADQAKACQAQwByAGUAZABlAG4AdABpAGEAbAAgAD0AIABOAGUAdwAtAE8AYgBqAGUAYwB0ACAALQBUAHkAcABlAE4AYQBtAGUAIABTAHkAcwB0AGUAbQAuAE0AYQBuAGEAZwBlAG0AZQBuAHQALgBBAHUAdABvAG0AYQB0AGkAbwBuAC4AUABTAEMAcgBlAGQAZQBuAHQAaQBhAGwAIAAtAEEAcgBnAHUAbQBlAG4AdABMAGkAcwB0ACAAJABWAE0AdwBhAHIAZQBVAHMAZQByACwAIAAkAFYATQB3AGEAcgBlAFAAYQBzAHMAdwBvAHIAZAANAAoADQAKACMAYwBvAG4AbgBlAGMAdAAgAHQAbwAgAFYATQB3AGEAcgBlAA0ACgAkAHYAYwBoAG8AcwB0ACAAPQAgAEMAbwBuAG4AZQBjAHQALQBWAEkAUwBlAHIAdgBlAHIAIAAtAFMAZQByAHYAZQByACAAJABWAE0AdwBhAHIAZQBIAG8AcwB0ACAALQBDAHIAZQBkAGUAbgB0AGkAYQBsACAAJABDAHIAZQBkAGUAbgB0AGkAYQBsACAALQBGAG8AcgBjAGUADQAKAA0ACgAjAEMAaABlAGMAawAgAHYAQwBlAG4AdABlAHIAIAAgACAADQAKACQAdgBDAGUAbgB0AGUAcgBJAG4AcwB0AGEAbABsAGUAZABWAGUAcgBzAGkAbwBuACAAPQAgACQAdgBjAGgAbwBzAHQALgBWAGUAcgBzAGkAbwBuAA0ACgAkAHYAQwBlAG4AdABlAHIASQBuAHMAdABhAGwAbABlAGQAQgB1AGkAbABkACAAPQAgACQAdgBjAGgAbwBzAHQALgBCAHUAaQBsAGQADQAKACQAdgBDAGUAbgB0AGUAcgBIAG8AcwB0AG4AYQBtAGUAIAA9ACAAJAB2AGMAaABvAHMAdAAuAE4AYQBtAGUADQAKAGkAZgAoACgAJAB2AEMAZQBuAHQAZQByAEkAbgBzAHQAYQBsAGwAZQBkAFYAZQByAHMAaQBvAG4AKQAuAFMAdABhAHIAdABzAFcAaQB0AGgAKAAiADYAIgApACkAewANAAoAIAAgACAAIAAkAHYAQwBlAG4AdABlAHIATABhAHQAZQBzAHQAQQB2AGEAaQBsAGEAYgBsAGUAQgB1AGkAbABkACAAPQAgACQAdgBDAGUAbgB0AGUAcgBMAGEAdABlAHMAdABBAHYAYQBpAGwAYQBiAGwAZQBCAHUAaQBsAGQAXwA2AA0ACgB9AA0ACgBlAGwAcwBlAGkAZgAoACgAJAB2AEMAZQBuAHQAZQByAEkAbgBzAHQAYQBsAGwAZQBkAFYAZQByAHMAaQBvAG4AKQAuAFMAdABhAHIAdABzAFcAaQB0AGgAKAAiADcAIgApACkAewANAAoAIAAgACAAIAAkAHYAQwBlAG4AdABlAHIATABhAHQAZQBzAHQAQQB2AGEAaQBsAGEAYgBsAGUAQgB1AGkAbABkACAAPQAgACQAdgBDAGUAbgB0AGUAcgBMAGEAdABlAHMAdABBAHYAYQBpAGwAYQBiAGwAZQBCAHUAaQBsAGQAXwA3AA0ACgB9AA0ACgBlAGwAcwBlAGkAZgAoACgAJAB2AEMAZQBuAHQAZQByAEkAbgBzAHQAYQBsAGwAZQBkAFYAZQByAHMAaQBvAG4AKQAuAFMAdABhAHIAdABzAFcAaQB0AGgAKAAiADgAIgApACkAewANAAoAIAAgACAAIAAkAHYAQwBlAG4AdABlAHIATABhAHQAZQBzAHQAQQB2AGEAaQBsAGEAYgBsAGUAQgB1AGkAbABkACAAPQAgACQAdgBDAGUAbgB0AGUAcgBMAGEAdABlAHMAdABBAHYAYQBpAGwAYQBiAGwAZQBCAHUAaQBsAGQAXwA4AA0ACgB9ACAAIAAgACAADQAKAEkAZgAoACgAJAB2AGMAaABvAHMAdAAuAEIAdQBpAGwAZAAgAC0AZQBxACAAJAB2AEMAZQBuAHQAZQByAEwAYQB0AGUAcwB0AEEAdgBhAGkAbABhAGIAbABlAEIAdQBpAGwAZABfADYAKQAgAC0AbwByACAAKAAkAHYAYwBoAG8AcwB0AC4AQgB1AGkAbABkACAALQBlAHEAIAAkAHYAQwBlAG4AdABlAHIATABhAHQAZQBzAHQAQQB2AGEAaQBsAGEAYgBsAGUAQgB1AGkAbABkAF8ANwApACAALQBvAHIAIAAoACQAdgBjAGgAbwBzAHQALgBCAHUAaQBsAGQAIAAtAGUAcQAgACQAdgBDAGUAbgB0AGUAcgBMAGEAdABlAHMAdABBAHYAYQBpAGwAYQBiAGwAZQBCAHUAaQBsAGQAXwA4ACkAKQB7AA0ACgAgACAAIAAgACMAdgBjAGUAbgB0AGUAcgAgAHUAcAAgAHQAbwAgAGQAYQB0AGUADQAKACAAIAAgACAAJAB2AEMAZQBuAHQAZQByAFUAcABUAG8ARABhAHQAZQAgAD0AIAAkAHYAQwBlAG4AdABlAHIASABvAHMAdABuAGEAbQBlACAAKwAgACIAIABVAHAALQBUAG8ALQBEAGEAdABlACIAIAAgACAAIAAgACAAIAANAAoAfQANAAoARQBsAHMAZQB7AA0ACgAgACAAIAAgACMAdgBjAGUAbgB0AGUAcgAgAG4AbwB0ACAAdQBwAC0AdABvAC0AZABhAHQAZQANAAoAIAAgACAAIAAkAHYAQwBlAG4AdABlAHIAVQBwAFQAbwBEAGEAdABlACAAPQAgACQAdgBDAGUAbgB0AGUAcgBIAG8AcwB0AG4AYQBtAGUAIAArACAAIgAgAE4AaQBlAHQAIABVAHAALQBUAG8ALQBEAGEAdABlACIADQAKAA0ACgB9ACAADQAKAEQAaQBzAGMAbwBuAG4AZQBjAHQALQBWAEkAUwBlAHIAdgBlAHIAIAAtAEYAbwByAGMAZQAgAC0AQwBvAG4AZgBpAHIAbQA6ACQAZgBhAGwAcwBlAA0ACgANAAoADQAKAA0ACgANAAoA">
+          <p:RunPowerShellScript.InArgs>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="VMwareHost" ArgType="string" DisplayArg="Input Parameters.VMware Hostname/IP Address. (Can be a Vcenter or ESXi Host)" DisplayName="VMwareHost" Name="VMwareHost" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[VMwareHost]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="VMwareUser" ArgType="string" DisplayArg="Input Parameters.VMware Username" DisplayName="VMwareUser" Name="VMwareUser" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[VMwareUser]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="VMwarePass" ArgType="password" DisplayArg="Input Parameters.Vmware password" DisplayName="VMwarePass" Name="VMwarePass" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[VMwarePass]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="vCenterLatestAvailableBuild_6" ArgType="string" DisplayArg="Input Parameters.vCenter Latest Available BuildNumber for Version 6" DisplayName="vCenterLatestAvailableBuild_6" Name="vCenterLatestAvailableBuild_6" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[vCenterLatestAvailableBuild_6]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="vCenterLatestAvailableBuild_7" ArgType="string" DisplayArg="Input Parameters.vCenter Latest Available BuildNumber for Version 7" DisplayName="vCenterLatestAvailableBuild_7" Name="vCenterLatestAvailableBuild_7" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[vCenterLatestAvailableBuild_7]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="vCenterLatestAvailableBuild_8" ArgType="string" DisplayArg="Input Parameters.vCenter Latest Available BuildNumber for Version 8" DisplayName="vCenterLatestAvailableBuild_8" Name="vCenterLatestAvailableBuild_8" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[vCenterLatestAvailableBuild_8]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+          </p:RunPowerShellScript.InArgs>
+          <p:RunPowerShellScript.OutArgs>
+            <p:OutArg x:Key="vCenterHostname" ArgType="string" DisplayName="vCenterHostname" Name="vCenterHostname">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_vCenterHostname]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="vCenterInstalledVersion" ArgType="string" DisplayName="vCenterInstalledVersion" Name="vCenterInstalledVersion">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_vCenterInstalledVersion]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="vCenterInstalledBuild" ArgType="string" DisplayName="vCenterInstalledBuild" Name="vCenterInstalledBuild">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_vCenterInstalledBuild]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="vCenterUpToDate" ArgType="string" DisplayName="vCenterUpToDate" Name="vCenterUpToDate">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_vCenterUpToDate]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="vCenterLatestAvailableBuild" ArgType="string" DisplayName="vCenterLatestAvailableBuild" Name="vCenterLatestAvailableBuild">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_vCenterLatestAvailableBuild]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+          </p:RunPowerShellScript.OutArgs>
+        </p:RunPowerShellScript>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_OutPut_64" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_Result" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_ResultString" />
+        <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="RunPowerShellScript_Results_x64" />
+        <Variable x:TypeArguments="x:String" Name="VMwareHost" />
+        <Variable x:TypeArguments="x:String" Name="VMwareUser" />
+        <Variable x:TypeArguments="p:Password" Name="VMwarePass" />
+        <Variable x:TypeArguments="x:String" Name="vCenterLatestAvailableBuild_6" />
+        <Variable x:TypeArguments="x:String" Name="vCenterLatestAvailableBuild_7" />
+        <Variable x:TypeArguments="x:String" Name="vCenterLatestAvailableBuild_8" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_vCenterHostname" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_vCenterInstalledVersion" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_vCenterInstalledBuild" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_vCenterLatestAvailableBuild" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_vCenterUpToDate" />
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>

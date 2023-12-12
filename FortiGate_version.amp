@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="8f6f5789-1c1b-4b69-ae50-b8cd817eb490" Name="FortiGate_version" Description="Rm9ydGlHYXRlX3ZlcnNpb24=" Version="2.10.0.19" RemoteCategory="0" ExecutionType="Local" MinimumPSVersionRequired="0.0.0">
+  <Object ID="{e62a1358-ca4a-4345-801b-e4fd1aa83c6c}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml&gt;&lt;Parameters&gt;&lt;Parameter ParameterName=&quot;FortiGate&quot; Label=&quot;FortiGate Hostname/IP-Address&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;FGTLatestVersion_v6&quot; Label=&quot;FortiGate Latest Available Version V6&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;FGTport&quot; Label=&quot;FortiGate Admin Port&quot; ParameterType=&quot;number&quot; Value=&quot;8443&quot; /&gt;&lt;Parameter ParameterName=&quot;FGTLatestVersion_V7&quot; Label=&quot;FortiGate Latest available Version V7.0&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;FGTLatestVersion_V74&quot; Label=&quot;FortiGate Latest available Version V7.4&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;Parameter ParameterName=&quot;FGTapikey&quot; Label=&quot;FortiGate APIKEY&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;/Parameters&gt;&lt;OutputParameters&gt;&lt;Parameter ParameterName=&quot;FortiGateHostname&quot; Label=&quot;FortiGate Hostname&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.FortiGateHostname&quot; /&gt;&lt;Parameter ParameterName=&quot;FGTInstalledVersion&quot; Label=&quot;FortiGate Installed Version&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.FGTInstalledVersion&quot; /&gt;&lt;Parameter ParameterName=&quot;FGTLatestAvailableVersion&quot; Label=&quot;FortiGate Latest Available Version&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.FGTLatestAvailableVersion&quot; /&gt;&lt;Parameter ParameterName=&quot;FGTUpToDate&quot; Label=&quot;FortiGate Up-To-Date&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.FGTUpToDate&quot; /&gt;&lt;/OutputParameters&gt;&lt;/xml&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>12a234d1-414a-49f6-84d7-9d26d0e24fbb.FGTUpToDate</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>FGTUpToDate</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>12a234d1-414a-49f6-84d7-9d26d0e24fbb.FortiGateHostname</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>FortiGateHostname</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>12a234d1-414a-49f6-84d7-9d26d0e24fbb.FGTInstalledVersion</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>FGTInstalledVersion</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>12a234d1-414a-49f6-84d7-9d26d0e24fbb.FGTLatestAvailableVersion</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>FGTLatestAvailableVersion</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+    </hashset>
+  </LinkManager>
+  <Diagnostics OriginalVersion="2.91.0.8" />
+  <Activity mc:Ignorable="sads sap" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>490,571</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="490,571" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:RunPowerShellScript AssemblyName="PolicyExecutionEngine, Version=2.91.0.8, Culture=neutral, PublicKeyToken=null" DisplayName="Run PowerShell Script" sap:VirtualizedContainerService.HintSize="454,348" Moniker="12a234d1-414a-49f6-84d7-9d26d0e24fbb" OutPut_64="[RunPowerShellScript_OutPut_64]" Result="[RunPowerShellScript_Result]" ResultString="[RunPowerShellScript_ResultString]" Results_x64="[RunPowerShellScript_Results_x64]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RunPowerShellScript" genArgEvent="198e3f51-3663-4b43-a6b3-9593040b160b" m_bTextLinkChange="False" script="PAAjACAADQAKAC4AUwBZAE4ATwBQAFMASQBTACAAIAANAAoAQwBoAGUAYwBrACAARgBvAHIAdABpAGcAYQB0AGUAIABWAGUAcgBzAGkAbwBuACAAaQBuAGYAbwByAG0AYQB0AGkAbwBuAA0ACgAuAEQARQBTAEMAUgBJAFAAVABJAE8ATgAgAA0ACgBDAGgAZQBjAGsAIABGAG8AcgB0AGkAZwBhAHQAZQAgAFYAZQByAHMAaQBvAG4AIABpAG4AZgBvAHIAbQBhAHQAaQBvAG4ADQAKAC4ATgBPAFQARQBTACAADQAKAEMAcgBlAGEAdABlAGQAIABiAHkAIABCAGEAcgBlAG4AZAAgAHYAZAAgAEQAdQBzAHMAZQBuACAADQAKAEQAYQB0AGUAOgAgADEANAAtADEAMQAtADIAMAAyADMADQAKAEkAbgBwAHUAdABzADoAIAAkAEYAbwByAHQAaQBHAGEAdABlAFsAcwB0AHIAaQBuAGcAXQAsACAAJABGAEcAVABhAHAAaQBrAGUAeQAsACAAJABGAEcAVABwAG8AcgB0AFsAaQBuAHQAXQAsACAARgBHAFQATABhAHQAZQBzAHQAVgBlAHIAcwBpAG8AbgBfAFYANgBbAFMAdAByAGkAbgBnAF0ALAAgAEYARwBUAEwAYQB0AGUAcwB0AFYAZQByAHMAaQBvAG4AXwBWADcAWwBTAHQAcgBpAG4AZwBdACwAIABGAEcAVABMAGEAdABlAHMAdABWAGUAcgBzAGkAbwBuAF8AVgA3ADQAWwBTAHQAcgBpAG4AZwBdAA0ACgBPAHUAdABwAHUAdABzADoAIAAkAEYAbwByAHQAaQBHAGEAdABlAEgAbwBzAHQAbgBhAG0AZQBbAHMAdAByAGkAbgBnAF0ALAAgACQARgBHAFQASQBuAHMAdABhAGwAbABlAGQAVgBlAHIAcwBpAG8AbgBbAHMAdAByAGkAbgBnAF0ALAAgACQARgBHAFQATABhAHQAZQBzAHQAQQB2AGEAaQBsAGEAYgBsAGUAVgBlAHIAcwBpAG8AbgBbAHMAdAByAGkAbgBnAF0ALAAgAEYARwBUAFUAcABUAG8ARABhAHQAZQBbAFMAdAByAGkAbgBnAF0ADQAKAFYAZQByAHMAaQBvAG4AOgAgADEALgAwACAADQAKAFIAZQBsAGUAYQBzAGUAIABOAG8AdABlAHMAIAANAAoAVgAxAC4AMAA6ACAASQBuAGkAdABpAGEAbAAgAFMAZQB0AHUAcAAgAA0ACgAjAD4AIAANAAoADQAKACMARgBHAFQAIABjAGgAZQBjAGsAIABtAG8AZAB1AGwAZQANAAoAJABGAEcAVABhAHAAaQBrAGUAeQAgAD0AIAAiADgAeQBmAGoAMwA2AHMAMAByAEgAeABuADEAagBIAG4AOAA2AGsAZAB6AGgAcABzAGcAMAAwADcAeABwACIADQAKACQAbQBvAGQAdQBsAGUAIAA9ACAAZwBlAHQALQBtAG8AZAB1AGwAZQANAAoASQBmACAAKAAkAG0AbwBkAHUAbABlAC4AbgBhAG0AZQAgAC0AbgBvAHQAYwBvAG4AdABhAGkAbgBzACAAIgBQAG8AdwBlAHIARgBHAFQAIgApAHsADQAKACAAIAAgACAAaQBmACgAKABHAGUAdAAtAFAAYQBjAGsAYQBnAGUAUAByAG8AdgBpAGQAZQByACAALQBOAGEAbQBlACAATgB1AEcAZQB0ACkALgB2AGUAcgBzAGkAbwBuACAALQBsAHQAIAAyAC4AOAAuADUALgAyADAAMQAgACkADQAKACAAIAAgACAAewANAAoAIAAgACAAIAAgACAAIAAgAEkAbgBzAHQAYQBsAGwALQBQAGEAYwBrAGEAZwBlAFAAcgBvAHYAaQBkAGUAcgAgAC0ATgBhAG0AZQAgAE4AdQBHAGUAdAAgAC0ATQBpAG4AaQBtAHUAbQBWAGUAcgBzAGkAbwBuACAAMgAuADgALgA1AC4AMgAwADEAIAAtAEYAbwByAGMAZQAgAA0ACgAgACAAIAAgAH0ADQAKACAAIAAgACAASQBuAHMAdABhAGwAbAAtAG0AbwBkAHUAbABlACAAUABvAHcAZQByAEYARwBUACAAIAAtAEYAbwByAGMAZQAgAC0AUwBrAGkAcABQAHUAYgBsAGkAcwBoAGUAcgBDAGgAZQBjAGsAIAAtAEEAbABsAG8AdwBDAGwAbwBiAGIAZQByAA0ACgB9AA0ACgBJAG0AcABvAHIAdAAtAE0AbwBkAHUAbABlACAAUABvAHcAZQByAEYARwBUAA0ACgANAAoAJABhAHAAaQBrAGUAeQAgAD0AIABDAG8AbgB2AGUAcgB0AFQAbwAtAFMAZQBjAHUAcgBlAFMAdAByAGkAbgBnACAAJABGAEcAVABhAHAAaQBrAGUAeQAgAC0AYQBzAHAAbABhAGkAbgB0AGUAeAB0ACAALQBmAG8AcgBjAGUADQAKACMAYwBvAG4AbgBlAGMAdAAgAHQAbwAgAEYARwBUAA0ACgAkAEYARwBUACAAPQAgACgAQwBvAG4AbgBlAGMAdAAtAEYARwBUACAALQBTAGUAcgB2AGUAcgAgADEAMAAuADEAOAAuADAALgAxACAALQBBAHAAaQBUAG8AawBlAG4AIAAkAEYARwBUAGEAcABpAGsAZQB5ACAALQBwAG8AcgB0ACAAOAA0ADQAMwAgAC0AUwBrAGkAcABDAGUAcgB0AGkAZgBpAGMAYQB0AGUAQwBoAGUAYwBrACkADQAKAA0ACgBbAHMAdAByAGkAbgBnAF0AJABGAEcAVABJAG4AcwB0AGEAbABsAGUAZABWAGUAcgBzAGkAbwBuACAAPQAgACQARgBHAFQALgB2AGUAcgBzAGkAbwBuAA0ACgAkAEYAbwByAHQAaQBHAGEAdABlAEgAbwBzAHQAbgBhAG0AZQAgAD0AIAAoAEcAZQB0AC0ARgBHAFQAUwB5AHMAdABlAG0ARwBsAG8AYgBhAGwAKQAuAGgAbwBzAHQAbgBhAG0AZQANAAoADQAKAGkAZgAoACgAJABGAEcAVABJAG4AcwB0AGEAbABsAGUAZABWAGUAcgBzAGkAbwBuACkALgBTAHQAYQByAHQAcwBXAGkAdABoACgAIgA2ACIAKQApAHsADQAKACAAIAAgACAAJABGAEcAVABMAGEAdABlAHMAdABBAHYAYQBpAGwAYQBiAGwAZQBWAGUAcgBzAGkAbwBuACAAPQAgACQARgBHAFQATABhAHQAZQBzAHQAVgBlAHIAcwBpAG8AbgBfAFYANgANAAoAfQANAAoAZQBsAHMAZQBpAGYAKAAoACQARgBHAFQASQBuAHMAdABhAGwAbABlAGQAVgBlAHIAcwBpAG8AbgApAC4AUwB0AGEAcgB0AHMAVwBpAHQAaAAoACIANwAuADAAIgApACkAewANAAoAIAAgACAAIAAkAEYARwBUAEwAYQB0AGUAcwB0AEEAdgBhAGkAbABhAGIAbABlAFYAZQByAHMAaQBvAG4AIAA9ACAAJABGAEcAVABMAGEAdABlAHMAdABWAGUAcgBzAGkAbwBuAF8AVgA3AA0ACgAgACAAIAAgAFcAcgBpAHQAZQAtAEgAbwBzAHQAIAAiAFQAZQBzAHQAIgANAAoAfQANAAoAZQBsAHMAZQBpAGYAKAAoACQARgBHAFQASQBuAHMAdABhAGwAbABlAGQAVgBlAHIAcwBpAG8AbgApAC4AUwB0AGEAcgB0AHMAVwBpAHQAaAAoACIANwAuADQAIgApACkAewANAAoAIAAgACAAIAAkAEYARwBUAEwAYQB0AGUAcwB0AEEAdgBhAGkAbABhAGIAbABlAFYAZQByAHMAaQBvAG4AIAA9ACAAJABGAEcAVABMAGEAdABlAHMAdABWAGUAcgBzAGkAbwBuAF8AVgA3ADQADQAKAH0AIAAgAA0ACgANAAoASQBmACgAKAAkAEYARwBUAEkAbgBzAHQAYQBsAGwAZQBkAFYAZQByAHMAaQBvAG4AIAAtAGUAcQAgACQARgBHAFQATABhAHQAZQBzAHQAVgBlAHIAcwBpAG8AbgBfAFYANgApACAALQBvAHIAIAAoACQARgBHAFQASQBuAHMAdABhAGwAbABlAGQAVgBlAHIAcwBpAG8AbgAgAC0AZQBxACAAJABGAEcAVABMAGEAdABlAHMAdABWAGUAcgBzAGkAbwBuAF8AVgA3ACkAIAAtAG8AcgAgACgAJABGAEcAVABJAG4AcwB0AGEAbABsAGUAZABWAGUAcgBzAGkAbwBuACAALQBlAHEAIAAkAEYARwBUAEwAYQB0AGUAcwB0AFYAZQByAHMAaQBvAG4AXwBWADcANAApACkAewANAAoAIAAgACAAIAAjAEYAbwByAHQAaQBHAGEAdABlACAASABvAHMAdAAgAHUAcAAgAHQAbwAgAGQAYQB0AGUADQAKACAAIAAgACAAJABGAEcAVABVAHAAVABvAEQAYQB0AGUAIAA9ACAAJABGAG8AcgB0AGkARwBhAHQAZQBIAG8AcwB0AG4AYQBtAGUAIAArACAAIgAgAFUAcAAtAFQAbwAtAEQAYQB0AGUAIgANAAoAfQAgACAAIAAgAA0ACgBFAGwAcwBlAHsADQAKACAAIAAgACAAIwBGAG8AcgB0AGkARwBhAHQAZQAgAEgAbwBzAHQAIABuAG8AdAAgAHUAcAAtAHQAbwAtAGQAYQB0AGUADQAKACAAIAAgACAAJABGAEcAVABVAHAAVABvAEQAYQB0AGUAIAA9ACAAJABGAG8AcgB0AGkARwBhAHQAZQBIAG8AcwB0AG4AYQBtAGUAIAArACAAIgAgAE4AaQBlAHQAIABVAHAALQBUAG8ALQBEAGEAdABlACIADQAKAH0ADQAKAA0ACgAjAGQAaQBzAGMAbwBuAG4AZQBjAHQAIABGAEcAVAANAAoARABpAHMAYwBvAG4AbgBlAGMAdAAtAEYARwBUACAALQBDAG8AbgBmAGkAcgBtADoAJABmAGEAbABzAGUADQAKAA==">
+          <p:RunPowerShellScript.InArgs>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="FortiGate" ArgType="string" DisplayArg="Input Parameters.FortiGate Hostname/IP-Address" DisplayName="FortiGate" Name="FortiGate" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[FortiGate]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="FGTapikey" ArgType="string" DisplayArg="Input Parameters.FortiGate APIKEY" DisplayName="FGTapikey" Name="FGTapikey" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[FGTapikey]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="FGTport" ArgType="number" DisplayArg="Input Parameters.FortiGate Admin Port" DisplayName="FGTport" Name="FGTport" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[FGTport]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="FGTLatestVersion_V6" ArgType="string" DisplayArg="Input Parameters.FortiGate Latest Available Version V6" DisplayName="FGTLatestVersion_V6" Name="FGTLatestVersion_V6" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[FGTLatestVersion_v6]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="FGTLatestVersion_V7" ArgType="string" DisplayArg="Input Parameters.FortiGate Latest available Version V7.0" DisplayName="FGTLatestVersion_V7" Name="FGTLatestVersion_V7" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[FGTLatestVersion_V7]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="FGTLatestVersion_V74" ArgType="string" DisplayArg="Input Parameters.FortiGate Latest available Version V7.4" DisplayName="FGTLatestVersion_V74" Name="FGTLatestVersion_V74" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:Object">[FGTLatestVersion_V74]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+          </p:RunPowerShellScript.InArgs>
+          <p:RunPowerShellScript.OutArgs>
+            <p:OutArg x:Key="FortiGateHostname" ArgType="string" DisplayName="FortiGateHostname" Name="FortiGateHostname">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_FortiGateHostname]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="FGTInstalledVersion" ArgType="string" DisplayName="FGTInstalledVersion" Name="FGTInstalledVersion">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_FGTInstalledVersion]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="FGTLatestAvailableVersion" ArgType="string" DisplayName="FGTLatestAvailableVersion" Name="FGTLatestAvailableVersion">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_FGTLatestAvailableVersion]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="FGTUpToDate" ArgType="string" DisplayName="FGTUpToDate" Name="FGTUpToDate">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_FGTUpToDate]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+          </p:RunPowerShellScript.OutArgs>
+        </p:RunPowerShellScript>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_OutPut_64" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_Result" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_ResultString" />
+        <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="RunPowerShellScript_Results_x64" />
+        <Variable x:TypeArguments="x:String" Name="FortiGate" />
+        <Variable x:TypeArguments="x:Double" Default="8443" Name="FGTport" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_FortiGateHostname" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_FGTInstalledVersion" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_FGTLatestAvailableVersion" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_FGTUpToDate" />
+        <Variable x:TypeArguments="x:String" Name="FGTLatestVersion_v6" />
+        <Variable x:TypeArguments="x:String" Name="FGTLatestVersion_V7" />
+        <Variable x:TypeArguments="x:String" Name="FGTLatestVersion_V74" />
+        <Variable x:TypeArguments="x:String" Name="FGTapikey" />
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>
